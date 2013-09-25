@@ -62,36 +62,16 @@ textarea {
 
 body{
 	background: url('../img/brushed.png');
+	min-width: 320px;
 }
 .tempMsg{
-	height: 25px;
-	width: 25px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.5);
+	height: 200px;
+	width: 100%;
 	background: url('../img/tweed.png');
 	color: white;
 	overflow: hidden;
-	padding-top: 25px;
 	box-sizing: border-box;
-	
-	-webkit-transition-duration: 0.8s;
-	-webkit-transition-property: transform;
 	box-shadow: 0 0 5px #333;
-}
-
-.tempMsg.hover{
-	height: 50px;
-	width: 50px;
-	padding-top: 50px;
-}
-
-.tempMsg.clicked{
-	-webkit-transform: rotate(360deg);
-	height: 200px;
-	width: 320px;
-	padding: 25px;
 }
 
 .tempMsg li{
