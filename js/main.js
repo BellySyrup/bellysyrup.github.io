@@ -1,5 +1,1 @@
-jQuery(function($){
 
-	// do stuff
-	
-});
