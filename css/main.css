@@ -60,6 +60,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body{
+	background: url('../img/brushed.png');
+}
 .tempMsg{
 	height: 25px;
 	width: 25px;
@@ -67,6 +70,7 @@ textarea {
 	top: 0;
 	left: 0;
 	background: rgba(0,0,0,0.5);
+	background: url('../img/tweed.png');
 	color: white;
 	overflow: hidden;
 	padding-top: 25px;
@@ -74,6 +78,7 @@ textarea {
 	
 	-webkit-transition-duration: 0.8s;
 	-webkit-transition-property: transform;
+	box-shadow: 0 0 5px #333;
 }
 
 .tempMsg.hover{
@@ -99,7 +104,7 @@ textarea {
 	text-decoration: none;
 }
 .tempMsg a:hover{
-	color: #333;
+	color: #C0C0C0;
 	-webkit-transition-duration: 0.8s;
 }
 
