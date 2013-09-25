@@ -74,10 +74,22 @@ body{
 	box-shadow: 0 0 5px #333;
 }
 
+.tempMsg ul{
+	width: 100%;
+	max-width: 136px;
+	display: block;
+	overflow: auto;
+	margin-left: auto;
+	margin: auto;
+	padding: 0;
+}
 .tempMsg li{
 	list-style: none;
 	float: left;
 	margin-left: 20px;
+}
+.tempMsg li:nth-child(1){
+	margin: 0;
 }
 .tempMsg a{
 	color: white;
@@ -96,10 +108,7 @@ body{
 
 .footer{
 	color: #ccc;
-	position: fixed; 
-	bottom: 0;
-	left: 0;
-	right: 0;
+	width: 100%;
 	height: 50px;
 	text-align: center;
 	padding: 0 40px 40px 40px;
