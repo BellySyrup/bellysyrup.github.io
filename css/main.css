@@ -83,6 +83,8 @@ textarea {
     right: 0;
     top: 0;
     background: rgb(0,0,0,0.8);
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .introContent{
