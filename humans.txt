@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    stephan -- lead awesome -- @sconzen
 
 # THANKS
 
-    <name>
+    Me
 
 # TECHNOLOGY COLOPHON
 
