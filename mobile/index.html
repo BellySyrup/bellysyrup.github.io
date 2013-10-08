@@ -6,6 +6,13 @@
 		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 		<script src="./js/WoW.js"></script>
 		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" /> 
+
+		<style>
+			#toons img{
+				height: 80px;
+				width: 80px;
+			}
+		</style>
 	</head>
 	<body>
 		<div data-role="page" id="page1">
@@ -69,13 +76,8 @@
 			    <a href="#my-header" data-role="button" data-rel="close">Close panel</a>
 			</div>
 
-		    <div data-theme="" data-role="header" data-id="foo1" data-position="fixed"><h3>My Characters</h3><a href="#menu" data-transition="" data-theme="" data-icon="bars">Menu</a></div>
-		    <br/>
-		    <div data-role="content">
-		        <ul data-role="listview" id="toons">
-
-				</ul>
-		    </div>
+		    <div data-role="header" data-id="foo1" data-position="fixed"><h3>My Characters</h3><a href="#menu" data-icon="bars">Menu</a></div>
+		    <div data-role="content"><ul data-role="listview" id="toons"></ul></div>
 		    <div data-theme="" data-role="footer" data-id="foo1" data-position="fixed"><h3>My Characters</h3></div>
 		</div>
 	
