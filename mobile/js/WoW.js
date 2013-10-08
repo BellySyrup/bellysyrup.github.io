@@ -10,8 +10,6 @@ $(function(){
 	toons[6] = 'Thorynn';
 	toons[7] = 'Baninii';
 	toons[8] = 'Runee';
-	toons[9] = 'Dornu';
-	toons[10] = 'Humpty';
 
 	$.each(toons,function(index,value){
 		checkToon(value);
