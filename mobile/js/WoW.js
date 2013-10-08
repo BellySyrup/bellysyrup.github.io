@@ -1,6 +1,7 @@
 $(function(){
 	// create list of toons from array
 	var toons = new Array();
+	// my toons
 	toons[0] = 'Helwyr';
 	toons[1] = 'Foongai';
 	toons[2] = 'Laughterhaus';
@@ -10,14 +11,26 @@ $(function(){
 	toons[6] = 'Thorynn';
 	toons[7] = 'Baninii';
 	toons[8] = 'Runee';
-
+	// nikkis toons
+	toons[9] = 'Dornu';
+	toons[10] = 'Finnara';
+	toons[11] = 'Kandance';
+	toons[12] = 'Asea';
+	//toons[13] = '';
+	//toons[14] = '';
+	//toons[15] = '';
+	//toons[16] = '';
+	//toons[17] = '';
+	//toons[18] = '';
+	counter = 0;
+	localStorage.toons = [];
 	$.each(toons,function(index,value){
 		checkToon(value);
 		$('#toons').append('<li id="'+value+'"><a href="http://us.battle.net/wow/en/character/jaedenar/'+value+'/simple"><img src="" id="" alt=""/><span>'+value+'</span></a><a href="http://www.guildox.com/wow/toon/us/Jaedenar/'+value+'"></a></li>');
 	});
 
 	$("#list").listview("refresh");
-	 
+	
 });
 
 function foo(data) {
@@ -36,8 +49,10 @@ function foo(data) {
 	$this.find('img').attr('src',t);
 	$this.find('span').html(n + ' - ' + l + ' ' + c);
 
-	console.log(data);
-
+	//console.log(data);
+	//localStorage.toon = data;
+	//console.log(localStorage.toon);
+	counter++;
 }
  
 
