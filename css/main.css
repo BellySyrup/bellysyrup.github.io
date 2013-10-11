@@ -61,7 +61,11 @@ textarea {
    ========================================================================== */
 
 .wrapper{
-
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 .header{
@@ -77,28 +81,34 @@ textarea {
 }
 
 .intro{
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     top: 0;
-    background: rgb(0,0,0,0.8);
-    display: table-cell;
-    vertical-align: middle;
+    background: rgba(0,0,0,0.8);
 }
 
 .introContent{
-    display: table-cell;
-    vertical-align: middle;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-left: -250px;
     height: 300px;
     width: 500px;
     background: #ccc;
 }
 
 
-
-
-
+.teal{background: #008299;}
+.blue{background: #2672EC;}
+.purple{background: #8C0095;}
+.darkpurple{background: #5133AB;}
+.red{background: #AC193D;}
+.orange{background: #D24726;}
+.green{background: #008A00;}
+.skyblue{background: #094AB2;}
 
 
 
