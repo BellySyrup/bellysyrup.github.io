@@ -11,16 +11,58 @@
 
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"/>
+
+		<style>
+			body{
+				background: #fff;
+			}
+			h1{
+				font-size: 238px;
+			}
+			h1:before{content:'[';}
+			h1:after{content:']';}
+			/* #### iPhone 4+ Portrait or Landscape #### */
+			@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+			  	h1{font-size: 74px;}
+			}
+			img{
+				float: left;
+				transition: opacity 0.5s;
+				-webkit-transition: opacity 0.5s; /* Safari */
+
+			}
+			img:hover{
+				opacity: 0.8;
+			}
+			#testMenu{
+				display: none;
+			}
+			a:hover{
+				text-decoration: none;
+			}
+		</style>
+		<script>
+		var imgPath = './astral/images/walls/';
+		var p = new Array();
+			p[0] = 'umbrella';
+			p[1] = 'tracks';
+			p[2] = 'cup';
+			p[3] = 'emmastone';
+			p[4] = 'lotr';
+			p[5] = 'musicislife';
+			p[6] = 'road';
+			p[7] = 'space';
+		</script>
+
 	</head>
 	<body>
-		<div class="page-header">
-  			<h1>hi <small>...</small></h1>
-		</div>
-		<a href="./brushed">brushed</a>
-		<a href="./prologue">prologue</a>
-		<a href="./astral">astral</a>
-		<a href="https://github.com/sconzen"><img style="position: absolute; top: 0; right: 0; border: 0;" src="./forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-
+		<h1 id="header"><a href="#">s</a><a href="#">t</a><a href="#">e</a><a href="#">p</a><a href="#">h</a><a href="#">a</a><a href="#">n</a></h1>
+		<br/>
+		<script>
+			for (var i=0; i<p.length; i++){
+				document.write('<img src="' + imgPath + p[i] + '.jpg" />');
+			}
+		</script>
     	<script src="http://code.jquery.com/jquery.js"></script>
     	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-41546843-1"]);_gaq.push(["_trackPageview"]);(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
