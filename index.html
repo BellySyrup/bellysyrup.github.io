@@ -1,3 +1,4 @@
+<!-- I'm only optimizing this site for chrome. I'm going to assume it'll look just as good in safari and firefox, but am not guaranteeing anything. IE? GTFO! -->
 <!DOCTYPE html>
 <html>
 	<head lang="en">
@@ -18,36 +19,38 @@
 		</style>
 		<script>
 		var imgPath = './astral/images/walls/';
-		// var p = new Array();
-		// 	p[0] = 'umbrella';
-		// 	p[1] = 'tracks';
-		// 	p[2] = 'cup';
-		// 	p[3] = 'emmastone';
-		// 	p[4] = 'lotr';
-		// 	p[5] = 'musicislife';
-		// 	p[6] = 'road';
-		// 	p[7] = 'space';
 		var p = new Array();
-			p[0] = 'umbrella';
-			p[1] = 'umbrella';
-			p[2] = 'umbrella';
-			p[3] = 'umbrella';
-			p[4] = 'umbrella';
-			p[5] = 'umbrella';
-			p[6] = 'umbrella';
-			p[7] = 'umbrella';
+			p[0] = ['umbrella','jpg']
+			p[1] = ['tracks','jpg']
+			p[2] = ['emmastone','jpg']
+			p[3] = ['lotr','jpg']
+			p[4] = ['musicislife','jpg']
+			p[5] = ['road','jpg']
+			p[6] = ['space','jpg']
+			p[7] = ['evolve','png']
 		</script>
 
 	</head>
 	<body>
-		<h1 id="header">2<!-- <a href="#">s</a><a href="#">t</a><a href="#">e</a><a href="#">p</a><a href="#">h</a><a href="#">a</a><a href="#">n</a> --></h1>
-		<br/>
-		<script>
-			for (var i=0; i<p.length; i++){
-				document.write('<img src="' + imgPath + p[i] + '.jpg" />');
-			}
-		</script>
+		<h1 id="header"><a href="#">s</a><a href="#">t</a><a href="#">e</a><a href="#">p</a><a href="#">h</a><a href="#">a</a><a href="#">n</a></h1>
+		<section id="container">
+			<script>
+				for (var i=0; i<p.length; i++){
+					var newItem = '<a class="item" href="' + imgPath + 'orig_' + p[i][0] + '.' + p[i][1]+'"><img src="' + imgPath + p[i][0] + '.' + p[i][1] + '" alt="' + p[i][0] + '"/></a>'
+					document.write(newItem);
+				}
+			</script>
+		</section>
     	<script src="http://code.jquery.com/jquery.js"></script>
+    	<script src="./isotope.js"></script>
+    	<script>
+    	$('#container').isotope({
+		  // options
+		  itemSelector : '.item',
+		  layoutMode : 'fitRows'
+		});
+
+    	</script>
     	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-41546843-1"]);_gaq.push(["_trackPageview"]);(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 	</body>
