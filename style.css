@@ -1,0 +1,31 @@
+body{
+	background: #fff;
+}
+h1{
+	font-size: 238px;
+	adisplay: none;
+}
+h1:before{content:'[';}
+h1:after{content:']';}
+img{
+	float: left;
+	width: 337px;
+	max-width: 337px;
+
+}
+img:hover{
+	opacity: 0.9;
+}
+#testMenu{
+	display: none;
+}
+a:hover{
+	text-decoration: none;
+}
+
+
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+  	h1{font-size: 74px;}
+}
