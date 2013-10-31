@@ -26,7 +26,7 @@ h1{
   margin-bottom: 28px;
 }
 #wrap{
-  width: 520px;
+  max-width: 520px;
   margin: 93px auto;
   position: relative;
 }
