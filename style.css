@@ -10,7 +10,6 @@
   font-weight: 700;
   src: local('Merriweather Bold'), local('Merriweather-Bold'), url(http://themes.googleusercontent.com/static/fonts/merriweather/v5/ZvcMqxEwPfh2qDWBPxn6nhAPw1J91axKNXP_-QX9CC8.woff) format('woff');
 }
-
 body{
   background-color: #1a1d26;
   font-family: 'Merriweather', sans-serif;
@@ -26,7 +25,7 @@ h1{
   color: #e9fafe;
   margin-bottom: 28px;
 }
-.wrap{
+#wrap{
   width: 520px;
   margin: 93px auto;
   position: relative;
