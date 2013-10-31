@@ -17,6 +17,7 @@ body{
   font-weight: 400;
   line-height: 30px;
   color: #9ca7aa;
+
 }
 h1{
   font-weight: 700;
@@ -24,6 +25,8 @@ h1{
   line-height: 50px;
   color: #e9fafe;
   margin-bottom: 28px;
+  -webkit-font-smoothing: antialiased !important;
+
 }
 #wrap{
   max-width: 520px;
