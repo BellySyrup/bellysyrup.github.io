@@ -1,13 +1,6 @@
 $(function(){
-	title();
 	footer();
 });
-
-function title(){
-	console.log('title();');
-	title = 'mnmlist';
-	$('.post h2 a:first-child').html(title);
-}
 
 function footer(){
 	console.log('footer();');
