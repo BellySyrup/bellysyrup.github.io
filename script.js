@@ -11,7 +11,7 @@ function title(){
 
 function footer(){
 	console.log('footer();');
-	link1 = '<a href="http://sconzen.github.io/posts/index.html" id="posts">more</a>';
+	link1 = '<a href="http://sconzen.github.io/posts" id="posts">more</a>';
 	link2 = '<a href="http://sconzen.github.io/">uncopyright</a>';
 	link3 = '<a href="http://sconzen.github.io/">feed</a>';
 	link4 = '<a href="http://sconzen.github.io/">less</a>';
