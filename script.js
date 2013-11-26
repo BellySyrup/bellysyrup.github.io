@@ -1,5 +1,5 @@
 $(function(){
-	footer();
+	//footer();
 });
 
 function footer(){
