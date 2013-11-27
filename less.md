@@ -3,7 +3,7 @@ layout: default
 title: Who am I?
 ---
 
-My name is Stephan Conzen1  
+My name is Stephan Conzen   
 I am 26 years old  
 Quite fond of cheeseburger pizza  
 Fluent in German and English  
