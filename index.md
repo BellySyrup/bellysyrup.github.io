@@ -1,9 +1,9 @@
 ---
 layout: default
-title: mnmlsm redefined
+title: mnmlist redefined
 ---
 
-Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna arcu, ultricies a lacinia sit amet, porttitor eu orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel lectus eleifend urna aliquam hendrerit a sed nibh. Cras eget consequat tortor, quis semper odio. Duis sagittis volutpat lorem sed rutrum. Nulla semper leo ut libero consequat, ut sagittis libero placerat. Curabitur auctor nulla sit amet mauris bibendum congue. Integer mollis tincidunt felis, sed convallis felis ultrices nec.
 
 {% for post in site.posts limit: 5%}[{{post.title}}]({{post.url}})  
 {% endfor %}
