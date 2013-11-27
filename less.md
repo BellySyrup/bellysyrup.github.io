@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Who am I?
+title: what it is
 ---
 
 My name is Stephan Conzen   
@@ -10,9 +10,10 @@ Fluent in German and English
 
 I throw code at my computer... see what happens  
 
-[Twitter](http://twitter.com/sconzen)  
-[Github](http://github.com/sconzen)  
-[Dunked](http://sconzen.dunked.com)  
++ [Twitter](http://twitter.com/sconzen)  
++ [Github](http://github.com/sconzen)  
++ [Dunked](http://sconzen.dunked.com)  
++ [Gmail](mailto:sconzen@gmail.com)
 
 This site is based on [mnmlist](http://mnmlist.com), picked apart and glued back together using [jekyll](http://jekyllrb.com/).
 Mnmlist is originally created by Leo Babauta, who was kind enough to give permission to go bananas on his site. Jekyll allowed me to create a simple version of the original, without the need for wordpress, or the database that would be required by wordpress to store all posts and pages.
