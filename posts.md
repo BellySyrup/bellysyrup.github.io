@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Home
+title: Posts
 ---
-## [sconzen](http://sconzen.github.io): [home](http://sconzen.github.io)
+## [sconzen](http://sconzen.github.io): [Posts](http://sconzen.github.io)
 
 {% for post in site.posts %}
 +{{post.title}}
