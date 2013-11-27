@@ -4,6 +4,8 @@ title: Who am I?
 ---
 ## [sconzen](http://sconzen.github.io): [who am I](http://sconzen.github.io/less.html)
 
+<div class="entry">
+
 My name is Stephan Conzen  
 I am 26 years old  
 Quite fond of cheeseburger pizza  
@@ -25,3 +27,5 @@ Github Pages allowed me to use Jekyll and Markdown to easily replicate the struc
 + Step by step documentation on this project.
 + Actually post something.
 + Finish Pages for bottom menu.
+
+</div>
