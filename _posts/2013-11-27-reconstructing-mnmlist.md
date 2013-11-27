@@ -8,6 +8,9 @@ title: reconstructing mnmlist
 ### Step 2: ???
 
 		permalink: /:categories/:title  
+
+changing the permalink setting in the _config.yml displays the url in a cleaner, more readable fashion. (removes .html at the end)
+
 		+ [Gmail](mailto:sconzen@gmail.com)  
 		---
 		layout: default
