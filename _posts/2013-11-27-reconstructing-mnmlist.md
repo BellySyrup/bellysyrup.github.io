@@ -7,6 +7,6 @@ title: reconstructing mnmlist
 
 ### Step 2: ???
 
-	permalink: /:categories/:title
+		permalink: /:categories/:title
 
 ### Step 3: Profit
