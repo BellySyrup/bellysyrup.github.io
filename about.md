@@ -27,3 +27,4 @@ Github Pages allowed me to use Jekyll and Markdown to easily replicate the struc
 + Step by step documentation on this project.
 + Actually post something.
 + Finish Pages for bottom menu.  
++ Remove [Slipsum](http://slipsum.com/) Content

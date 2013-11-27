@@ -1,22 +1,21 @@
 sconzen.github.io
 =================
 
-A simple landing page to introduce myself, and lead visitors to various sites.
-Minimal design, inspired by jason.sc.
-I wanted my landing page to be as simple as possible to ensure fast load time and put the focus on content, typography and links.
+Work in progress.
 
-Links include:
+Rebuilding mnmlist.com in Github Pages and Jekyll.
+The Idea is to create a simple blog, hosted on Github, using templates and markdown.
+I want to be able to focus on the quality on content, instead of spending more time styling and formatting text.
+This method also prevents the use of wordpress which I am not to fond of.
 
-	Innovasium Digital @ innovasium.com
+No Database.
+No Javascript.
+No modifying the original CSS.
+Markdown for simple post formatting.
 
-	Dunked Portfolio @ sconzen.dunked.com
+Design and concept by Leo Babauta.
 
-	Medium @ medium.com/@sconzen
+Tools used:
 
-	Twitter @ twitter.com/sconzen
-
-	GitHub @ github.com/sconzen
-
-	Email @ sconzen@gmail.com
-
-CSS3, Dunked, GitHub, Google Analytics, Google Web Fonts, HTML5, Innovasium, Medium, Sublime Text, Twitter
+Sublime Text, Notepad++, Github
+Jekyll + Markdown
