@@ -11,6 +11,4 @@ Also this is my first time using markdown, so I will post examples of the syntax
 
 ### Step 2: ???
 
-{% highlight ruby %}def show @widget = Widget(params[:id]){% endhighlight %}
-
 ### Step 3: Profit
