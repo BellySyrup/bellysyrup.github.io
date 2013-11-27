@@ -7,6 +7,8 @@ title: reconstructing mnmlist
 
 ### Step 2: ???
 
+#### Permalinks:
+
 		permalink: /:categories/:title  
 
 changing the permalink setting in the _config.yml displays the url in a cleaner, more readable fashion. (removes .html at the end)
