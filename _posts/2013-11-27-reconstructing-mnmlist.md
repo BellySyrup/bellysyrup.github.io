@@ -7,7 +7,9 @@ title: reconstructing mnmlist
 
 ### Step 2: ???
 
-# Permalinks:
+### Step 3: Profit
+
+### Permalinks:
 
 		permalink: /:categories/:title  
 
@@ -22,4 +24,3 @@ changing the permalink setting in the _config.yml displays the url in a cleaner,
 		{% for post in site.posts limit: 5%}[{{post.title}}]({{post.url}})  
 		{% endfor %}
 
-### Step 3: Profit
