@@ -10,6 +10,8 @@ Fluent in German and English
 
 I throw code at my computer... see what happens  
 
+### More about me:
+
 + [Twitter](http://twitter.com/sconzen)  
 + [Github](http://github.com/sconzen)  
 + [Dunked](http://sconzen.dunked.com)  
