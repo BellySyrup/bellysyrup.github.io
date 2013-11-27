@@ -5,12 +5,11 @@ title: Home
 ## [sconzen](http://sconzen.github.io): [home](http://sconzen.github.io)
 
 
-  {% for post in site.posts %}
-
-	  +	 [{{ post.title }}]({{ post.url }})
-	  +   Red
- 
-  {% endfor %}
+ <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 
   +   Red
   +   Green
