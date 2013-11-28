@@ -6,7 +6,7 @@ title: what it is
 My name is Stephan Conzen   
 I am 26 years old  
 Quite fond of cheeseburger pizza  
-Fluent in German and English  
+Born in Neuss, Germany, live in Ontario, Canada.  
 
 I throw code at my computer... see what happens  
 
