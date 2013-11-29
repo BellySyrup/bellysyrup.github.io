@@ -12,3 +12,5 @@ Also this is my first time using markdown, so I will post examples of the syntax
 ### Step 2: ???
 
 ### Step 3: Profit
+
+<a href="http://bufferapp.com/add" class="buffer-add-button" data-count="vertical" data-via="sconzen" >Buffer</a><script type="text/javascript" src="http://static.bufferapp.com/js/button.js"></script>
