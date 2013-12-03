@@ -1,6 +1,4 @@
 ---
 layout: color
-title: testing color
+title: color
 ---
-
-hello world
