@@ -20,6 +20,13 @@
 					newstuff(id);
 				});
 
+
+			    $('#channelname').keypress(function(e){
+			    	if(e.keyCode==13)
+			    		$('#go').click();
+			    });
+	
+
 				function newstuff(x){
 					if(typeof x == 'undefined'){
 						var newChannel = $('#channelname').val();
