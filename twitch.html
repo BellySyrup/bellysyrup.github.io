@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>demo twitch app</title>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			$(function(){
+				$('input[type=checkbox]').change(function(){
+					if(this.checked){
+						$('.'+this.name).animate({'opacity':'1'});
+					} else {
+						$('.'+this.name).animate({'opacity':'0'});
+					}
+				});
+				$('#go').click(function(){
+					newstuff();
+				});
+
+				$('#list').change(function(){
+					id = $(this).val();
+					newstuff(id);
+				});
+
+				function newstuff(x){
+					if(typeof x == 'undefined'){
+						var newChannel = $('#channelname').val();
+					} else {
+						var newChannel = x;
+					}
+
+					num1 = "http://www.twitch.tv/widgets/live_embed_player.swf?channel="+newChannel;
+					num2 = "hostname=www.twitch.tv&channel="+newChannel+"&auto_play=true&start_volume=25";
+					chaturl = "http://twitch.tv/chat/embed?channel="+newChannel+"&amp;popout_chat=true"; 
+
+					$('.chat iframe').attr('src',chaturl);
+
+					newObj = '<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="'+num1+'" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="'+num2+'" /></object>';
+					$('.video object').remove();
+					$('.video').append(newObj);
+				}
+			});
+		</script>
+		<style>
+			.chat{
+				opacity: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+<input type="checkbox" name="video" checked></input>
+		<input type="checkbox" name="chat"></input>
+ -->
+		<input type="text" id="channelname" placeholder="channel name"></input>
+		<select id="list">
+			<option selected disabled>pick one</option>
+			<option>athenelive</option>
+			<option>sodapoppin</option>
+			<option>etticey</option>
+			<option>foongai</option>
+			<option>wowinsider</option>
+			<option>swifty</option>
+			<option>fatbosstv</option>
+		</select>
+		<button id="go">Go</button>
+		<div class="video">
+			<object type="application/x-shockwave-flash" height="378" width="620" class="num1" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=wowinsider" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param id='num2' name="flashvars" value="hostname=www.twitch.tv&channel=etticey&auto_play=true&start_volume=25" /></object>
+		</div>
+		<!-- 
+<div class="chat">
+			<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=etticey&amp;popout_chat=true" height="500" width="100%"></iframe>
+		</div>
+ -->
+		<!--<ul id="list"><li id="athenelive">athenelive</li></ul>-->
+	</body>
+</html>
