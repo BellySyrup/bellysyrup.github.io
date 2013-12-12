@@ -36,149 +36,175 @@
 	#searchText{
 		text-transform: capitalize;
 	}
+	#wrapper{
+		max-width: 960px;
+		margin: auto;
+		padding: 20px;
+	}
+	h1{
+		text-align: center;
+	}
+	p{
+		text-align: center;
+		max-width: 400px;
+		margin: auto;
+	}
+	input{
+		height: 50px;
+		width: 100%;
+		font-size: 20px;
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	li{
+		font-size: 20px;
+		list-style: none;
+		float: left;
+		width: 30%;
+	}
 </style>
 </head>
 <body>
-<div>
-	<h1>Is my server connected yet?</h1>
-	<p>If your server is listed here, it has NOT been connected or it has not been announced to be connected. Only support US servers.</p>
-	<input type="text" id="searchText" placeholder="US server name"/>
-	<ul>
-		<li>Aerie Peak</li>
-		<li>Arathor</li>
-		<li>Antonidas</li>
-		<li>Azuremyst</li>
-		<li>Baelgun</li>
-		<li>Blade's Edge</li>
-		<li>Bladefist</li>
-		<li>Cenarius</li>
-		<li>Gnomeregan</li>
-		<li>Hyjal</li>
-		<li>Korialstrasz</li>
-		<li>Lightbringer</li>
-		<li>Misha</li>
-		<li>Moonrunner</li>
-		<li>Proudmoore</li>
-		<li>Shadowsong</li>
-		<li>Shu'Halo</li>
-		<li>Silvermoon</li>
-		<li>Skywall</li>
-		<li>Uldum</li>
-		<li>Uther</li>
-		<li>Blackrock</li>
-		<li>Bonechewer</li>
-		<li>Destromath</li>
-		<li>Frostwolf</li>
-		<li>Kil'Jaeden</li>
-		<li>Nazjatar</li>
-		<li>Ner'zhul</li>
-		<li>Shattered Halls</li>
-		<li>Spinebreaker</li>
-		<li>Stormscale</li>
-		<li>Tichondrius</li>
-		<li>Vashj</li>
-		<li>Blackwater Raiders</li>
-		<li>Cenarion Circle</li>
-		<li>Feathermoon</li>
-		<li>Sentinels</li>
-		<li>Silver Hand</li>
-		<li>The Scryers</li>
-		<li>Wyrmrest Accord</li>
-		<li>The Venture Co</li>
-		<li>Azjol-Nerub</li>
-		<li>Doomhammer</li>
-		<li>Terenas</li>
-		<li>Kel'Thuzad</li>
-		<li>Darkspear</li>
-		<li>Deathwing</li>
-		<li>Shadow Council</li>
-		<li>Alexstrasza</li>
-		<li>Alleria</li>
-		<li>Borean Tundra</li>
-		<li>Dawnbringer</li>
-		<li>Eitrigg</li>
-		<li>Garona</li>
-		<li>Ghostlands</li>
-		<li>Greymane</li>
-		<li>Grizzly Hills</li>
-		<li>Hydraxis</li>
-		<li>Kael'thas</li>
-		<li>Khaz Modan</li>
-		<li>Kul Tiras</li>
-		<li>Madoran</li>
-		<li>Malfurion</li>
-		<li>Ravencrest</li>
-		<li>Rexxar</li>
-		<li>Runetotem</li>
-		<li>Staghelm</li>
-		<li>Terokkar</li>
-		<li>Thunderhorn</li>
-		<li>Agamaggan</li>
-		<li>Archimonde</li>
-		<li>Burning Legion</li>
-		<li>Cho'gall</li>
-		<li>Drak'thul</li>
-		<li>Illidan</li>
-		<li>Korgath</li>
-		<li>Mal'Ganis</li>
-		<li>Mug'thol</li>
-		<li>Stormreaver</li>
-		<li>Sargeras</li>
-		<li>The Underbog</li>
-		<li>Thunderlord</li>
-		<li>Wildhammer</li>
-		<li>Farstriders</li>
-		<li>Kirin Tor</li>
-		<li>Moon Guard</li>
-		<li>Scarlet Crusade</li>
-		<li>Sisters of Elune</li>
-		<li>Thorium Brotherhood</li>
-		<li>Emerald Dream</li>
-		<li>Lightninghoof</li>
-		<li>Maelstrom</li>
-		<li>Twisting Nether</li>
-		<li>Area 52</li>
-		<li>Bloodhoof</li>
-		<li>Dalaran</li>
-		<li>Drenden</li>
-		<li>Durotan</li>
-		<li>Duskwood</li>
-		<li>Eldre'Thalas</li>
-		<li>Elune</li>
-		<li>Exodar</li>
-		<li>Garrosh</li>
-		<li>Gilneas</li>
-		<li>Grizzly Hills</li>
-		<li>Kargath</li>
-		<li>Khadgar</li>
-		<li>Lothar</li>
-		<li>Medivh</li>
-		<li>Nazgrel</li>
-		<li>Norgannon</li>
-		<li>Stormrage</li>
-		<li>Tanaris</li>
-		<li>Thrall</li>
-		<li>Trollbane</li>
-		<li>Turalyon</li>
-		<li>Uldaman</li>
-		<li>Ysera</li>
-		<li>Zul'jin</li>
-		<li>Altar of Storms</li>
-		<li>Alterac Mountains</li>
-		<li>Arthas</li>
-		<li>Bleeding Hollow</li>
-		<li>Eredar</li>
-		<li>Gorefiend</li>
-		<li>Jaedenar</li>
-		<li>Shadowmoon</li>
-		<li>Shattered Hand</li>
-		<li>Zuluhed</li>
-		<li>Argent Dawn</li>
-		<li>Earthen Ring</li>
-		<li>Steamwheedle Cartel</li>
-		<li>Ravenholdt</li>
-	<ul>
-</div>
+	<div id="wrapper">
+		<h1>Is my server connected yet?</h1>
+		<p>If your server is listed here, it has NOT been connected or it has not been announced to be connected. Only support US servers.</p>
+		<input type="text" id="searchText" placeholder="US server name"/>
+		<ul>
+			<li>Aerie Peak</li>
+			<li>Arathor</li>
+			<li>Antonidas</li>
+			<li>Azuremyst</li>
+			<li>Baelgun</li>
+			<li>Blade's Edge</li>
+			<li>Bladefist</li>
+			<li>Cenarius</li>
+			<li>Gnomeregan</li>
+			<li>Hyjal</li>
+			<li>Korialstrasz</li>
+			<li>Lightbringer</li>
+			<li>Misha</li>
+			<li>Moonrunner</li>
+			<li>Proudmoore</li>
+			<li>Shadowsong</li>
+			<li>Shu'Halo</li>
+			<li>Silvermoon</li>
+			<li>Skywall</li>
+			<li>Uldum</li>
+			<li>Uther</li>
+			<li>Blackrock</li>
+			<li>Bonechewer</li>
+			<li>Destromath</li>
+			<li>Frostwolf</li>
+			<li>Kil'Jaeden</li>
+			<li>Nazjatar</li>
+			<li>Ner'zhul</li>
+			<li>Shattered Halls</li>
+			<li>Spinebreaker</li>
+			<li>Stormscale</li>
+			<li>Tichondrius</li>
+			<li>Vashj</li>
+			<li>Blackwater Raiders</li>
+			<li>Cenarion Circle</li>
+			<li>Feathermoon</li>
+			<li>Sentinels</li>
+			<li>Silver Hand</li>
+			<li>The Scryers</li>
+			<li>Wyrmrest Accord</li>
+			<li>The Venture Co</li>
+			<li>Azjol-Nerub</li>
+			<li>Doomhammer</li>
+			<li>Terenas</li>
+			<li>Kel'Thuzad</li>
+			<li>Darkspear</li>
+			<li>Deathwing</li>
+			<li>Shadow Council</li>
+			<li>Alexstrasza</li>
+			<li>Alleria</li>
+			<li>Borean Tundra</li>
+			<li>Dawnbringer</li>
+			<li>Eitrigg</li>
+			<li>Garona</li>
+			<li>Ghostlands</li>
+			<li>Greymane</li>
+			<li>Grizzly Hills</li>
+			<li>Hydraxis</li>
+			<li>Kael'thas</li>
+			<li>Khaz Modan</li>
+			<li>Kul Tiras</li>
+			<li>Madoran</li>
+			<li>Malfurion</li>
+			<li>Ravencrest</li>
+			<li>Rexxar</li>
+			<li>Runetotem</li>
+			<li>Staghelm</li>
+			<li>Terokkar</li>
+			<li>Thunderhorn</li>
+			<li>Agamaggan</li>
+			<li>Archimonde</li>
+			<li>Burning Legion</li>
+			<li>Cho'gall</li>
+			<li>Drak'thul</li>
+			<li>Illidan</li>
+			<li>Korgath</li>
+			<li>Mal'Ganis</li>
+			<li>Mug'thol</li>
+			<li>Stormreaver</li>
+			<li>Sargeras</li>
+			<li>The Underbog</li>
+			<li>Thunderlord</li>
+			<li>Wildhammer</li>
+			<li>Farstriders</li>
+			<li>Kirin Tor</li>
+			<li>Moon Guard</li>
+			<li>Scarlet Crusade</li>
+			<li>Sisters of Elune</li>
+			<li>Thorium Brotherhood</li>
+			<li>Emerald Dream</li>
+			<li>Lightninghoof</li>
+			<li>Maelstrom</li>
+			<li>Twisting Nether</li>
+			<li>Area 52</li>
+			<li>Bloodhoof</li>
+			<li>Dalaran</li>
+			<li>Drenden</li>
+			<li>Durotan</li>
+			<li>Duskwood</li>
+			<li>Eldre'Thalas</li>
+			<li>Elune</li>
+			<li>Exodar</li>
+			<li>Garrosh</li>
+			<li>Gilneas</li>
+			<li>Grizzly Hills</li>
+			<li>Kargath</li>
+			<li>Khadgar</li>
+			<li>Lothar</li>
+			<li>Medivh</li>
+			<li>Nazgrel</li>
+			<li>Norgannon</li>
+			<li>Stormrage</li>
+			<li>Tanaris</li>
+			<li>Thrall</li>
+			<li>Trollbane</li>
+			<li>Turalyon</li>
+			<li>Uldaman</li>
+			<li>Ysera</li>
+			<li>Zul'jin</li>
+			<li>Altar of Storms</li>
+			<li>Alterac Mountains</li>
+			<li>Arthas</li>
+			<li>Bleeding Hollow</li>
+			<li>Eredar</li>
+			<li>Gorefiend</li>
+			<li>Jaedenar</li>
+			<li>Shadowmoon</li>
+			<li>Shattered Hand</li>
+			<li>Zuluhed</li>
+			<li>Argent Dawn</li>
+			<li>Earthen Ring</li>
+			<li>Steamwheedle Cartel</li>
+			<li>Ravenholdt</li>
+		<ul>
+	</div>
 <script>
 	// makes :contains case insensitive
 	$.expr[":"].contains = $.expr.createPseudo(function(arg) {
