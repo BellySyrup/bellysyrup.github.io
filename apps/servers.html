@@ -62,12 +62,17 @@
 		float: left;
 		width: 30%;
 	}
+	#count{
+		font-size: large;
+		color: red;
+		font-weight: bold;
+	}
 </style>
 </head>
 <body>
 	<div id="wrapper">
 		<h1>Is my server connected yet?</h1>
-		<p>If your server is listed here, it has NOT been connected or it has not been announced to be connected. Only support US servers.</p>
+		<p>If your server is listed here, it has NOT been connected or it has not been announced to be connected. Only support US servers. There are <span id="count"></span> lonely servers left.</p>
 		<p class="small">Updated on Dec. 19th 2013.</p>
 		<input type="text" id="searchText" placeholder="US server name"/>
 		<ul>
@@ -219,6 +224,12 @@
 			foundonkey.hide();
 		}
 	});
+
+	$(function(){
+		var n = $('li').length;
+		$('#count').html(n);
+	});
+	
 </script>
  
 </body>
