@@ -1,0 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Megrim&text=CAT);
+
+html {
+  background-color: blue;
+  background-image: url("http://placekitten.com/1920/1120");
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  font-size: 100%;
+  -webkit-filter: blur(100px);
+  -moz-filter   : blur(100px);
+  -ms-filter    : blur(100px);
+  -o-filter     : blur(100px);
+  filter        : blur(100px);
+}
