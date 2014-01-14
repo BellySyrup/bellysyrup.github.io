@@ -1,3 +1,4 @@
 $(function(){
-	alert('hello');
+	$('img').remove();
+	$('*').css({'background':'none'});
 });
