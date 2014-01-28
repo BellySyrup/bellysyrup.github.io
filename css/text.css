@@ -40,8 +40,6 @@ section {
     width: 520px;
     margin: 93px auto;
     position: relative;
-    transition: margin 0.2s;
-    -webkit-transition: margin 0.2s;
 }
 
 body.dark {
