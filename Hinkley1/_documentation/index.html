@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META DATA -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  	<meta charset="utf-8" />
+	<title>Documentation | Flato - Parallax One Page HTML Template</title>
+    <meta name="description" content="A Template by IIMediaMonkeys"/>
+    <meta name="keywords" content="HTML, CSS, JavaScript"/>
+    <meta name="author" content="IIMediaMonkeys"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width" />
+	
+    <!-- THEME STYLESHEETS -->
+    <link rel="stylesheet" media="all" href="assets/css/reset.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700' rel='stylesheet' type='text/css' />
+
+	<link rel="stylesheet" media="all" href="assets/css/jquery.snippet.css" />
+    <link rel="stylesheet" media="all" href="assets/css/responsive.gs.12col.css" />
+    <link rel="stylesheet" media="all" href="assets/css/stylesheet.css" />
+
+ 	<!-- JAVASCRIPT -->
+	<script type="text/javascript" src="assets/scripts/jquery.1.9.1.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/modernizr.custom.97074.js"></script>
+</head>
+<body>
+
+
+	<header id="header">
+        <div class="row">
+            <!-- START NAVIGATION -->
+            <ul id="main-navigation">
+                <li><a class="active" href="#start">Start</a></li>
+                <li><a href="#html-structure">Structure</a></li>
+				<li><a href="#style">CSS</a></li>
+				<li><a href="#javascript">JS</a></li>
+				<li><a href="#shortcodes">Shortcodes</a></li>
+				<li><a href="#work">Work</a></li>
+				<li><a href="#blog">Blog</a></li>
+				<li><a href="#parallax">Parallax</a></li>
+				<li><a href="#contact">PHP Form</a></li>
+				<li><a href="#credits">Credits</a></li>
+            </ul><!-- END NAVIGATION -->
+        </div>
+	</header>
+
+    <div id="page-wrapper">
+        <section id="start">
+            <div class="row">
+                <h1>Flato Documentation</h1>
+                <p>
+                    <span class="bold">Created</span> 15.01.2014<br />
+                    <span class="bold">By</span> IIMediaMonkeys<br />
+                    <span class="bold">eMail</span> <a href="mailto:info@mediamonkeys.de">info@mediamonkeys.de</a>
+                </p>
+				<p>
+					<a href="http://www.mediamonkeys.de"><img src="assets/images/layout/mediamonkeys_logo.png" alt="MediaMonkeys" /></a>
+				</p>
+                <p class="max-width">
+                    Thank you for purchasing our theme. If you have any questions that are beyond the scope of this help file, please feel free to write us an email or contact us via our themeforest user page.
+                </p>
+				<a class="button" href="mailto:info@mediamonkeys.de">Support via eMail</a>
+				<a class="button" href="http://themeforest.net/user/IIMediaMonkeys">Go to Themeforest</a>
+            </div>
+        </section>
+		
+		
+        <section id="html-structure">
+            <div class="row">
+                <h1>HTML Structure</h1>		
+<h2>Basic Structure</h2>	
+<p class="max-width">
+	The Basic Structure contains:<br />
+	&lt;header>&lt;/header> - logo, navigation and social-icons<br />
+	&lt;div id="page-wrapper">&lt;/div> - all the content<br />
+	&lt;footer id="contact">&lt;/footer> - contact information<br />
+</p>					
+<pre class="htmlCode">
+&lt;!-- START HEADER -->
+&lt;header id="header">
+    &lt;div class="logo-wrapper">
+        &lt;a id="logo" href="index.html">&lt;img src="images/layout/flato-logo.png" alt="FLATO" />&lt;/a>
+    &lt;/div>
+    &lt;!-- START NAVIGATION -->
+    &lt;ul id="main-navigation">
+        &lt;li>&lt;a class="active" href="#banner">Start&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#work">Work&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#service">Service&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#pricing">Pricing&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#team">Team&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#blog">Blog&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="shortcodes.html">Shortcodes&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
+    &lt;/ul>&lt;!-- END NAVIGATION -->
+    &lt;div class="social-links">
+        &lt;a href="">&lt;i class="fa fa-twitter">&lt;/i>&lt;/a>
+        &lt;a href="">&lt;i class="fa fa-facebook">&lt;/i>&lt;/a>
+        &lt;a href="">&lt;i class="fa fa-linkedin">&lt;/i>&lt;/a>
+    &lt;/div>
+    &lt;a id="open-nav">&lt;i class="fa fa-bars">&lt;/i>&lt;/a>
+&lt;/header>&lt;!-- CLOSE HEADER -->
+	
+	
+&lt;!-- START PAGE WRAPPER -->
+&lt;div id="page-wrapper">
+	&lt;!-- START SECTION -->
+	&lt;section id="section-id" class="section">
+		{{ PAGE CONTENT }}
+	&lt;/section>&lt;!-- END SECTION -->
+&lt;/div>&lt;!-- END PAGE WRAPPER -->
+	
+	
+&lt;!-- START FOOTER -->
+&lt;footer id="contact">
+	{{ FOOTER CONTENT }}
+&lt;/footer>&lt;!-- END FOOTER -->
+</pre>
+
+		
+<h2 class="margin-top">Section Headline with Undertitle</h2>
+<pre class="htmlCode">
+&lt;!-- START SECTION -->
+&lt;section id="section-id" class="section">
+	&lt;!-- START HEADNLINE -->
+    &lt;div class="headline-wrapper">
+        &lt;div class="row">
+            &lt;h1 class="underline">
+				{{ HEADLINE }}
+			&lt;/h1>
+            &lt;p class="undertitle">
+				{{ UNDERTITLE }}
+			&lt;/p>
+        &lt;/div>
+    &lt;/div>&lt;!-- END HEADNLINE -->
+&lt;/section>&lt;!-- END SECTION -->
+</pre>
+
+
+<h2 class="margin-top">12 Column Grid</h2>
+<p class="max-width">
+	This is a full responsive 12 Column Grid.<br />
+	If you want a margin between the columns, add the class "gutters" to the "row" &lt;div> like this:<br />
+	&lt;div class="row gutters">&lt;/div><br />
+	If you want no margin, remove the class "gutters".
+</p>	
+<pre class="htmlCode">
+&lt;!-- START SECTION -->
+&lt;section id="section-id" class="section">
+	&lt;!-- START CONTAINER -->
+    &lt;div class="row gutters">
+        &lt;div class="col span_6">
+			{{ 6/12 COLUMN PAGE CONTENT }}
+        &lt;/div>
+        &lt;div class="col span_6">
+			{{ 6/12 COLUMN PAGE CONTENT }}
+        &lt;/div>
+	&lt;/div>&lt;!-- END CONTAINER -->
+&lt;/section>&lt;!-- END SECTION -->
+</pre>
+
+            </div>
+        </section>
+    </div>
+	
+	
+    <section id="style">
+        <div class="row">
+            <h1>Stylesheets</h1>
+			<h3>Files</h3>
+			<p class="max-width">
+				All CSS are located in the "css" folder of the template. Each CSS File is well commented and easy to use and customize to your own needs. Here's the list of the CSS files:
+			</p>
+            <p class="max-width">
+            	<span class="bold">1. reset.css</span> - Reset default css browser settings<br />
+				<span class="bold">2. responsive.gs.12col.css</span> - 12 Column Grid settings<br />
+				<span class="bold">3. jquery.bxslider.css</span> - BX Slider settings<br />
+				<span class="bold">4. stylesheet.css</span> - Specific theme settings<br />
+				<span class="bold">5. shortcodes.css</span> - Shortcodes settings<br />
+				<span class="bold">5. responsive.css</span> - Responsive @media settings<br />
+            </p>
+			
+			<h3 class="margin-top">stylesheet.css includes:</h3>
+<pre class="cssCode">
+/*
+1. DOCUMENT SETUP
+2. POSITIONING, MARGIN AND PADDING	
+3. WRAPPER
+  3.1 PARALLAX WRAPPER
+4. HEADER
+5. NAVIGATION
+6. BANNER
+7. WORK
+  7.1 FILTER TABS
+  7.2 PREVIEW GRID
+  7.3 PREVIEW GRID LAYER
+  7.4 WORK DETAILS
+8. NEWSLETTER
+9. TEAM
+10. BLOG
+  10.1 BLOG PREVIEW
+  10.2 BLOG DETAILS
+11. CONTACT
+  11.1 CONTACT FORM
+  11.2 CONTACT DETAILS
+12. FOOTER
+  12.1 TAGS
+  12.2 BOTTOM BOX
+13. SHORTCODE PAGE
+*/
+</pre>			
+
+			<h3 class="margin-top">shortcodes.css includes:</h3>
+<pre class="cssCode">
+/*
+1. TYPOGRAPHY
+2. IMAGES
+3. BUTTONS
+4. LINES
+5. FORM
+6. ICONS / SOCIAL
+7. ICON BOX
+8. SLIDER
+  8.1 DEVICE SLIDER
+  8.2 DEVICE IPHONE
+  8.3 DEVICE MACBOOK
+  8.4 COMMENT SLIDER
+9. CAROUSEL
+  9.1 CLIENT CAROUSEL
+10. PRICING TABLE
+  10.1 TOP PRICE
+11. TOGGLE BOX
+12. SKILLBAR
+13. FACTS
+14. TAB CONTENT
+15. CALLOUT BOX
+16. ALERT BOX
+*/
+</pre>	
+
+			
+        </div>
+    </section>
+	
+	
+	<section id="javascript">
+		<div class="row">
+            <h1>Javascript</h1>
+			<h3>Plugins</h3>
+			<p class="max-width">
+				All JavaScript / jQuery plugins are located in the "scripts" folder of the template. You do not need to edit these items.
+			</p>
+            <p class="max-width">
+            	<span class="bold">1. jquery.1.9.1.min.js</span> - jQuery<br />
+				<span class="bold">2. modernizr.custom.97074.js</span> - Modernizr 2.6.2<br />
+				<span class="bold">3. jquery.easing.1.3.js</span> - jQuery Easing v1.3<br />
+				<span class="bold">4. SmoothScroll.js</span> - SmoothScroll for websites v1.2.1<br />
+				<span class="bold">5. jquery.parallax-1.1.3.js</span> - Simple Parallax Plugin<br />
+				<span class="bold">6. jquery.bxslider.js</span> - BxSlider v4.1.1<br />
+				<span class="bold">7. jquery.hoverdir.js</span> - HoverDir v1.1.0<br />
+				<span class="bold">8. jquery.mixitup.js</span> - MixItUp - V1.5.5<br />
+				<span class="bold">9. jquery.carouFredSel-6.2.1.js</span> - carouFredSel 6.2.1<br />
+				<span class="bold">10. respond.min.js</span> - Respond.js v1.1.0<br />
+            </p>
+			
+			<h3 class="margin-top">Theme Javascript</h3>
+			<p class="max-width">
+				There are two theme javascript files. The first contains the script for the navigation, header, work-preview, blog-preview and shortcodes. You do not need to edit these file.  <span class="bold">If you want to change settings, add a slider, a parallax background or something else, you must edit the "theme.settings.js" file.</span>
+			</p>
+            <p class="max-width">
+            	<span class="bold">1. theme.script.js</span> - Theme script<br />
+				<span class="bold">2. theme.settings.js</span> - <span class="bold color">Do all settings here</span><br />
+            </p>
+
+			<h3 class="margin-top">theme.settings.js includes:</h3>
+<pre class="cssCode">
+/*
+1. WORK PREVIEW HOVERDIR
+2. PARALLAX BACKGROUNDS
+3. SLIDER
+  3.1 MACBOOK DEVICE SLIDER
+  3.2 IPHONE DEVICE SLIDER
+  3.3 COMMENT SLIDER
+4. CAROUSEL
+  4.1 CLIENT CAROUSEL
+*/
+</pre>
+			
+		</div>
+	</section>
+	
+	
+	<section id="shortcodes">
+		<div class="row">
+            <h1>Shortcodes</h1>
+			<h2>Buttons</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<pre class="htmlCode">
+&lt;a class="button">Normal Button&lt;/a>
+&lt;a class="button medium">Medium Button&lt;/a>
+&lt;a class="button small">Small Button&lt;/a>
+&lt;a class="button border">Border Button&lt;/a>
+&lt;a class="button border medium">Medium Border Button&lt;/a>
+&lt;a class="button border small">Small Border Button&lt;/a>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - shortcodes.css</h4>	
+<pre class="cssCode">
+.button {
+    color: #d7d7d7; /* change color */
+    background: #48a65b; /* change background color */
+    border: 2px solid #48a65b; /* change border */
+    font-size: 0.95em; /* change font size */
+    font-weight: 600; /* change font weight */
+}
+.button:hover {
+    background: #56c16b; /* change hover background color */
+    border: 2px solid #56c16b; /* change hover border */
+}
+</pre>					
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<h2 class="margin-top">Lines</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<pre class="htmlCode">
+&lt;div class="hr">&lt;/div>
+&lt;div class="hr margin">&lt;/div>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - shortcodes.css</h4>	
+<pre class="cssCode">
+.hr {
+    width: 100%; /* change width */
+    border-top: 1px solid rgba(255,255,255,0.15); 
+	/* change border */
+}
+</pre>					
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<h2 class="margin-top">Icons / Social</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<pre class="htmlCode">
+&lt;a href="">&lt;i class="fa fa-twitter">&lt;/i>&lt;/a>
+&lt;a href="">&lt;i class="fa fa-facebook">&lt;/i>&lt;/a>
+&lt;a href="">&lt;i class="fa fa-google-plus">&lt;/i>&lt;/a>
+&lt;!-- 
+	For more Icons check http://fontawesome.io/ 
+	and replace the class "fa-twitter"
+	with your new icon class
+-->
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - shortcodes.css</h4>	
+<pre class="cssCode">
+.social-icons a {
+    color: #d7d7d7; /* change color */
+    border: 2px solid #d7d7d7; /* change border */
+}
+.social-icons a:hover {
+    background: #48a65b; /* change hover background color */
+    border: 2px solid #48a65b; /* change hover border */
+}
+</pre>					
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<h2 class="margin-top">Icon Box</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<pre class="htmlCode">
+&lt;div class="icon-box">
+	&lt;!-- You can use an image or a fontawesome icon -->
+    &lt;img src="images/service/diamond-icon.png" alt="" />
+    &lt;h4>Your Headline&lt;/h4>
+    &lt;p>Your Text&lt;/p>
+&lt;/div>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - shortcodes.css</h4>	
+<pre class="cssCode">
+/*
+If you use a fontawesome icon 
+*/
+.icon-box:hover i {
+    color: #48a65b; /* hover color */
+}
+</pre>					
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<h2 class="margin-top">Normal Slider and Device Slider</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<pre class="htmlCode">
+&lt;!-- Normal SLIDER -->
+&lt;ul class="normal-slider">
+    &lt;li>&lt;img src="your-image-01.jpg" alt="" />&lt;/li>
+    &lt;li>&lt;img src="your-image-02.jpg" alt="" />&lt;/li>
+    &lt;li>&lt;img src="your-image-03.jpg" alt="" />&lt;/li>
+&lt;/ul>
+	
+&lt;!-- MACBOOK DEVICE SLIDER -->
+&lt;div class="device-slider macbook">
+    &lt;ul id="macbook-01">
+        &lt;li>&lt;img src="your-image-01.jpg" alt="" />&lt;/li>
+        &lt;li>&lt;img src="your-image-02.jpg" alt="" />&lt;/li>
+        &lt;li>&lt;img src="your-image-03.jpg" alt="" />&lt;/li>
+    &lt;/ul>
+    &lt;img class="device-img" src="images/layout/device-slider-macbook.png" alt="Macbook Device" />
+&lt;/div>
+				
+&lt;!-- IPHONE DEVICE SLIDER -->
+&lt;div class="device-slider iphone">
+    &lt;ul id="iphone-01">
+        &lt;li>&lt;img src="your-image-01.jpg" alt="" />&lt;/li>
+        &lt;li>&lt;img src="your-image-02.jpg" alt="" />&lt;/li>
+        &lt;li>&lt;img src="your-image-03.jpg" alt="" />&lt;/li>
+    &lt;/ul>
+    &lt;img class="device-img" src="images/layout/device-slider-iphone.png" alt="Iphone Device" />
+&lt;/div>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - shortcodes.css</h4>	
+<p>
+	You do not need to edit these css for the device slider.
+	Here's an example for do settings for the normal slider
+</p>
+<pre class="cssCode">
+.normal-slider {
+	/* Do settings for the normal slider here */
+}
+</pre>	
+		
+<h4 class="margin-top">Javascript - theme.settings.js</h4>	
+<pre class="scriptCode">
+/* ==== NORMAL SLIDER  ==== */
+$('.normal-slider').bxSlider({
+    slideWidth: 1200,
+    minSlides: 1,
+    maxSlides: 1,
+    auto: true
+});
+/* ==== MACBOOK DEVICE SLIDER  ==== */
+$('#macbook-01').bxSlider({
+    slideWidth: 1200,
+    minSlides: 1,
+    maxSlides: 1,
+    controls: false,
+    auto: true
+});
+/* ==== IPHONE DEVICE SLIDER  ==== */
+$('#iphone-01').bxSlider({
+    slideWidth: 1200,
+    minSlides: 1,
+    maxSlides: 1,
+    controls: false,
+    auto: true,
+    autoDelay: 500
+});
+</pre>							
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<h2 class="margin-top">Pricing Table</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<p>
+	You can add the class "best-price" to highlighting your pricing table:<br />
+	&lt;div class="pricing-table <span class="bold">best-price</span>">...&lt;/div>
+</p>
+<pre class="htmlCode">
+&lt;div class="pricing-table">
+    &lt;div class="header">
+        &lt;h3>Headline&lt;/h3>
+        &lt;span class="price">39 $ / month&lt;/span>
+    &lt;/div>
+    &lt;div class="content">
+        &lt;ul>
+            &lt;li>Your Service&lt;/li>
+            &lt;li>Your Service&lt;/li>
+			&lt;li>Your Service&lt;/li>
+			&lt;li>Your Service&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="footer">
+        &lt;a class="button border">Purchase Now&lt;/a>
+    &lt;/div>
+&lt;/div>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - shortcodes.css</h4>	
+<pre class="cssCode">
+.pricing-table {
+    background: #384551; /* change background color */
+}
+	
+/* TOP PRICE */
+.pricing-table.best-price .header {
+    background: #48a65b; /* change best-price color */
+    border-bottom: 1px solid #48a65b; 
+	/* change best-price border color */
+}
+</pre>						
+			</div>
+		</div>
+		
+
+		<div class="row">
+			<h2 class="margin-top">Toggle Box</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<pre class="htmlCode">
+&lt;div class="toggle-box">
+    &lt;div class="toggle">
+        &lt;a class="header">
+            &lt;span class="icon plus">+&lt;/span>
+			&lt;span class="icon minus">-&lt;/span>
+            &lt;span class="text">Toggle Box Header&lt;/span>
+        &lt;/a>
+        &lt;div class="content">
+          	Your Content
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="toggle">
+        &lt;a class="header">
+            &lt;span class="icon plus">+&lt;/span>
+			&lt;span class="icon minus">-&lt;/span>
+            &lt;span class="text">Toggle Box Header&lt;/span>
+        &lt;/a>
+        &lt;div class="content">
+          	Your Content
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - shortcodes.css</h4>	
+<pre class="cssCode">
+.toggle-box .toggle .header {
+    background: #384551; /* change background color */
+    color: #d7d7d7; /* change font color */
+}
+.toggle-box .toggle .header:hover {
+    background: #48a65b;
+    /* change hover background color */
+}
+.toggle-box .toggle .header.active {
+    background: #48a65b;
+    /* change active background color */
+}
+.toggle-box .content {
+    background: #384551;
+    /* change content backgorund color */
+}
+</pre>
+            </div>
+		</div>
+		
+		
+		<div class="row">
+			<h2 class="margin-top">Skillbar</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<p>
+	Replace the number in data-percent to change the percent.<br />
+	data-percent="<span class="bold">80</span>"
+</p>
+<pre class="htmlCode">
+&lt;div data-percent="100" class="skillbar">
+    &lt;span class="skill">Skill&lt;/span>
+    &lt;span class="number">100%&lt;/span>
+    &lt;span class="percent-bg">&lt;/span>
+&lt;/div>
+&lt;div data-percent="100" class="skillbar">
+    &lt;span class="skill">Skill&lt;/span>
+    &lt;span class="number">80%&lt;/span>
+    &lt;span class="percent-bg">&lt;/span>
+&lt;/div>
+&lt;div data-percent="100" class="skillbar">
+    &lt;span class="skill">Skill&lt;/span>
+    &lt;span class="number">50%&lt;/span>
+    &lt;span class="percent-bg">&lt;/span>
+&lt;/div>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - shortcodes.css</h4>	
+<pre class="cssCode">
+.skillbar {
+	background: #384551; /* background color */
+}
+.skillbar .percent-bg {
+	background: #48a65b; /* percent color */
+}
+</pre>					
+			</div>
+		</div>
+
+
+
+        <div class="row">
+            <h2 class="margin-top">Tab Content</h2>
+        </div>
+        <div class="row gutters">
+            <div class="col span_6">
+                <h4>Html</h4>
+<pre class="htmlCode">
+&lt;div class="col span_4">
+    &lt;ul class="tab-content-navi">
+        &lt;li>&lt;a open-content="tab-content-01">Tab 01&lt;/a>&lt;/li>
+        &lt;li>&lt;a open-content="tab-content-02">Tab 02&lt;/a>&lt;/li>
+    &lt;/ul>
+&lt;/div>
+&lt;div class="col span_8">
+    &lt;div class="tab-content" id="tab-content-01">
+        Your Content
+    &lt;/div>
+    &lt;div class="tab-content" id="tab-content-02">
+        Your Content
+    &lt;/div>
+&lt;/div>
+</pre>
+            </div>
+            <div class="col span_6">
+                <h4>CSS - shortcodes.css</h4>
+<pre class="cssCode">
+.tab-content-navi li a {
+    color: #d7d7d7; /* color */
+    background: #384551; /* background color */
+    border-left: 4px solid #384551; /* border left */
+}
+.tab-content-navi a.active {
+    border-left: 4px solid #48a65b; /* active border left */
+}
+.tab-content-navi a:hover {
+    border-left: 4px solid #48a65b; /* hover border left */
+}
+</pre>
+            </div>
+        </div>
+		
+		
+        <div class="row">
+            <h2 class="margin-top">Callout Box</h2>
+        </div>
+        <div class="row gutters">
+            <div class="col span_6">
+                <h4>Html</h4>
+<pre class="htmlCode">
+&lt;div class="callout-box">
+    &lt;h3>Your Title&lt;/h3>
+    &lt;p class="max-width">
+        Your Text
+    &lt;/p>
+    &lt;a class="button">Button Text&lt;/a>
+&lt;/div>
+</pre>
+            </div>
+            <div class="col span_6">
+                <h4>CSS - shortcodes.css</h4>
+<pre class="cssCode">
+.callout-box {
+    border-left: 4px solid #48a65b; /* change border color */
+    background: #384551; /* change background color */
+}
+</pre>
+            </div>
+        </div>
+		
+		
+        <div class="row">
+            <h2 class="margin-top">Alert Box</h2>
+        </div>
+        <div class="row gutters">
+            <div class="col span_6">
+                <h4>Html</h4>
+<pre class="htmlCode">
+&lt;div class="alert-box error">
+    Error Message
+    &lt;a class="close">x&lt;/a>
+&lt;/div>
+&lt;div class="alert-box warning">
+    Warning Message
+    &lt;a class="close">x&lt;/a>
+&lt;/div>
+&lt;div class="alert-box success">
+    Success Message
+    &lt;a class="close">x&lt;/a>
+&lt;/div>
+&lt;div class="alert-box notice">
+    Notice Message
+    &lt;a class="close">x&lt;/a>
+&lt;/div>
+</pre>
+            </div>
+            <div class="col span_6">
+                <h4>CSS - shortcodes.css</h4>
+<pre class="cssCode">
+.alert-box {
+	background: #384551; /* change background color */
+}
+/* error settings */
+.alert-box.error {
+	color: #cb4545;
+	border-left: 4px solid #cb4545;
+}
+.alert-box.error .close {
+	color: #cb4545;
+}
+/* warning settings */
+.alert-box.warning {
+	color: #cec25f;
+	border-left: 4px solid #cec25f;
+}
+.alert-box.warning .close {
+	color: #cec25f;
+}
+/* success settings */
+.alert-box.success {
+	color: #48a65b;
+	border-left: 4px solid #48a65b;
+}
+.alert-box.success .close {
+	color: #48a65b;
+}
+/* notice settings */
+.alert-box.notice {
+	color: #9f9f9f;
+	border-left: 4px solid #9f9f9f;
+}
+.alert-box.notice .close {
+	color: #9f9f9f;
+}
+</pre>
+            </div>
+        </div>
+	</section>
+	
+	
+	
+	
+	
+    <section id="work">
+        <div class="row">
+            <h1>Add Work Example</h1>
+			<p class="color">
+				The AJAX Work Details load function not works offline in every Browser.
+			</p>
+        </div>
+		<div class="row">
+			<h2>Preview grid</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html - index.html</h4>	
+<p>
+	At first, there is the preview grid in the index.html file of your theme. To add a new work example, copy the &lt;li class="mix webdesign">&lt;/li> with his content. Your preview image must have a size of 600 x 450 px.
+</p>
+<pre class="htmlCode">
+&lt;ul id="work-preview">
+	&lt;li class="mix webdesign">
+		&lt;a work-link="#work-01.html">
+			&lt;img src="your-preview-image.jpg" alt="" />
+			&lt;div class="layer">
+				&lt;h4 class="underline">Your title&lt;/h4>
+				&lt;span class="client">Client / &lt;i>Your Client&lt;/i>&lt;/span>
+			&lt;/div>
+		&lt;/a>
+	&lt;/li>
+	&lt;li class="mix webdesign">
+		...
+	&lt;/li>
+&lt;/ul>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - stylesheet.css</h4>	
+<pre class="cssCode">
+#work-preview .layer {
+	background: rgba(71,165,91,0.85);
+	/* change background color of the layer */
+}
+</pre>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<h2 class="margin-top">Wrok Details</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<p>
+	Add a new html file to the /work/ folder. Now replace the link of your work example in the preview grid with your new filename: &lt;a work-link="#<span class="bold">work-01.html</span>">...&lt;/a>.
+</p>
+<pre class="htmlCode">
+&lt;!DOCTYPE HTML>
+&lt;html>
+&lt;head>
+&lt;/head>
+&lt;body>
+&lt;article class="work-article">
+    &lt;ul class="work-slider">
+        &lt;li>&lt;img src="work-image-01.jpg" alt="" />&lt;/li>
+        &lt;li>&lt;img src="work-image-02.jpg" alt="" />&lt;/li>
+        &lt;li>&lt;img src="work-image-03.jpg" alt="" />&lt;/li>
+    &lt;/ul>
+	&lt;div class="wrapper">
+		YOUR CONTENT
+	&lt;/div>
+&lt;/article>
+&lt;/body>
+&lt;/html>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - stylesheet.css</h4>	
+<p>
+	Add styles to the work details by using the class ".work-article".
+</p>
+<pre class="cssCode">
+/* For example the link color */
+.work-article a {
+	color: #ff0;
+}
+/* For example the headline size */
+.work-article h4 {
+    font-size: 3em;
+}
+</pre>					
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<h2 class="margin-top">Work Filter Tabs</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<p>
+	You can add filters as many as you want. Replace the data-filter="<span class="bold">webdesign</span>" with your new filtername. Then add the new filtername as a class name to &lt;li&nbsp;class="mix&nbsp;<span class="bold">webdesign</span>">...&lt;/li> in the preview grid. To make a filter, thats show all of your work, replace the data-filter with data-filter="<span class="bold">all</span>".
+</p>
+<pre class="htmlCode">
+&lt;ul class="work-tabs">
+    &lt;li class="filter active" data-filter="all">
+		&lt;a>All&lt;/a>
+	&lt;/li>
+    &lt;li class="filter" data-filter="webdesign">
+		&lt;a>Webdesign&lt;/a>
+	&lt;/li>
+    &lt;li class="filter" data-filter="html">
+		&lt;a>HTML 5 & CSS 3&lt;/a>
+	&lt;/li>
+&lt;/ul>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - stylesheet.css</h4>	
+<pre class="cssCode">
+.work-tabs li a {
+    color: #d7d7d7;
+    border: 2px solid #d7d7d7;
+    background: none;
+    font-size: 0.95em;
+    font-weight: 600;
+}
+.work-tabs li a:hover {
+    color: #d7d7d7;
+    background: #48a65b;
+    border: 2px solid #48a65b;
+}
+.work-tabs li.active a {
+    color: #d7d7d7;
+    background: #48a65b;
+    border: 2px solid #48a65b;
+}
+</pre>					
+			</div>
+		</div>
+    </section>
+	
+	
+    <section id="blog">
+        <div class="row">
+            <h1>Add Blog Article</h1>
+			<p class="color">
+				The AJAX Blog Details load function not works offline in every Browser.
+			</p>
+        </div>
+		<div class="row">
+			<h2>Articel Preview</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html - index.html</h4>	
+<p>
+	At first, there is the preview grid in the index.html file of your theme. To add a new blog article, copy the &lt;li>&lt;/li> with his content. Your preview image must have a size of 600 x 360 px.
+</p>
+<pre class="htmlCode">
+&lt;ul id="blog-preview">
+    &lt;li>
+        &lt;div class="layer">
+            &lt;a blog-link="#blog-01.html" class="button">Show Article&lt;/a>
+        &lt;/div>
+        &lt;img class="prev-img" src="your-preview-image.jpg" alt="" />
+        &lt;div class="text">
+            &lt;h4 class="underline">
+				Your Title
+			&lt;/h4>
+            &lt;span class="detail">Categorie / &lt;i>Your Categorie&lt;/i>&lt;/span>
+            &lt;span class="detail">Author / &lt;i>The Author&lt;/i>&lt;/span>
+            &lt;span class="detail">Date / &lt;i>The Date&lt;/i>&lt;/span>
+        &lt;/div>
+    &lt;/li>
+&lt;/ul>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - stylesheet.css</h4>	
+<pre class="cssCode">
+#blog-preview li {
+    background: #384551; /* change background color */
+}
+#blog-preview li:hover {
+    background: #48a65b; /* change hover background color */
+}
+</pre>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<h2 class="margin-top">Blog Details</h2>
+		</div>
+		<div class="row gutters">
+			<div class="col span_6">
+<h4>Html</h4>	
+<p>
+	Add a new html file to the /blog/ folder. Now replace the link of your article preview in the preview grid with your new filename: &lt;a blog-link="#<span class="bold">blog-01.html</span>">...&lt;/a>.
+</p>
+<pre class="htmlCode">
+&lt;!DOCTYPE HTML>
+&lt;html>
+&lt;head>
+&lt;/head>
+&lt;body>
+&lt;article class="blog-article">
+    &lt;ul class="blog-slider">
+        &lt;li>&lt;img src="blog-image-01.jpg" alt="" />&lt;/li>
+        &lt;li>&lt;img src="blog-image-02.jpg" alt="" />&lt;/li>
+        &lt;li>&lt;img src="blog-image-03.jpg" alt="" />&lt;/li>
+    &lt;/ul>
+	&lt;div class="wrapper">
+	    Your Content
+	&lt;/div>
+&lt;/article>
+&lt;/body>
+&lt;/html>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - stylesheet.css</h4>	
+<p>
+	Add styles to the work details by using the selector class ".blog-article".
+</p>
+<pre class="cssCode">
+/* For example the link color */
+.blog-article a {
+	color: #ff0;
+}
+/* For example the headline size */
+.blog-article h4 {
+    font-size: 3em;
+}
+</pre>					
+			</div>
+		</div>
+    </section>
+
+
+        <section id="parallax">
+            <div class="row">
+                <h1>Add a Parallax Background</h1>
+            </div>
+			<div class="row gutters">
+				<div class="col span_6">
+<h4>Html</h4>	
+<p>
+	To give a container a parallax background add the class="<span class="bold">paralax-content</span>" and a individual class name to define the background image<br /> class="paralax-content&nbsp;<span class="bold">bubble-background</span>".
+</p>
+<pre class="htmlCode">
+&lt;div class="paralax-content bubble-background">
+    Your Content
+&lt;/div>
+</pre>		
+			</div>
+			<div class="col span_6">
+<h4>CSS - stylesheet.css</h4>	
+<p>
+	Now add your new class and define the background image.
+</p>
+<pre class="cssCode">
+.bubble-background {
+    background-image: url('../path/bubble-background.jpg');
+}
+</pre>			
+
+<h4 class="margin-top">Javascript - theme.settings.js</h4>		
+<p>
+	If you want different parallax sections with different speeds, copy the javascript code and replace the class ".paralax-content" with the class of your section.
+</p>
+<pre class="scriptCode">
+$('.paralax-content').parallax({
+    speed: 0.25 /* speed of the parallax effect */
+});
+</pre>	
+				</div>
+			</div>
+        </section>	
+		
+		
+		
+        <section id="contact">
+            <div class="row">
+                <h1>PHP Contact Form</h1>
+			</div>
+			<div class="row gutters">
+				<div class="col span_6">
+					<h4>PHP - mail.php</h4>	
+					<p>
+						To send emails via the contact form, just replace the value "$toAddresses" with your email adress in the "mail.php" file.
+					</p>
+<pre class="phpCode">
+$toAddresses = array(
+    'youremail@yourdomain.de',
+);
+</pre>		
+				</div>
+				<div class="col span_6">
+				
+				</div>
+			</div>
+        </section>
+		
+		
+		
+		
+        <section id="credits">
+            <div class="row">
+                <h1>Credits and Sources</h1>
+				<h4>Javascript / jQuery Plugins</h4>
+				<p>
+					jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/<br />
+					SmoothScroll for websites v1.2. - Balazs Galambosi, Michael Herf<br />
+					jQuery Simple Parallax Plugin - Author: Heather Corey<br />
+					BxSlider v4.1.1 - Fully loaded, responsive content slider - http://bxslider.com<br />
+					jquery.hoverdir.js v1.1.0 - http://www.codrops.com<br />
+					MIXITUP - A CSS3 and JQuery Filter & Sort Plugin - http://mixitup.io<br />
+					jQuery carouFredSel 6.2.1 - caroufredsel.dev7studios.com<br />
+					Respond.js v1.1.0: min/max-width media query polyfill. (c) Scott Jehl
+				</p>
+				<h4>CSS Plugins</h4>
+				<p>
+					12 COLUMN : RESPONSIVE GRID SYSTEM - http://responsive.gs<br />
+					Font Awesome 4.0.3 by @davegandy - http://fontawesome.io
+				</p>
+				<h4>Images</h4>
+				<p>
+					Images - http://unsplash.com
+				</p>
+				
+				
+				<p class="margin-top max-width">
+					As we said at the beginning, we are glad to help you if you have any questions relating to this theme. No guarantees, but we do our best to assist.<br />
+					<span class="bold">IIMediaMonkeys</span>
+				</p>
+				<p>
+					<a class="button" href="mailto:info@mediamonkeys.de">Support via eMail</a>
+					<a class="button" href="http://themeforest.net/user/IIMediaMonkeys">Go to Themeforest</a>
+				</p>
+				<p>
+					<a href="http://www.mediamonkeys.de"><img src="assets/images/layout/mediamonkeys_logo.png" alt="MediaMonkeys" /></a>
+				</p>
+            </div>
+			
+        </section>	
+
+<!-- THEME JAVASCRIPT -->
+
+<script type="text/javascript" src="assets/scripts/jquery.snippet.js"></script>
+<script type="text/javascript" src="assets/scripts/respond.min.js"></script>
+<script type="text/javascript" src="assets/scripts/theme.javascript.js"></script>
+<script type="text/javascript">
+	
+	$(".htmlCode").snippet("html",{style:"acid"});
+	$(".cssCode").snippet("css",{style:"acid"});
+	$(".scriptCode").snippet("javascript",{style:"acid"});
+	$(".phpCode").snippet("php",{style:"acid"});
+	
+
+</script>
+</body>
+</html>
