@@ -1,0 +1,172 @@
+
+/* --------------------------------------------------------------------- */
+/* 1. DOCUMENT SETUP
+/* --------------------------------------------------------------------- */
+
+body {
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+	color: #585858;
+	background: #f5f5f5;
+    height: 100%;
+}
+
+::selection {
+    background: #333333;
+    color: #f5f5f5;
+}
+::-moz-selection {
+    background: #333333;
+    color: #f5f5f5;
+}
+
+
+a {
+    color: #1d998e;
+    text-decoration: none;
+	cursor: pointer;
+}
+
+p {
+    font-size: 0.9em;
+    margin-bottom: 25px;
+}
+p.max-width {
+    max-width: 700px;
+}
+
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+	font-weight: 700;
+}
+h1 {
+    font-size: 2.6em;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    background: url('../images/layout/border.jpg') bottom repeat-x;
+}
+h2 {
+	font-size: 1.6em;
+	margin-bottom: 20px;
+}
+h3 {
+	font-size: 1.2em;
+	margin-bottom: 15px;
+}
+h4 {
+	font-size: 1em;
+	margin-bottom: 10px;
+}
+
+
+.bold {
+    font-weight: 700;
+}
+.color {
+	color: #1d998e;
+}
+
+.margin-top {
+	margin-top: 50px;
+}
+
+
+a.button {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 0.9em;
+    background: #1d998e;
+	font-weight: 600;
+	color: #fff;
+    border-bottom: 4px solid #177b72;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+a.button:hover {
+	background: #22b2a5;
+}
+
+
+/* --------------------------------------------------------------------- */
+/* 2. HEADER
+/* --------------------------------------------------------------------- */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+	background: #dfdfdf;
+    border-bottom: 5px solid #c2c2c2;
+    z-index: 999;
+}
+
+
+/* === NAVIGATION === */
+
+#main-navigation {
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+#main-navigation li {
+	position: relative;
+    float: left;
+    margin: 0 0 2px 2px;
+}
+#main-navigation:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#main-navigation a {
+    display: block;
+    padding: 6px 17px;
+    font-size: 0.9em;
+	font-weight: 700;
+	color: #585858;
+	 border-bottom: 3px solid #dfdfdf;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+#main-navigation a:hover {
+    background: #1d998e;
+	color: #fff;
+    border-bottom: 3px solid #177b72;
+}
+#main-navigation a.active {
+    background: #1d998e;
+	color: #fff;
+    border-bottom: 3px solid #177b72;
+}
+
+
+
+/* --------------------------------------------------------------------- */
+/* 3. WRAPPER
+/* --------------------------------------------------------------------- */
+
+#page-wrapper {
+    padding: 120px 0 0 0;
+}
+
+section {
+    padding: 110px 0;
+}
+
+
+
+/* --------------------------------------------------------------------- */
+/* 4. CODE
+/* --------------------------------------------------------------------- */
+
+.code {
+    background: #fff;
+}
