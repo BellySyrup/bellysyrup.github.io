@@ -5,52 +5,16 @@
 		<title>Don't look up here</title>
 
 		<!-- jQuery -->
-		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-
-		<!-- bootstrap stuff -->
-		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-		<!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
-		<!-- font awesome for social icons-->
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-		<!-- <link rel="stylesheet" href="lib/css/font-awesome.min.css"> -->
-		<!-- animate.css for animations-->
-		<link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
-		<!-- holder.js - for dynamic placeholder images -->
-		<script src="http://imsky.github.io/holder/holder.js"></script>
 		
-		<!-- custom stuff -->
+		<link rel="stylesheet" href="netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		
+		<link href="netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
+		
 		<link href="styles.css" rel="stylesheet">
 
-		<script>
-
-			$(function(){
-
-				// add innovasium link and logo on all projects built at innovasium
-				inno = " <a href='http://www.innovasium.com' target='_blank'><img src='img/inno.png' alt='Powered by Innovasium'/></a>";
-				$('.inno').each(function(){
-					console.log($(this).find('h3').html());
-					temp = $(this).find('h3').html();
-					temp += inno;
-					$(this).find('h3').html(temp);
-				});
-
-				// add animations to header, thumbs and images
-				$('.header, .thumbnail').addClass('animated fadeIn');
-			});
-			
-			// scroll function to adjust menu
-			$(window).scroll(function() {
-			  var x = $("#projects").offset().top - $(window).scrollTop();
-			  var y = $('.header h1').outerHeight(true);
-			  if(x <= y){
-			  	$('.header').addClass('sticky');
-			  } else {
-			  	$('.header').removeClass('sticky');
-			  }
-			});
-			
-		</script>
+		
 	</head>
 	<body>
 
@@ -198,6 +162,37 @@
 			  </div>
 			</div>
 		</div>
+		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<script src="netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="http://imsky.github.io/holder/holder.js"></script>
+		<script>
 
+			$(function(){
+
+				// add innovasium link and logo on all projects built at innovasium
+				inno = " <a href='http://www.innovasium.com' target='_blank'><img src='img/inno.png' alt='Powered by Innovasium'/></a>";
+				$('.inno').each(function(){
+					console.log($(this).find('h3').html());
+					temp = $(this).find('h3').html();
+					temp += inno;
+					$(this).find('h3').html(temp);
+				});
+
+				// add animations to header, thumbs and images
+				$('.header, .thumbnail').addClass('animated fadeIn');
+			});
+			
+			// scroll function to adjust menu
+			$(window).scroll(function() {
+			  var x = $("#projects").offset().top - $(window).scrollTop();
+			  var y = $('.header h1').outerHeight(true);
+			  if(x <= y){
+			  	$('.header').addClass('sticky');
+			  } else {
+			  	$('.header').removeClass('sticky');
+			  }
+			});
+			
+		</script>
 	</body>
 </html>
