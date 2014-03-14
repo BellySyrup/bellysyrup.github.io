@@ -6,11 +6,11 @@
 
 		<!-- jQuery -->
 		
-		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+		<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"> -->
 		
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-		<link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
+		<!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+		<!-- <link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css"> -->
 		
 		<link href="styles.css" rel="stylesheet">
 
@@ -163,8 +163,8 @@
 			  </div>
 			</div>
 		</div>
-		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="lib/js/jquery.js"></script>
+		<!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
 		<script>
 
 			$(function(){
@@ -172,7 +172,6 @@
 				// add innovasium link and logo on all projects built at innovasium
 				inno = " <a href='http://www.innovasium.com' target='_blank'><img src='img/inno.png' alt='Powered by Innovasium'/></a>";
 				$('.inno').each(function(){
-					console.log($(this).find('h3').html());
 					temp = $(this).find('h3').html();
 					temp += inno;
 					$(this).find('h3').html(temp);
