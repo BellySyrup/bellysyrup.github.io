@@ -63,6 +63,7 @@ h1 small{
 }
 .footer a{
 	margin: 0 10px;
+	display: inline-block;
 }
 .footer .fa-github{color: #171515;}
 .footer .fa-twitter{color: #55ACEE;}
