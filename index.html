@@ -164,33 +164,9 @@
 			</div>
 		</div>
 		<script src="lib/js/jquery.js"></script>
-		<!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
 		<script>
 
-			$(function(){
-
-				// add innovasium link and logo on all projects built at innovasium
-				inno = " <a href='http://www.innovasium.com' target='_blank'><img src='img/inno.png' alt='Powered by Innovasium'/></a>";
-				$('.inno').each(function(){
-					temp = $(this).find('h3').html();
-					temp += inno;
-					$(this).find('h3').html(temp);
-				});
-
-				// add animations to header, thumbs and images
-				$('.header, .thumbnail').addClass('animated fadeIn');
-			});
-			
-			// scroll function to adjust menu
-			$(window).scroll(function() {
-			  var x = $("#projects").offset().top - $(window).scrollTop();
-			  var y = $('.header h1').outerHeight(true);
-			  if(x <= y){
-			  	$('.header').addClass('sticky');
-			  } else {
-			  	$('.header').removeClass('sticky');
-			  }
-			});
+			$(function(){x=" <a href='http://www.innovasium.com' target='_blank'><img src='img/inno.png' alt='Powered by Innovasium'/></a>";$(".inno").each(function(){y=$(this).find("h3").html();y+=x;$(this).find("h3").html(y)});$(".header, .thumbnail").addClass("animated fadeIn")});$(window).scroll(function(){var e=$("#projects").offset().top-$(window).scrollTop();var t=$(".header h1").outerHeight(true);if(e<=t){$(".header").addClass("sticky")}else{$(".header").removeClass("sticky")}})
 			
 		</script>
 	</body>
