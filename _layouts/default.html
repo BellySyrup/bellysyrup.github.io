@@ -11,7 +11,7 @@
 		{% include header.html %}
 		<div id="projects">
 		  {% for post in site.posts %}
-			<div class="jumbotron inno">
+			<div class="jumbotron {{ post.group }}">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-md-3">
@@ -27,6 +27,13 @@
 				</div>
 			</div>
 		  {% endfor %}
+
+		  {% for item in site.posts %}
+			 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+			  {% if thecycle == 'odd' %}
+			    <div>echo something</div>
+			  {% endif %}
+			{% endfor %}
 		  {% include footer.html %}
 		</div>
 		<script src="lib/js/jquery.js"></script>
