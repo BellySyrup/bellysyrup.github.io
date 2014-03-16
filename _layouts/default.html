@@ -55,7 +55,24 @@
 		<script>
 
 			$(function(){x=" <a href='http://www.innovasium.com' target='_blank'><img src='img/inno.png' alt='Powered by Innovasium'/></a>";$(".inno").each(function(){y=$(this).find("h3").html();y+=x;$(this).find("h3").html(y)});$(".header, .thumbnail").addClass("animated fadeIn")});$(window).scroll(function(){var e=$("#projects").offset().top-$(window).scrollTop();var t=$(".header h1").outerHeight(true);if(e<=t){$(".header").addClass("sticky")}else{$(".header").removeClass("sticky")}})
-			
+			 function scrollBanner() {
+			    //Get the scoll position of the page
+			    scrollPos = jQuery(this).scrollTop();
+
+			    //Scroll and fade out the banner text
+			    
+				
+			    //Scroll the background of the banner
+			    jQuery('.header').css({
+			      'background-position' : 'center ' + (-scrollPos/8)+"px"
+			    });    
+			  }
+			  $(function(){
+			  	$(window).scroll(function() {	      
+	       			scrollBanner();	      
+				});
+			  });
+			  
 		</script>
 	</body>
 </html>
