@@ -19,15 +19,11 @@ body{
 
 .header{
 	background: url(img/banner.jpg) top center;
-	height: 500px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	box-shadow: 0 0 10px #333 inset;
+	height: 451px;
 	color: rgba(255,255,255,0.7);
 	padding-top:0;
 	padding-bottom: 0;
+	margin-bottom: 0;
 }
 .header h1{
 	margin-bottom: 20px;
@@ -36,18 +32,12 @@ h1 small{
 	color: rgba(255,255,255,0.9);
 	white-space: nowrap;
 }
-.header.sticky{
-	height: auto;
-	z-index:100;
-	overflow: hidden;
-	background: black;
-}
 
 /********* Projects *********/
 
 #projects{
 	box-shadow: 0 0 10px #333;
-	margin-top: 500px;
+	amargin-top: 500px;
 	background: #FAFAFA;
 	position: relative;
 }
@@ -89,8 +79,5 @@ h1 small{
 		height: auto;
 		z-index:100;
 		overflow: hidden;
-	}
-	#projects{
-		margin-top: 79px;
 	}
 }
