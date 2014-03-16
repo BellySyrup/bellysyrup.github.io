@@ -12,6 +12,7 @@
 		<div id="projects">
 
 		  {% for item in site.posts %}
+		  {{item}}
 			 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 			  {% if thecycle == 'odd' %}
 			    <div class="jumbotron {{ post.group }}">
@@ -47,6 +48,7 @@
 				</div>
 			  {% endif %}
 			{% endfor %}
+
 		  {% include footer.html %}
 		</div>
 		<script src="lib/js/jquery.js"></script>
