@@ -8,13 +8,14 @@
 
 	</head>
 	<body>
+		{% include header.html %}
 		<div id="projects">
 		  {% for post in site.posts %}
 			<div class="jumbotron inno">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-md-3">
-							<a href="{{ post.link }}" class="thumbnail">
+							<a href="http://{{ post.link }}" class="thumbnail">
     							<img src="{{ post.img }}" alt="{{ post.title }}">
     						</a>
     					</div>
@@ -26,6 +27,7 @@
 				</div>
 			</div>
 		  {% endfor %}
+		  {% include footer.html %}
 		</div>
 	</body>
 </html>
