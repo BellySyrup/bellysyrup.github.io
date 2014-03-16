@@ -12,7 +12,7 @@
 		<div id="projects">
 
 		  {% for item in site.posts %}
-		  {{item}}
+		  {{item.title}}
 			 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 			  {% if thecycle == 'odd' %}
 			    <div class="jumbotron {{ post.group }}">
