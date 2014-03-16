@@ -74,9 +74,6 @@ h1 small{
 .footer .fa-html5{color: #E34C26;}
 
 @media (max-width: 480px){
-	h1 small{
-		display: none;
-	}
 	.header{
 		height: auto;
 	}
