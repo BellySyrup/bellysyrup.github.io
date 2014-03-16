@@ -8,13 +8,14 @@
 
 	</head>
 	<body>
+		<div id="projects">
 		  {% for post in site.posts %}
 			<div class="jumbotron inno">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-md-3">
-							<a href="http://allerganprivilege.ca" class="thumbnail">
-    							<img src="img/allergan.png" alt="Allergan Privilege Program">
+							<a href="{{ post.url }}" class="thumbnail">
+    							<img src="{{ post.image }}" alt="{{ post.title }}">
     						</a>
     					</div>
 						<div class="col-xs-12 col-md-9">
@@ -24,9 +25,7 @@
 					</div>
 				</div>
 			</div>
-
-		      <!-- <a href="{{ post.url }}"></a> -->
-
 		  {% endfor %}
+		</div>
 	</body>
 </html>
