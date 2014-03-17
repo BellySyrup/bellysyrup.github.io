@@ -48,15 +48,19 @@ h1 small{
 }
 .header{
 	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 .menu{
 	text-align: right;
 }
-.header a{
+.menu a{
 	font-size: 18px;
 	font-weight: bold;
 	color: #333;
 	margin-left: 10px;
+	margin-bottom: 48px;
+	margin-top: 48px;
 }
 #blog img,
 #post img{
