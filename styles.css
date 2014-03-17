@@ -39,7 +39,7 @@ h1 small{
 /********* Projects *********/
 
 #projects{
-	box-shadow: 0 0 10px #333;
+	overflow: auto;
 	background: #FFFFFF;
 	position: relative;
 }
