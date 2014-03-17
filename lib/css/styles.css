@@ -58,6 +58,13 @@ h1 small{
 	display: block;
 	margin-top: 20px;
 }
+#logo h1{
+	margin: 0;
+	line-height: 81px;
+}
+#logo a{
+	color: #333;
+}
 .menu{
 	text-align: right;
 	padding-top: 48px;
@@ -68,6 +75,10 @@ h1 small{
 	font-weight: bold;
 	color: #333;
 	margin-left: 20px;
+}
+.logo a:hover,
+.menu a:hover{
+	color: #111;
 }
 #blog img,
 #post img{
