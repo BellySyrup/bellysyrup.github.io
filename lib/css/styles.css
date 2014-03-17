@@ -98,7 +98,7 @@ h1 small{
 
 @media (max-width: 480px){
 	.header{
-		height: auto;
+		height: 200px
 	}
 	.header #bannerText{
 		position: static;
