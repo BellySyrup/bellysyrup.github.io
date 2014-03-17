@@ -36,6 +36,13 @@ h1 small{
 	white-space: nowrap;
 }
 
+#blog .header{
+	height: 200px;
+}
+#blog .header #bannerText{
+	top: 70px;
+}
+
 /********* Projects *********/
 
 #projects{
