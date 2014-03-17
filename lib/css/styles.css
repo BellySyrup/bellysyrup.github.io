@@ -52,9 +52,11 @@ h1 small{
 	padding-bottom: 0;
 }
 #logo{
-	height: 60px;
-	width: 100px;
-	background: blue;
+	height: 81px;
+	width: 200px;
+	background: #fff;
+	display: block;
+	margin-top: 20px;
 }
 .menu{
 	text-align: right;
