@@ -13,9 +13,11 @@
 					{% if item.type == 'blog' %}
 						<div class="jumbotron">
 							<div class="container">
-								<div class="row">	
-									{{ item.title }}
-									{{ item.excerpt }}
+								<div class="row">
+									<div class="col-xs-6 col-xs-offset-3">
+										<h3>{{ item.title }}</h3>
+										{{ item.excerpt }}
+									</div>
 								</div>
 							</div>
 						</div>
