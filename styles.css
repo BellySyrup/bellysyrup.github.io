@@ -43,6 +43,9 @@ h1 small{
 	top: 40px;
 }
 
+#post img{
+	max-width: 100%;
+}
 /********* Projects *********/
 
 #projects{
