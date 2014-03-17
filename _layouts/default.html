@@ -9,7 +9,7 @@
 	<body>
 		{% include header.html %}
 		<div id="projects">
-		  {% for item in site.sites.posts %}
+		  {% for item in site.categories.sites.posts %}
 			 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 			  {% if thecycle == 'odd' %}
 			    <div class="jumbotron {{ item.group }}">
