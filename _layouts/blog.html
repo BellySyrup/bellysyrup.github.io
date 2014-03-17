@@ -10,8 +10,8 @@
 		{% include header.html %}
 		<div id="projects">
 			<ul>
-			{% for item in site.posts.blog %}
-			 	{% if item.type == 'blog' %}
+			{% for item in site.posts %}
+				{% if item.type == 'blog' %}
 					<li>{{ item.title }}</li>
 				{% endif %}
 			{% endfor %}
