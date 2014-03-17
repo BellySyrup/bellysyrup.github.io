@@ -53,14 +53,14 @@ h1 small{
 }
 .menu{
 	text-align: right;
+	padding-top: 48px;
+	padding-bottom: 48px;
 }
 .menu a{
 	font-size: 18px;
 	font-weight: bold;
 	color: #333;
 	margin-left: 10px;
-	margin-bottom: 48px;
-	margin-top: 48px;
 }
 #blog img,
 #post img{
