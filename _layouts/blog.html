@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ page.title }}</title>
+		
+		<link href="styles.css" rel="stylesheet">
+
+	</head>
+	<body>
+		{% include header.html %}
+		<div id="projects">
+
+		  {% for item in site.posts %}
+
+			 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+			  {% if thecycle == 'odd' %}
+			    <div class="jumbotron {{ item.group }}">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-md-4">
+								<a href="http://{{ item.link }}" class="thumbnail">
+	    							<img src="img/{{ item.img }}" alt="{{ item.title }}">
+	    						</a>
+	    					</div>
+							<div class="col-xs-12 col-md-8">
+								<h3>{{ item.title }}</h3>
+								<p>{{ item.description }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			    {% else %}
+				<div class="jumbotron {{ item.group }}">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-md-4 col-md-push-8">
+								<a href="http://{{ item.link }}" class="thumbnail">
+	    							<img src="img/{{ item.img }}" alt="{{ item.title }}">
+	    						</a>
+	    					</div>
+	    					<div class="col-xs-12 col-md-8 col-md-pull-4">
+								<h3>{{ item.title }}</h3>
+								<p>{{ item.description }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			  {% endif %}
+			{% endfor %}
+
+		  
+		</div>
+		{% include footer.html %}
+		<script src="lib/js/jquery.js"></script>
+		<script>
+
+			$(function(){
+				x=" <a href='http://www.innovasium.com' target='_blank'><img src='img/inno.png' alt='Powered by Innovasium'/></a>";
+				$(".inno").each(function(){
+					y=$(this).find("h3").html();
+					y+=x;$(this).find("h3").html(y);
+				});
+				$(".header, .thumbnail").addClass("animated fadeIn");
+
+			});
+			$(window).scroll(function() {	      
+       			scrollBanner();	      
+			});
+			function scrollBanner() {
+			    scrollPos = jQuery(this).scrollTop();
+
+			    jQuery('.header div').css({
+			      'margin-top' : -(scrollPos/3)+"px",
+			      'opacity' : 1-(scrollPos/300)
+			    });
+			    
+			    $('.header').css({
+			      'background-position' : 'center ' + (-scrollPos/8)+"px"
+			    });    
+			  }
+			  
+		</script>
+	</body>
+</html>
