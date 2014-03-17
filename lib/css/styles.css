@@ -20,7 +20,7 @@ body{
 }
 /********* Header *********/
 
-.header{
+.banner{
 	background: url(../../img/banner.jpg) top center;
 	height: 451px;
 	color: rgba(255,255,255,0.7);
@@ -28,11 +28,11 @@ body{
 	padding-bottom: 0;
 	margin-bottom: 0;
 }
-.header #bannerText{
+.banner #bannerText{
 	position: fixed;
 	top: 300px;
 }
-.header h1{
+.banner h1{
 	margin-bottom: 20px;
 }
 h1 small{
@@ -46,11 +46,14 @@ h1 small{
 #bannerText a:hover{
 	color: white;
 }
-
+.menu{
+	text-align: right;
+}
 .menu a{
 	font-size: 18px;
 	font-weight: bold;
 	color: #333;
+	margin-left: 10px;
 }
 
 #blog img,
@@ -97,10 +100,10 @@ h1 small{
 .footer .fa-html5{color: #E34C26;}
 
 @media (max-width: 480px){
-	.header{
+	.banner{
 		height: 200px
 	}
-	.header #bannerText{
+	.banner #bannerText{
 		position: static;
 	}
 }
