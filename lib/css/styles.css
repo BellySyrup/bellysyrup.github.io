@@ -39,7 +39,13 @@ h1 small{
 	color: rgba(255,255,255,0.9);
 	white-space: nowrap;
 }
-
+#bannerText a{
+	color: rgba(255,255,255,0.7);
+	text-decoration: none;
+}
+#bannerText a:hover{
+	color: white;
+}
 #blog .header{
 	height: 200px;
 }
