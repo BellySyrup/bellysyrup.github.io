@@ -12,7 +12,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-md-6 col-md-offset-3">
-							{{ page.img }}
+							<h2>{{ page.title }}</h2>
+							{% if item.img %}
+								<p><img src="img/blog/{{ page.img }}" alt="{{ page.title }}" /></p>
+							{% endif %}
 							{{ content }}
 							<br/>
 							{% include disqus.html %}
