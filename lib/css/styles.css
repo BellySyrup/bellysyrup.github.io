@@ -46,11 +46,11 @@ h1 small{
 #bannerText a:hover{
 	color: white;
 }
-#blog .header{
-	/*height: 200px;*/
-}
-#blog .header #bannerText{
-	/*top: 40px;*/
+
+.menu a{
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
 }
 
 #blog img,
