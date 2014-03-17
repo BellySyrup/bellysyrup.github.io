@@ -5,18 +5,11 @@
 @import url("holyshit.css");
 
 /********* General *********/
-body{
-	/*background-color: #111111;*/
-}
 .jumbotron{
 	background: none;
 }
 .hide{
 	display: none;
-}
-.navbar{
-	margin-bottom: 0;
-	background: none;
 }
 /********* Header *********/
 
@@ -64,6 +57,7 @@ h1 small{
 }
 .logo a{
 	color: #333;
+	text-decoration: none;
 }
 .menu{
 	text-align: right;
@@ -75,11 +69,6 @@ h1 small{
 	font-weight: bold;
 	color: #333;
 	margin-left: 20px;
-}
-.logo a:hover,
-.menu a:hover{
-	color: #111;
-	text-decoration: none;
 }
 #blog img,
 #post img{
