@@ -79,6 +79,7 @@ h1 small{
 .logo a:hover,
 .menu a:hover{
 	color: #111;
+	text-decoration: none;
 }
 #blog img,
 #post img{
