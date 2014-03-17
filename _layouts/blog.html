@@ -9,13 +9,15 @@
 	<body id="blog">
 		{% include header.html %}
 		<div id="projects">
-			<ul>
-			{% for item in site.posts %}
-				{% if item.type == 'blog' %}
-					<li>{{ item.title }}</li>
-				{% endif %}
-			{% endfor %}
-			</ul>
+			<div class="container">
+				<ul>
+				{% for item in site.posts %}
+					{% if item.type == 'blog' %}
+						<li>{{ item.title }}</li>
+					{% endif %}
+				{% endfor %}
+				</ul>
+			</div>
 		</div>
 		{% include footer.html %}
 		<script src="lib/js/jquery.js"></script>
