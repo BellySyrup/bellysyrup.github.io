@@ -13,7 +13,10 @@
 				<ul>
 				{% for item in site.posts %}
 					{% if item.type == 'blog' %}
-						<li>{{ item.title }}</li>
+						<li>
+							{{ item.title }}
+							{{ item.excerpt }}
+						</li>
 					{% endif %}
 				{% endfor %}
 				</ul>
