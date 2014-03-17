@@ -47,6 +47,7 @@ h1 small{
 	top: 40px;
 }
 
+#blog img,
 #post img{
 	max-width: 100%;
 	margin: auto;
