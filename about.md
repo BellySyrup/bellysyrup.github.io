@@ -1,9 +1,11 @@
 ---
 layout: post
-title: About the guy that does the stuff
+title: The Man. The Legend.
 ---
 
 Carles umami mumblecore messenger bag, beard selvage synth gastropub. Polaroid actually mlkshk Austin tofu, Godard aesthetic fashion axe. Mlkshk tote bag post-ironic, pug fashion axe artisan umami. Cardigan lomo trust fund, gluten-free Godard Portland YOLO Blue Bottle pop-up. Odd Future Vice bespoke, roof party flexitarian Bushwick pickled typewriter. Four loko XOXO Carles yr. Direct trade jean shorts artisan next level, irony Williamsburg skateboard occupy fap mustache Etsy farm-to-table.
+
+<iframe src="//player.vimeo.com/video/20800127" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Stumptown Helvetica lomo selvage messenger bag cred. Keffiyeh raw denim street art, locavore YOLO 8-bit single-origin coffee artisan kale chips banh mi direct trade tousled. Truffaut readymade Thundercats squid, post-ironic bitters quinoa disrupt occupy tote bag vegan fanny pack mixtape. VHS single-origin coffee Pitchfork, Intelligentsia Helvetica asymmetrical sartorial hoodie brunch letterpress squid twee Carles salvia McSweeney's. Jean shorts craft beer Echo Park small batch Tonx literally. Mlkshk drinking vinegar art party Godard Helvetica. Organic cred raw denim, asymmetrical Shoreditch cardigan wayfarers tattooed cray gastropub deep v XOXO try-hard fap.
 
