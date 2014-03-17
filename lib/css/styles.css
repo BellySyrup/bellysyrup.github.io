@@ -47,10 +47,10 @@ h1 small{
 	color: white;
 }
 #blog .header{
-	height: 200px;
+	/*height: 200px;*/
 }
 #blog .header #bannerText{
-	top: 40px;
+	/*top: 40px;*/
 }
 
 #blog img,
