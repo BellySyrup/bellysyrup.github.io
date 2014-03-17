@@ -10,6 +10,7 @@
 		{% include header.html %}
 		<div id="projects">
 		  {% for item in site.posts %}
+		  	{% if item.type != 'blog' %}
 			 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 			  {% if thecycle == 'odd' %}
 			    <div class="jumbotron {{ item.group }}">
@@ -43,6 +44,7 @@
 						</div>
 					</div>
 				</div>
+				{% endif %}
 			  {% endif %}
 			{% endfor %}
 		</div>
