@@ -9,9 +9,13 @@
 	<body>
 		{% include header.html %}
 		<div id="projects">
-			{% for item in site.posts %}
-				{{ item.title }} 
+			<ul>
+			{% for item in site.posts.blog %}
+			 	{% if item.type == 'blog' %}
+					<li>{{ item.title }}</li>
+				{% endif %}
 			{% endfor %}
+			</ul>
 		</div>
 		{% include footer.html %}
 		<script src="lib/js/jquery.js"></script>
