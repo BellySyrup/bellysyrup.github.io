@@ -17,16 +17,15 @@ li{
 }
 /********* Header *********/
 #home .banner{
-	background: url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/home.jpg);
+	background: url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/home.jpg) top center;
 }
 #blog .banner{
-	background: url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/blog.jpg);
+	background: url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/blog.jpg) top center;
 }
 #about .banner{
-	background: url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/about.jpg);
+	background: url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/about.jpg) top center;
 }
 .banner{
-	background-position: top center;
 	background-repeat: no-repeat;
 	height: 451px;
 	color: rgba(255,255,255,0.7);
