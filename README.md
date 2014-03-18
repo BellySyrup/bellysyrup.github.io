@@ -14,13 +14,13 @@ Uses Github Pages, Jekyll and markdown to build a dynamic site. Seperate "post" 
 	-	Animated images - animate.css
 	-	vector social icons - font-awesome
 	-	Blog
+		-	Post types: Image, Youtube, Vimeo, Text
 	-	Site list with alternating orientation
 	-	Markdown support
 
 ## Todos:
 
 	-	blog could use some design work
-	-	add embedded video support (not responsive) + breaking markdown files
 	-	find a way to merge blog posts with website posts to simplify posts structure.
 
 ## Browser support
