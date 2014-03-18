@@ -15,9 +15,6 @@ li{
 	font-size: 20px;
 	font-weight: 200;
 }
-#sig{
-	margin: 0;
-}
 /********* Header *********/
 #home .banner{
 	background: #000 url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/home.jpg) top center;
@@ -90,6 +87,9 @@ h1 small{
 	max-width: 100%;
 	margin: auto;
 	display: block;
+}
+#sig{
+	margin: 0;
 }
 .videoWrapper {
 	position: relative;
