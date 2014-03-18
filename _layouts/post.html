@@ -16,6 +16,12 @@
 							{% if page.img %}
 								<p><img src="{{ site.url }}/img/blog/{{ page.img }}" alt="{{ page.title }}" /></p>
 							{% endif %}
+							{% if page.vimeo %}
+								<iframe src="//player.vimeo.com/video/{{ page.vimeo }}?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							{% endif %}
+							{% if page.youtube %}
+								<p><img src="{{ site.url }}/img/blog/{{ page.img }}" alt="{{ page.title }}" /></p>
+							{% endif %}
 							{{ content }}
 							<br/>
 							{% include disqus.html %}
