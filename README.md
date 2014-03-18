@@ -17,6 +17,7 @@ Uses Github Pages, Jekyll and markdown to build a dynamic site. Seperate "post" 
 		-	Post types: Image, Youtube, Vimeo, Text
 	-	Site list with alternating orientation
 	-	Markdown support
+	-	Google drive hosted images
 
 ## Todos:
 
