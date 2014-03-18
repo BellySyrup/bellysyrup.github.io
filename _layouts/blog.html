@@ -19,7 +19,9 @@
 										<p><img src="{{ site.url }}/img/blog/{{ item.img }}" alt="{{ page.title }}" /></p>
 									{% endif %}
 									{% if item.vimeo %}
-										<iframe src="//player.vimeo.com/video/{{ item.vimeo }}?title=0&amp;byline=0&amp;portrait=0" width="100%" height="380" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										<div class="videoWrapper">
+											<iframe src="//player.vimeo.com/video/{{ item.vimeo }}?title=0&amp;byline=0&amp;portrait=0" width="100%" height="380" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
 									{% endif %}
 									{% if item.youtube %}
 										<div class="videoWrapper">
