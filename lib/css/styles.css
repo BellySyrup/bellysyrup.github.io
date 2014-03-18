@@ -16,9 +16,18 @@ li{
 	font-weight: 200;
 }
 /********* Header *********/
-
+#home .banner{
+	background: url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/home.jpg);
+}
+#blog .banner{
+	background: url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/blog.jpg);
+}
+#about .banner{
+	background: url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/about.jpg);
+}
 .banner{
-	background: url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/banner.jpg) top center no-repeat;
+	background-position: top center;
+	background-repeat: no-repeat;
 	height: 451px;
 	color: rgba(255,255,255,0.7);
 	padding-top:0;
