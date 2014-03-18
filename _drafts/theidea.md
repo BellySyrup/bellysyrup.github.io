@@ -17,6 +17,9 @@ Sad thing is, during the writing of this series, I'll probably continuously upda
 
 When I look around the internet I see quite a few new trends that I never really noticed before becoming a web developer. Keep in mind I graduated College 3 years ago come April, but I've been a long time Internet Enthusiast. Some things that pop out at me today are:
 
+1	lol
+2	lol2
+
 	-	Banners. Everyone, or at least the majority (at least the majority... did that just happen?) has a nice, crisp banner image at the top of their page. It might be relative to their sites content, but the majority are just really pretty high-res images.
 	-	Parallax. The idea is to scroll the image, as you're scrolling the page, giving a static page more movement and animation. Pure eye candy, and it makes designers (and clients) cream their pants.
 	-	Light. White background, no borders and subtle background color changes from the body and footer. If you look at the footer at the bottom of the page, it goes from a #FFFFFF to #F0F0F0, not a HUGE difference, but when put side by side they still show a prominent content change, without overpowering the user with blasts of color.
