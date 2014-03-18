@@ -22,7 +22,9 @@
 										<iframe src="//player.vimeo.com/video/{{ item.vimeo }}?title=0&amp;byline=0&amp;portrait=0" width="100%" height="380" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 									{% endif %}
 									{% if item.youtube %}
-										<iframe width="100%" height="380" src="//www.youtube.com/embed/{{ item.youtube }}" frameborder="0" allowfullscreen></iframe>
+										<div class="videoWrapper">
+											<iframe width="100%" height="380" src="//www.youtube.com/embed/{{ item.youtube }}" frameborder="0" allowfullscreen></iframe>
+										<div class="videoWrapper">
 									{% endif %}
 									{{ item.excerpt }}
 								</div>
