@@ -15,6 +15,9 @@ li{
 	font-size: 20px;
 	font-weight: 200;
 }
+#sig{
+	margin: 0;
+}
 /********* Header *********/
 #home .banner{
 	background: #000 url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/home.jpg) top center;
