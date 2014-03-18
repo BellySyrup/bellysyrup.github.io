@@ -46,6 +46,7 @@ h1 small{
 }
 #logo{
 	height: 81px;
+	line-height: 81px;
 	background: #fff;
 	display: block;
 	margin-top: 20px;
