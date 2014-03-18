@@ -11,6 +11,10 @@
 .hide{
 	display: none;
 }
+li{
+	font-size: 20px;
+	font-weight: 200;
+}
 /********* Header *********/
 
 .banner{
