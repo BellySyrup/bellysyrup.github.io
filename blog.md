@@ -1,4 +1,4 @@
 ---
 layout: blog
-title: Don't look up here
+title: The Adventure Begins
 ---
