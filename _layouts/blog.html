@@ -7,12 +7,27 @@
 	</head>
 	<body id="blog">
 		{% include header.html %}
-		<div id="projects">{% for item in site.posts %}{% if item.type == 'blog' %}
+		<div id="projects">
+			{% for item in site.posts %}
+				{% if item.type == 'blog' %}
 					<div data-scroll-reveal class="jumbotron {{ item.hide }}">
 						<div class="container">
 							<div class="row">
 								<div class="col-xs-12 col-md-6 col-md-offset-3">
-									<a href="{{ item.url }}"><h2>{{ item.title }}</h2></a>{% if item.img %}<p><img src="https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/{{ item.img }}" alt="{{ page.title }}" /></p>{% endif %}{% if item.vimeo %}<div class="videoWrapper"><iframe src="//player.vimeo.com/video/{{ item.vimeo }}?title=0&amp;byline=0&amp;portrait=0" width="500" height="380"></iframe></div>{% endif %}{% if item.youtube %}<div class="videoWrapper"><iframe width="500" height="380" src="//www.youtube.com/embed/{{ item.youtube }}"></iframe></div>{% endif %}
+									<a href="{{ item.url }}"><h2>{{ item.title }}</h2></a>
+									{% if item.img %}
+										<p><img src="https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/{{ item.img }}" alt="{{ page.title }}" /></p>
+									{% endif %}
+									{% if item.vimeo %}
+										<div class="videoWrapper">
+											<iframe src="//player.vimeo.com/video/{{ item.vimeo }}?title=0&amp;byline=0&amp;portrait=0" width="500" height="380"></iframe>
+										</div>
+									{% endif %}
+									{% if item.youtube %}
+										<div class="videoWrapper">
+											<iframe width="500" height="380" src="//www.youtube.com/embed/{{ item.youtube }}"></iframe>
+										</div>
+									{% endif %}
 									{{ item.excerpt }}
 								</div>
 							</div>
