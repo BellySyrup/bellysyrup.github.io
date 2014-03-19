@@ -1,7 +1,7 @@
 ---
 title: Allergan Privilege Program
 img: allergan.png
-link: allerganprivilege.cas
+link: allerganprivilege.ca
 group: inno 
 ---
 
