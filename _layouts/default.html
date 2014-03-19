@@ -9,9 +9,7 @@
 	<body id="home">
 		{% include header.html %}
 		<div id="projects">{% for item in site.posts %}{% if item.type != 'blog' %}{% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}{% if thecycle == 'odd' %}
-			<script>
-				console.log('{{ item }}');
-			</script>
+			<!--{{ item }}-->
 		    <div data-scroll-reveal class="jumbotron {{ item.group }}">
 				<div class="container">
 					<div class="row">
