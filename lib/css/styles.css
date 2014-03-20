@@ -110,11 +110,11 @@ h1 small{
 }
 .jumbotron p{
 	color: #333;
-	font-family: 'Merriweather', serif;
-	font-size: 18px;
-	font-style: normal;
-	line-height: 1.5;
-	letter-spacing: .01rem;
+	/*font-family: 'Merriweather', serif;*/
+	/*font-size: 18px;*/
+	/*font-style: normal;*/
+	/*line-height: 1.5;*/
+	/*letter-spacing: .01rem;*/
 }
 /********* Projects *********/
 
