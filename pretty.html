@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- pretty rss -->
+<html>
+	<head>
+		<title>Pretty RSS</title>
+	</head>
+	<body>
+
+		<div class="ajax" data-url="http://rss.cbc.ca/lineup/topstories.xml">
+
+		</div>
+
+		<p id="someElement"></p>
+		
+		<p id="anotherElement"></p>
+		<script src="./lib/js/jquery.js"></script>
+		<script>
+			var feed = "http://lifehacker.com/rss";
+			$.ajax({
+			  type: "GET",
+			  url: feed,
+
+			  // change dataType to 'text' so that jquery doesn't try to parse xml
+			  dataType: "text",
+			  success: function(xml) {
+
+			    // just remove the declaration using replace()
+			    xml = xml.replace('<?xml version="1.0" ?>', '');
+
+			    $(xml).find('result').each(function(){
+			    var bid = $(this).find('bid').text();
+			    alert(bid);
+			    });
+			  }
+			});
+		</script>
+	</body>
+</html>
