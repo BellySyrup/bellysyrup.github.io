@@ -13,15 +13,15 @@
 		<p id="someElement"></p>
 		
 		<p id="anotherElement"></p>
-		<script src="./lib/js/jquery.js"></script>
+		<script src="jquery.js"></script>
 		<script>
 			var feed = "http://lifehacker.com/rss";
 			$.ajax({
-			  type: "GET",
+			  type: "POST",
 			  url: feed,
 
 			  // change dataType to 'text' so that jquery doesn't try to parse xml
-			  dataType: "text",
+			  dataType: "jsonp",
 			  success: function(xml) {
 
 			    // just remove the declaration using replace()
