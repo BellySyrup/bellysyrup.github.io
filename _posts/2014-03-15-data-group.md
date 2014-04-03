@@ -1,5 +1,5 @@
 ---
-title: Data Group - ... in progress
+title: Data Group
 img: data.jpg
 link: datagroup.ca
 group: inno 
