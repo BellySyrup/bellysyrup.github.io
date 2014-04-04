@@ -3,7 +3,7 @@
 	<head>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script>
-			$(function(){function e(){$("body").addClass("special")}function t(){$("body").removeClass("special")}function n(e){var t="$(window).keypress(function(e) { \n	if(e.keyCode == "+e.keyCode+"){ \n		// do something special \n 	} else { \n		// nothing to see here \n	}\n}";$("#code pre").html(t);$("#code pre").show()}$(window).keypress(function(r){$("#msg").html(r.keyCode);if(r.keyCode==111||r.keyCode==49||r.keyCode==69){e()}else{t()}n(r)})})
+			$(function(){function e(){$("body").addClass("special")}function t(){$("body").removeClass("special")}function n(e){var t="$(window).keypress(function(e) { \n	if(e.which == "+e.which+"){ \n		// do something special \n 	} else { \n		// nothing to see here \n	}\n}";$("#code pre").html(t);$("#code pre").show()}$(window).keypress(function(r){$("#msg").html(r.which);if(r.which==111||r.which==49||r.which==69){e()}else{t()}n(r)})})
 		</script>
 		<style>
 			h1,h2,p{text-align:center}body{max-width:600px;margin:auto}body.special{background:#000;color:#fff}#msg{font-size:100px;line-height:100px;text-align:center;background:#f0f0f0;border-radius:15px;margin:auto;width:200px;padding:50px 0;color:#000}pre{background:#f0f0f0;padding:20px;border-radius:5px;color:#000;display:none}a{text-decoration:none;}
