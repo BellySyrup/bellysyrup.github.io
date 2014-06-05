@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Google Drive hosted Image Feed</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="galleryDrive.js"></script>
 		<style>
 			body{
 				background: #f8f8f8;
 			}
-			img{
+			#galleryDrive{
+				width: 100%;
+				max-width: 1024px;
+				margin: auto;
+			} 
+			#galleryDrive img{
 				width: 100%;
 				border: 20px solid white;
 				box-shadow: 2px 2px 5px #ccc;
@@ -13,59 +21,16 @@
 				margin-bottom: 20px;
 				box-sizing: border-box;
 			}
-			.container, .list{
-				width: 100%;
-				max-width: 1024px;
-				margin: auto;
-			}
-			.hide{
-				display: none;
-			}
-			.number{
-				position: fixed;
-				top: -200px;
-				left: 0;
-				right: 0;
-				text-align: center;
-				font-size: 75px;
-			}
-			
-			.number span{
-				background: white;
-				border-radius: 15px;
-				box-shadow: 0 0 5px #333;
-				padding: 30px;
-			}
 		</style>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+		
 		<script>
 			$(function(){
-				counter = 0;
-				url = 'https://googledrive.com/host/0BxjvFCbJpltvQUx5eXo1Um9TaEU/';
-				$.get( url, function( data ) {
-				  	x = $.parseHTML(data);
-					$('.container').html(x[3]);
-					$($('.folder-cell a').get().reverse()).each(function(){
-					  	image = '<img src="https://googledrive.com/host/0BxjvFCbJpltvQUx5eXo1Um9TaEU/'+$(this)[0].text+'" />'
-					  	$('.list').append(image);
-					  	counter++;
-					});
-					$('.number span').html(counter);
-					$('.number').animate({'top':'-100px'});
-				});
-				$('.number').hover(function(){
-					$(this).stop().animate({'top':'0'});
-				},function(){
-					$(this).stop().animate({'top':'-100px'});
-				})
+				// public folder id
+				galleryDrive('0BxjvFCbJpltvQUx5eXo1Um9TaEU');
 			});
 		</script>
-		<title>Google Drive hosted Image Feed</title>
 	</head>
 	<body>
-		<div class="container hide"></div>
-		<div class="list"></div>
-		<div class="number"><span>0</span></div>
+		<div id="galleryDrive"/>
 	</body>
 </html>
