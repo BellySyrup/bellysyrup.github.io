@@ -21,41 +21,31 @@
 	These get saved in the Screenshots folder.
 	I then used Belvedere, a desktop organization program to watch this folder and move all screenshots to my Public Google Drive folder called WoW.
 	Then Gallery Drive does it's thing, and upchucks my screenshots onto the page, with a little demo styles thrown in to make it pretty.
+	
+	Supported file types:
+
+		mp4, jpg, png
 
 	All this from Screenshot to live on the web in ~4 seconds.
 
 	Coming features:
 
 		Watch multiple folders.
-		More file type suppport (videos, other image formats, etc...)
+		More file type suppport (videos, sound, etc...)
 		An app? who knows.
 		Sign in with facebook or twitter (or google+) to like and comment? maybe
-
+		templates in progress
 -->
 <html>
 	<head>
 		<title>Google Drive hosted Image Feed</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="galleryDrive.js"></script>
-		<style>
-			body{
-				background: #f8f8f8;
-				margin: 0;
-			}
-			#galleryDrive{
-				width: 100%;
-				max-width: 1280px;
-				margin: auto;
-			} 
-			#galleryDrive img{
-				width: 100%;
-				border: 20px solid white;
-				box-shadow: 2px 2px 5px #ccc;
-				margin-bottom: 15px;
-				margin-top: 15px;
-				box-sizing: border-box;
-			}
-		</style>
+		<script src="js/lightbox.min.js"></script>
+		<script src="js/galleryDrive.js"></script>
+
+		<link href="css/lightbox.css" rel="stylesheet" />
+		<link href="css/default.css" rel="stylesheet" />
+		<!-- <link href="css/grid.css" rel="stylesheet" /> -->
 		
 		<script>
 			$(function(){

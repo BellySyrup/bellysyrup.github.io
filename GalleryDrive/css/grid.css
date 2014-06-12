@@ -1,0 +1,35 @@
+#galleryDrive{
+	width: 100%;
+	max-width: 100%;
+}
+#galleryDrive a{
+	display: block;
+}
+#galleryDrive img, #galleryDrive video, #galleryDrive a.download{
+	width: 20%;
+	height: auto;
+	border: none;
+	box-shadow: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	float: left;
+
+}
+#galleryDrive a.download img{
+	float: none;
+} 
+@media (max-width: 1024px){
+	#galleryDrive img,#galleryDrive video{
+		width: 25%;
+	}
+}
+@media (max-width: 768px){
+	#galleryDrive img,#galleryDrive video{
+		width: 50%;
+	}
+}
+@media (max-width: 480px){
+	#galleryDrive img,#galleryDrive video{
+		width: 100%;	
+	}
+}
