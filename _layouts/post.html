@@ -7,36 +7,6 @@
 		{% include ga.html %}
 	</head>
 	<body id="post">
-		{% include header.html %}
-		<div id="projects">
-			<div class="jumbotron">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-md-6 col-md-offset-3">
-							<h2 class="hide">{{ page.title }}</h2>
-							{% if page.img %}
-								<p><img src="https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/{{ page.img }}" alt="{{ page.title }}" /></p>
-							{% endif %}
-							{% if page.vimeo %}
-								<div class="videoWrapper">
-									<iframe src="//player.vimeo.com/video/{{ page.vimeo }}?title=0&amp;byline=0&amp;portrait=0" width="500" height="380"></iframe>
-								</div>
-							{% endif %}
-							{% if page.youtube %}
-								<div class="videoWrapper">
-									<iframe width="500" height="380" src="//www.youtube.com/embed/{{ page.youtube }}"></iframe>
-								</div>
-							{% endif %}
-							{{ content }}
-							<p>Cheers,</p>
-							<img id="sig" src="https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/sig.png" alt="Stephan"/>
-							<br/>
-							{% include disqus.html %}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		{% include footer.html %}
+		
 	</body>
 </html>
