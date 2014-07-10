@@ -1,4 +1,4 @@
 ---
 layout: default
-title: I arrange pixels... yup.
+title: I arrange pixels... yup1.
 ---
