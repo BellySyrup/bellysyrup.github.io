@@ -44,6 +44,10 @@ a:hover {
  	text-decoration: none;
  	color: #4f3c6d;
 }
+ul, li{
+	list-style: none;
+	padding-left: 0;
+}
 #ag{
 	height:0;
 	overflow: auto;
