@@ -9,27 +9,17 @@
 	<body>
 		<div class="datwrapper">
 
-			<h1><a href="http://sconzen.github.io">@sconzen</a></h1>
-
-			<hr/>
+			{% include header.html %}
 
 			<p>Auto Glyph<span class="remove"> - </span><a href="http://www.curse.com/addons/wow/auto-glyph" target="_blank">Curse</a><span class="remove"> - </span><a href="http://www.wowinterface.com/downloads/info22908-AutoGlyph.html" target="_blank">WoW Interface</a><span class="remove"> - </span><a href="https://github.com/sconzen/autoglyph" target="_blank">Github</a></p>
 			<p>Innovasium<span class="remove"> - </span><a href="http://www.innovasium.com/portfolio" target="_blank">Projects</a></p>
 			<p>Charm <span class="remove"> by </span><a href="http://www.bykartsoftware.com" target="_blank">Bykart Software</a></p>
 
 			<hr/>
-
+			{{page.content}}
 			<p>I am a Digital Developer, currently working remotely for <a href="http://www.innovasium.com/" target="_blank">Innovasium Digital</a>. I mainly work with HTML, CSS and Javascript (jQuery and Angularjs), as well as Cold Fusion, PHP, SQL, XML, LUA and Java. I sometimes post stuff on <a href="http://twitter.com/sconzen" target="_blank">Twitter</a> and <a href="http://medium.com/@sconzen" target="_blank">Medium</a> for anything longer than 140 characters.</p>
 
-			<hr/>
-
-			<div class="sp charlie circle" title="meow!"></div>
-			<h2>Charlie</h2>
-
-			<hr/>
-
-			<p class="footer">2014 Stephan Conzen<br/><a href="www.kopimi.com/kopimi"><span class="sp kopimi"></span></a></p>
-			{% include disqus.html %}
+			{% include footer.html %}
 		</div>
 	</body>
 </html>
