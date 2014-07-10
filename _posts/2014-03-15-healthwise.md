@@ -1,4 +1,5 @@
 ---
+hide: hide
 title: HealthWise
 img: healthwise.png
 link: hwnri.com

@@ -1,4 +1,5 @@
 ---
+hide: hide
 title: Eagles Nest Golf
 img: eagle.jpg
 link: eaglesnestgolf.com

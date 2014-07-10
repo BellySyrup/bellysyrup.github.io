@@ -1,4 +1,5 @@
 ---
+hide: hide
 title: Allergan Privilege Program
 img: allergan.png
 link: allerganprivilege.ca

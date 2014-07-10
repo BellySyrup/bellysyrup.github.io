@@ -1,4 +1,5 @@
 ---
+hide: hide
 title: Hinkley Associates - ... in progress
 img: placeholder.jpg
 link: hinkley.innovasium.com

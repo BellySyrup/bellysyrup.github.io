@@ -1,4 +1,5 @@
 ---
+hide: hide
 title: Almira Fine Furniture
 img: almira.png
 link: almira.com

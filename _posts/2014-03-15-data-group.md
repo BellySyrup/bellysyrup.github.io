@@ -1,4 +1,5 @@
 ---
+hide: hide
 title: Data Group
 img: data.jpg
 link: datagroup.ca
