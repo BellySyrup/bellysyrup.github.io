@@ -1,159 +1,87 @@
-/********* Stephan Conzen *********/
+html, html a{
 
-/********* Helper *********/
-
-@import url("holyshit.css");
-
-/********* General *********/
-.jumbotron{
-	background: none;
+			text-decoration: none;
 }
-.hide{
-	display: none;
-}
-li{
-	font-size: 20px;
-	font-weight: 200;
-}
-/********* Header *********/
-#home .banner{
-	background: #000 url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/home.jpg) top center;
-}
-#blog .banner{
-	background: #000 url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/blog.jpg) top center;
-}
-#post .banner{
-	background: #000 url(https://googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/about.jpg) top center;
-}
-.banner{
-	background-repeat: no-repeat;
-	height: 451px;
-	color: rgba(255,255,255,0.7);
-	padding-top:0;
-	padding-bottom: 0;
-	margin-bottom: 0;
-}
-.banner #bannerText{
-	position: fixed;
-	top: 300px;
-}
-.banner h1{
-	margin-bottom: 20px;
-}
-h1 small{
-	color: rgba(255,255,255,0.9);
-	white-space: nowrap;
-}
-#bannerText a{
-	color: rgba(255,255,255,0.7);
-	text-decoration: none;
-}
-#bannerText a:hover{
-	color: white;
-}
-.header{
-	margin-bottom: 0;
-	padding-top: 0;
-	padding-bottom: 0;
-}
-#logo{
-	height: 81px;
-	line-height: 81px;
-	background: #fff;
-	display: block;
-	margin-top: 20px;
-}
-#logo h1{
-	margin: 0;
-	line-height: 81px;
-}
-.logo a{
+body{
+	background: #fcfcfc;
+	font-family: 'Merriweather', sans-serif;
 	color: #333;
-	text-decoration: none;
 }
-.menu{
-	text-align: right;
-	padding-top: 48px;
-	padding-bottom: 48px;
-}
-.menu a{
-	font-size: 18px;
-	font-weight: bold;
-	color: #333;
-	margin-left: 20px;
-}
-#blog img,
-#post img{
-	max-width: 100%;
-	margin: auto;
-	display: block;
-}
-#post #sig{
-	margin: 0;
-}
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-	margin-bottom: 20px;
-}
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
+img{
 	width: 100%;
-	height: 100%;
+	display: block;
 }
-#fourohfour .videoWrapper{
-	margin-bottom: 0;
-}
-.jumbotron p{
-	color: #333;
-}
-/********* Projects *********/
-
-#projects{
-	overflow: auto;
-	background: #FFFFFF;
-	position: relative;
-}
-#projects h2{
-	margin-top: 0;
-	font-size: 24px;
-}
-
-/********* Footer *********/
-
-.footer{
+h2{
 	text-align: center;
-	margin: 0;
-	background: #f0f0f0;
-	padding: 50px 0px;
 }
-.footer p{
-	margin: 0;
+h1 a{
+	color: #333 !important;
 }
-.footer a{
-	margin: 0 5px;
+.datwrapper{
+	max-width: 555px;
+	margin: auto;
+	width: 100%;
 }
-.footer a:first-child{
-	margin: 0 5px 0 0;
+hr{
+	border: none;
+	border-bottom: 1px solid #ddd;
 }
-.footer a:last-child{
-	margin: 0 0 0 5px;
+p{
+	margin-bottom: 15px;
+	font-size: 18px;
+	line-height: 1.5em;
 }
-.footer .fa-github{color: #171515;}
-.footer .fa-twitter{color: #55ACEE;}
-.footer .fa-linkedin{color: #4875B4;}
-.footer .fa-instagram{color: #4E433C;}
-.footer .fa-html5{color: #E34C26;}
-
-@media (max-width: 480px){
-	.banner{
-		height: 200px
+p.footer{
+	font-size: 12px;
+	color: #ddd;
+	text-align: center;
+}
+a, a:visited{
+	color: #6f5499;
+	transition: 0.5s all;
+}
+a:hover {
+ 	text-decoration: none;
+ 	color: #4f3c6d;
+}
+#ag{
+	height:0;
+	overflow: auto;
+	margin:0;
+	padding:0;
+}
+.sp{
+	background: url(sp.png) no-repeat;
+}
+span.sp{
+	display: inline-block;
+}
+.charlie{
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	margin: auto;
+}
+.circle{border-radius: 50%;transition: all 0.5s;}
+.circle:hover{-webkit-transform: rotate(7deg);}
+.kopimi{
+	height: 50px;
+	width: 50px;
+	background-position: 0px -201px;
+	-webkit-transform: scale(0.5,0.5);
+}
+.inno{
+	height: 37px;
+	width: 41px;
+	background-position: -50px 50px;
+}
+@media (max-width: 768px){
+	.datwrapper{
+		max-width: 320px;
 	}
-	.banner #bannerText{
-		position: static;
+	.remove{
+		height: 0;
+		display: block;
+		visibility: hidden;
 	}
 }
