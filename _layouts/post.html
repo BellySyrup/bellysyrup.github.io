@@ -8,8 +8,15 @@
 	</head>
 	<body>
 		<div class="datwrapper">
+			
+			{% include header.html %}
+
 			{{page.content}}
+
 			{% include disqus.html %}
+
+			{% include footer.html %}
+
 		</div>
 	</body>
 </html>
