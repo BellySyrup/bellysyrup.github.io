@@ -3,6 +3,8 @@ layout: post
 title: Innovasium Digital
 ---
 
+![Innovasium Digital](https://63e5bb0f7fca30e692294c8cb2dac7acbd1c146b.googledrive.com/host/0BxjvFCbJpltvbDRyZUZZYXBCa2s/innologo.jpg)
+
 Innovasium Digital is a Digital Media company based out of Markham, Ontario, where I am part of the development team. As of April 2014 I have been with Innovasium for one year, and have since become their first remote developer since I moved away from the GTA towards Windsor.
 
 As part of the Innovasium Team I have worked on numerous projects such as:
