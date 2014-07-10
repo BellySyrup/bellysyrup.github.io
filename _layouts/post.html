@@ -7,7 +7,9 @@
 		{% include ga.html %}
 	</head>
 	<body>
-		{{page.content}}
-		{% include disqus.html %}
+		<div class="datwrapper">
+			{{page.content}}
+			{% include disqus.html %}
+		</div>
 	</body>
 </html>
