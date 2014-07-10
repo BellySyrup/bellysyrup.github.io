@@ -2,13 +2,20 @@
 layout: post
 title: Innovasium Digital
 ---
-VHS Carles keytar Wes Anderson, fixie blog farm-to-table. Master cleanse hella PBR&B 3 wolf moon. Williamsburg American Apparel hella polaroid disrupt small batch. Trust fund hoodie skateboard, mixtape quinoa Bushwick 8-bit retro small batch pour-over lo-fi put a bird on it ethical. Drinking vinegar mumblecore fap mustache, cred meggings master cleanse sustainable. Mixtape irony tote bag tousled Tumblr Odd Future. Try-hard trust fund mixtape paleo.
 
-Crucifix meh Neutra bitters, Williamsburg Tumblr meggings 3 wolf moon blog raw denim distillery keffiyeh selfies. Helvetica try-hard hashtag food truck bitters. Yr four loko cliche, vinyl Godard sustainable plaid McSweeney's seitan art party hoodie cred American Apparel. Twee umami Bushwick banh mi Cosby sweater viral gentrify. Typewriter fap Schlitz, disrupt asymmetrical freegan lo-fi. Wayfarers disrupt skateboard, tattooed typewriter lo-fi chillwave meh artisan. Hoodie Tumblr banjo Portland hella.
+Innovasium Digital is a Digital Media company based out of Markham, Ontario, where I am part of the development team. As of April 2014 I have been with Innovasium for one year, and have since become their first remote developer since I moved away from the GTA towards Windsor.
 
-Schlitz fap American Apparel umami beard pug. Tote bag chia American Apparel, Truffaut polaroid brunch mixtape single-origin coffee selfies put a bird on it Vice skateboard authentic chambray. Single-origin coffee raw denim artisan, fixie Truffaut aesthetic craft beer tofu four loko hashtag fingerstache crucifix plaid Neutra. Pour-over ugh jean shorts, bicycle rights Blue Bottle typewriter banjo sartorial scenester gastropub ennui squid try-hard lomo twee. Normcore Thundercats sriracha cornhole quinoa cray, four loko actually McSweeney's mumblecore literally banjo mlkshk typewriter single-origin coffee. YOLO Godard ethnic Intelligentsia. Typewriter gluten-free roof party wayfarers letterpress.
+As part of the Innovasium Team I have worked on numerous projects such as:
 
-Schlitz vegan cardigan mlkshk. Deep v VHS ethical crucifix cray ethnic. Paleo fanny pack food truck drinking vinegar. Ethnic leggings sriracha church-key pop-up single-origin coffee, bicycle rights banh mi blog Shoreditch disrupt Marfa farm-to-table Truffaut. Fap disrupt irony Banksy tote bag ugh, sriracha cliche yr 3 wolf moon fashion axe banjo dreamcatcher Cosby sweater vegan. Fanny pack freegan Shoreditch semiotics iPhone Bushwick. Umami cred viral tattooed Brooklyn Neutra.
-Oh. You need a little dummy text for your mockup? How quaint.
+[Dental Corporation](http://dentalcorp.ca/)
+[CACDS](http://www.cacds.com/)
+[Allergan Privilege Program](https://www.allerganprivilege.ca/)
+[Data Group](http://datagroup.ca)
+[Healthwisenri](http://hwnri.com/)
+[Almira Fine Furniture](http://www.almira.com/)
+[Hinkley Associates](hinkley.innovasium.com)
+[esight Eyewear](http://www.esighteyewear.com/)
+[Turnberry Golf Club](http://www.turnberrygolf.ca/home.htm)
+[Eaglesnest Golf Club](http://www.eaglesnestgolf.com/home.htm)
 
-I bet you’re still using Bootstrap too…
+For more detail check out the official [Innovasium Digital](http://www.innovasium.com/) site or our [portfolio](http://www.innovasium.com/portfolio) for even more sites.
