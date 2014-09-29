@@ -46,7 +46,35 @@
 		<link href="css/lightbox.css" rel="stylesheet" />
 		<link href="css/default.css" rel="stylesheet" />
 		<!-- <link href="css/grid.css" rel="stylesheet" /> -->
-		
+		<style>
+			#galleryDrive{
+				overflow: auto;
+				max-width: none;
+			}
+			#galleryDrive a{
+				width: 23.5%;
+				margin-right: 2%;
+			}
+			#galleryDrive a:nth-child(4n+5){
+				margin-right:0;
+			}
+			#galleryDrive a:nth-child(1){
+				background: #111;
+				width: 100%;
+				margin-right: 0;
+			}
+			#galleryDrive img{
+				margin: 15px auto;
+				max-width: 1024px;
+				display: block;
+			}
+			#galleryDrive img{
+				border: none;
+			}
+			#galleryDrive img, #galleryDrive video, #galleryDrive a.download{
+				box-shadow: none;
+			}
+		</style>
 		<script>
 			$(function(){
 				// enter your google drive public folder id here
