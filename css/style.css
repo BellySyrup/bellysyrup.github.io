@@ -976,7 +976,7 @@
 		padding-top: 3em;
 	}
 
-	body.landing #skel-layers-wrapper {
+	#skel-layers-wrapper {
 		padding-top: 0;
 	}
 	@-moz-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
