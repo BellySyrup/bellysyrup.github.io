@@ -976,7 +976,7 @@
 		padding-top: 3em;
 	}
 
-	span.landing #skel-layers-wrapper {
+	body.landing #skel-layers-wrapper {
 		padding-top: 0;
 	}
 	@-moz-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
@@ -1308,7 +1308,7 @@
 				padding: 1em 0 1.25em 0;
 			}
 
-	span.landing #main {
+	#main.testing {
 		margin-top: -14em;
 	}
 
