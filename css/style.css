@@ -23,3 +23,7 @@
 		line-height: 1.65em;
 		letter-spacing: -0.015em;
 	}
+
+	h1,h2{
+		text-align: center;
+	}
