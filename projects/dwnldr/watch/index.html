@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dwnldr</title>
+		<script>
+			value = getParameterByName('v');
+			if(value != ''){
+				window.location.assign('http://youtubeinmp3.com/fetch/?video=http://www.youtube.com/watch?v=' + value);
+			}
+			function getParameterByName(name) {
+			    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+			    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			        results = regex.exec(location.search);
+			    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+		</script>
+	</head>
+</html>
