@@ -3,4 +3,6 @@ layout: default
 title: stuf
 ---
 
-#hello
+# hello
+
+Lorem ipsum dolor sit amet
