@@ -1,6 +1,6 @@
 ---
 layout: default
-title: #stuf
+title: stuf
 ---
 
 #hello
