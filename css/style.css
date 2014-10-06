@@ -11,6 +11,8 @@
 
 	body {
 		/*background: #f5f5f5;*/
+		max-width: 680px;
+		margin: auto;
 	}
 
 	body, input, select, textarea {
