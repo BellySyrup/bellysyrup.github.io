@@ -9,7 +9,7 @@ title: stuf
 
 GalleryDrive lets you create a gallery feed from any public Google Drive folder.
 
-[Demo](http://example.net/) [Download](http://example.net/)
+[Demo](http://sconzen.github.io/projects/gallerydrive/demo.html) [Download](http://sconzen.github.io/projects/gallerydrive/gallerydrive.zip)
 
 ### Installation
 
