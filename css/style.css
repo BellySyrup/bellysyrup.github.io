@@ -21,14 +21,12 @@
 	img{
 		width: 100%;
 	}
-	p{
-		/*margin:0;*/
-	}
 	pre{
 		background: #333;
 		color: #fff;
 		padding: 1em;
 		border-radius: 5px;
+		font-size: 10pt;
 	}
 	a:not(#logo){
 		padding: .5em 2em;
