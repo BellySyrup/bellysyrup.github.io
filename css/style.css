@@ -27,6 +27,7 @@
 		padding: 1em;
 		border-radius: 5px;
 		font-size: 10pt;
+		line-height: 1.44em;
 	}
 	a:not(#logo){
 		padding: .5em 2em;
