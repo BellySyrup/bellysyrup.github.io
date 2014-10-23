@@ -24,23 +24,20 @@
 	p{
 		/*margin:0;*/
 	}
-	a{
-
-	}
 	pre{
-				background: #333;
-				color: #fff;
-				padding: 1em;
-				border-radius: 5px;
-			}
-			a{
-				padding: .5em 2em;
-				background: #333;
-				color: #fff;
-				text-decoration: none;
-				border-radius: 5px;
-			}
-			a:hover{
-				background: #ccc;
-				color: #333;
-			}
+		background: #333;
+		color: #fff;
+		padding: 1em;
+		border-radius: 5px;
+	}
+	a:not(#logo){
+		padding: .5em 2em;
+		background: #333;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 5px;
+	}
+	a:not(#logo):hover{
+		background: #ccc;
+		color: #333;
+	}
