@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GalleryDrive</title>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/galleryDrive.js"></script>
+		<script>
+			$(function(){
+				galleryDrive('0BxjvFCbJpltvRlBOZllQazRlWWs');
+			});
+		</script>
+		<style>
+			#content{
+				margin: auto;
+				width: 100%;
+				max-width: 500px;
+				font-family: sans-serif;
+			}
+			pre{
+				background: #333;
+				color: #fff;
+				padding: 1em;
+				border-radius: 5px;
+			}
+			a{
+				padding: .5em 2em;
+				background: #333;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 5px;
+			}
+			a:hover{
+				background: #ccc;
+				color: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<h1>GalleryDrive.js</h1>
+			<h2>A basic jquery plugin for google drive hosted files</h2>
+			<p>GalleryDrive lets you create a gallery feed from any public Google Drive folder.</p>
+			<p><a href="demo.html">Demo</a> <a href="gallerydrive.zip">Download</a></p>
+			<h3>Installation</h3>
+<pre>
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/galleryDrive.js"&gt;&lt;/script&gt;
+</pre>
+<p>This plugin requires jQuery, which is also included in the demo. Include jQuery.min.js and galleryDrive.js</p>
+<hr/>
+<pre>
+&lt;script&gt;
+	$(function(){
+		galleryDrive('0BxjvFCbJpltvRlBOZllQazRlWWs');
+	});
+&lt;/script&gt;
+</pre>
+<p>To set up your GalleryDrive, replace this code with your public folder ID. When you create and open a public folder in google drive, the ID is in the URL.</p>
+<hr/>
+<pre>
+&lt;div id="galleryDrive"/&gt;
+</pre>
+<p>Throw the galleryDrive container anywhere on your page you would like to display your gallery. The gallery is built to be responsive, so it will scale to the size of whatever container you throw it in.</p>
+<hr/>
+			<div id="galleryDrive"/>
+		</div>
+	</body>
+</html>
