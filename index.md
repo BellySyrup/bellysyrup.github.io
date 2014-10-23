@@ -1,5 +1,4 @@
 ---
-layout: blog
+layout: default
 title: stuf
 ---
-# Howdy
