@@ -1,5 +1,5 @@
 ---
-layout: new
+layout: work
 title: Stuff you might use
 ---
 
