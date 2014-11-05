@@ -10,12 +10,10 @@
 			<section id="main">
 			{{ content }}
 			<hr/>
-			<h2><a href="#">hello2</a></h2>
-			<p>Hubot is a chat robot for [most popular chat networks](https://github.com/github/hubot/blob/master/docs/adapters.md).</p><hr/>
-			<h2><a href="#">hello2</a></h2>
-			<p>Hubot is a chat robot for [most popular chat networks](https://github.com/github/hubot/blob/master/docs/adapters.md).</p><hr/>
-			<h2><a href="#">hello2</a></h2>
-			<p>Hubot is a chat robot for [most popular chat networks](https://github.com/github/hubot/blob/master/docs/adapters.md).</p><hr/>
+			{% for post in site.posts %}
+				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				<p>{{ post.url }}</p><hr/>
+			{% endfor %}
 			</section>
 			{% include footer.html %}
 		</div>
