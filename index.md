@@ -1,6 +1,6 @@
 ---
-layout: default
-title: stuf
+layout: new
+title: galleryDrive.js
 ---
 
 # GalleryDrive.js
