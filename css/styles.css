@@ -183,7 +183,7 @@ footer {
   bottom:50px;
 }
 
-@media print, screen and (max-width: 960px) {
+@media print, device, screen and (max-width: 960px) {
   
   div.wrapper {
     width:auto;
@@ -218,7 +218,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 720px) {
+@media print, device, screen and (max-width: 720px) {
   body {
     word-wrap:break-word;
   }
@@ -236,7 +236,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 480px) {
+@media print, device, screen and (max-width: 480px) {
   body {
     padding:15px;
   }
