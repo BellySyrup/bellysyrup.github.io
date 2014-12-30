@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- 
+			app breaks when trying to load channel that does not exist
+			hide footer
+			help button to bring up instructions?
+			add help instructions to inital add button?
+			pass in multiple params to msg. ie msg('...',xx) to fade msg after xx seconds (0 for stay on page)
+		-->
+		<title>Multiple Chat Monitor</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>			
+			var d='<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=';var e='&popout_chat=true" height="500" width="350"></iframe>';var morestring='<div class="chat"><input placeholder="User Name"/><div class="close center">x</div><div class="chatframe">&nbsp;</div></div>';var preloadArr=["sodapoppin","fleebagd","etticey"];var preloadArr=[];$(function(){function i(){if(t){$("#container").prepend(morestring);t=false}else{s("new chat already available")}$(".chat input").change(function(){var n=$(this).val();s("adding "+n);$(this).parent().find(".chatframe").html(d+n+e);$(this).parent().attr("data-user",n);t=true;$("#help").fadeOut()});$(".close").click(function(){user=$(this).parent().attr("data-user");$(this).parent().remove();s("removed "+user);t=true})}function s(e){clearTimeout(n);$("#msg").hide();$("#msg").html(e);$("#msg").fadeIn();if(!r){n=window.setTimeout(function(){$("#msg").fadeOut()},2500)}r=false}function o(n){$.each(n,function(t,n){newindex=t+1;console.log(newindex,t,n);$("#container").prepend(morestring);$(".chat:nth-child(1)").find(".chatframe").html(d+n+e);$(".chat:nth-child(1)").attr("data-user",n)});$(".close").click(function(){user=$(this).parent().attr("data-user");$(this).parent().remove();s("removed "+user);t=true})}var t=true;var n;var r=true;$(".more").click(function(){i()});s("<p>Welcome to Multi Chat Manager</p><p>Click the + to add a new chat</p><p>Enter a user name and hit enter</p><p>Click the x to close a chat</p>");o(preloadArr)})
+		</script>
+	</head>
+	<body>
+		<div id="container"><div class="more center">+</div></div>
+		<div id="msg"></div>
+	</body>
+	<style>#msg{position:fixed;bottom:0;right:0;margin-right:20px;margin-bottom:50px;padding:10px 15px;border-radius:5px;font-weight:700;border:2px solid #f2f2f2;background:#fff}#help{position:fixed;bottom:0;right:0;margin-right:20px;margin-bottom:100px;padding:10px 15px;border-radius:5px;font-weight:700;border:2px solid #f2f2f2;width:240px}body{font-family:sans-serif;color:#333}.center{text-align:center}#container{overflow:auto}.chat{float:left;margin-right:8px;margin-bottom:8px;background:#f2f2f2;position:relative}.chat input{box-sizing:border-box;width:320px;height:30px;padding-left:8px}.chat .close{height:30px;width:30px;float:right;line-height:28px;background:#fff;border:1px solid #ccc;border-left:none;box-sizing:border-box;cursor:pointer}.chat .close:hover{background:#f2f2f2}.chat .chatframe{height:500px;width:350px}.more{height:530px;width:350px;background:#6441a5;color:#fff;float:left;font-size:40px;font-weight:700;line-height:530px;cursor:pointer}.more:hover{opacity:.9}footer{position:fixed;bottom:0;left:0;right:0;text-align:center;background:#f2f2f2;padding:10px 15px}a{text-decoration:none;color:#333}
+	</style>
+</html>
