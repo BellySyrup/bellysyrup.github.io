@@ -1,31 +1,20 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- 
-			app breaks when trying to load channel that does not exist
-		-->
 		<meta charset="UTF-8">
 		<meta name="description" content="Multiple chat manager for twitch.tv">
 		<meta name="keywords" content="twitch,stream,chat,multiple,manager">
 		<meta name="author" content="Stephan Conzen">
 		<title>Multiple Chat Monitor</title>
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<script>			
-			// var preloadArr = ['sodapoppin','etticey']; // add twitch users here
-
 			var d = '<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=';
 			var e = '&amp;popout_chat=true" height="500" width="350"></iframe>';
 			var morestring = '<div class="chat"><input placeholder="User Name"/><div class="close">x</div><div class="chatframe">&nbsp;</div></div>';
-			var lang = $('html').attr('lang');
-
-			var msg_intro = '<p>Click the + to add a new chat</p><p>Enter a user name and hit enter</p><p>Click the x to close a chat</p>';
-			var msg_exists = 'new chat is already available';
-			var msg_removed = 'removed ';
-			var msg_adding = 'adding ';
 			
 			$(function(){
+
 				var allownew = true;
 				var timeout;
 				var m = $('#msg');
@@ -34,10 +23,11 @@
 					newUser();
 				});
 
-				msg(msg_intro,0);
+				msg('<p>Click the + to add a new chat</p><p>Enter a user name and hit enter</p><p>Click the x to close a chat</p>',0);
 
-				if (typeof preloadArr !== 'undefined') {
-    				preload(preloadArr);
+				if (typeof localStorage["preload"] !== 'undefined') {
+					var names = JSON.parse(localStorage["preload"]);
+					preload(names);
 				}
 
 				function newUser(){
@@ -45,7 +35,7 @@
 						$(morestring).insertBefore('.more');
 						allownew = false;
 					} else {
-						msg(msg_exists,2);
+						msg('new chat is already available',2);
 					}
 					
 					addnew();
@@ -54,7 +44,7 @@
 
 				function preload(x){
 					if(x.length>0){
-						m.hide();
+						$('#msg').hide();
 					}
 					$.each(x,function(index,value){
 						newindex = index+1;
@@ -71,7 +61,7 @@
 				function addnew(){
 					$('.chat input').change(function(){
 						var x = $(this).val();
-						msg(msg_adding + x,2);
+						msg('adding ' + x,2);
 						$(this).parent().find('.chatframe').html(d+x+e);
 						$(this).parent().attr('data-user',x)
 						allownew = true;
@@ -81,7 +71,7 @@
 				function closethis(){
 					$('.close').click(function(){
 						$(this).parent().remove();
-						msg(msg_removed + $(this).parent().attr('data-user'),2);
+						msg('removed ' + $(this).parent().attr('data-user'),2);
 						allownew = true;
 					});
 				}
@@ -98,6 +88,20 @@
 				    	}, y*1000);
 					}
 				}
+
+				$('#save').click(function(){
+					var mynames = [];
+					$('.chat').each(function(index){
+						thischat = $(this).attr('data-user');
+						mynames[index] = thischat;
+					});
+					localStorage["preload"] = JSON.stringify(mynames);
+				});
+
+				$('#reset').click(function(){
+					localStorage.removeItem("preload");
+					console.log('removed preload');
+				});
 
 			});
 		</script>
@@ -171,49 +175,18 @@
 			.more:hover{
 				opacity: 0.9;
 			}
+			.console{
+				margin: 0 8px;
+			}
+			.console a{
+				cursor: pointer;
+			}
 		</style>
 	</head>
-	<body><div id="container"><div class="more">+</div></div><div id="msg"></div></body>
+	<body><div id="container"><div class="more">+</div></div><div id="msg"></div>
+		<div class="console">
+			<a id="save"><i class="fa fa-floppy-o fa-2x"></i></a>
+			<a id="reset"><i class="fa fa-trash fa-2x"></i></a>
+		</div>
+	</body>
 </html>
-
-<!--
-quu..__
- $$$b  `---.__
-  "$$b        `--.                          ___.---uuudP
-   `$$b           `.__.------.__     __.---'      $$$$"              .
-     "$b          -'            `-.-'            $$$"              .'|
-       ".                                       d$"             _.'  |
-         `.   /                              ..."             .'     |
-           `./                           ..::-'            _.'       |
-            /                         .:::-'            .-'         .'
-           :                          ::''\          _.'            |
-          .' .-.             .-.           `.      .'               |
-          : /'$$|           .@"$\           `.   .'              _.-'
-         .'|$u$$|          |$$,$$|           |  <            _.-'
-         | `:$$:'          :$$$$$:           `.  `.       .-'
-         :                  `"--'             |    `-.     \
-        :##.       ==             .###.       `.      `.    `\
-        |##:                      :###:        |        >     >
-        |#'     `..'`..'          `###'        x:      /     /
-         \                                   xXX|     /    ./
-          \                                xXXX'|    /   ./
-          /`-.                                  `.  /   /
-         :    `-  ...........,                   | /  .'
-         |         ``:::::::'       .            |<    `.
-         |             ```          |           x| \ `.:``.
-         |                         .'    /'   xXX|  `:`M`M':.
-         |    |                    ;    /:' xXXX'|  -'MMMMM:'
-         `.  .'                   :    /:'       |-'MMMM.-'
-          |  |                   .'   /'        .'MMM.-'
-          `'`'                   :  ,'          |MMM<
-            |                     `'            |tbap\
-             \                                  :MM.-'
-              \                 |              .''
-               \.               `.            /
-                /     .:::::::.. :           /
-               |     .:::::::::::`.         /
-               |   .:::------------\       /
-              /   .''               >::'  /
-              `',:                 :    .'
-                                 
--->
