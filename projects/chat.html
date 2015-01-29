@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,8 +12,9 @@
 		<script>			
 			var d = '<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=';
 			var e = '&amp;popout_chat=true" height="500" width="350"></iframe>';
-			var morestring = '<div class="chat"><input placeholder="User Name"/><div class="close">x</div><div class="chatframe">&nbsp;</div></div>';
-			
+			var morestring = '<div class="chat"><input placeholder="User Name"/><div class="close">x</div><div class="play">y</div><div class="chatframe">&nbsp;</div></div>';
+			var f = '<iframe src="http://www.twitch.tv/';
+			var g = '/embed" frameborder="0" scrolling="no" height="378" width="708"></iframe>';
 			$(function(){
 
 				var allownew = true;
@@ -39,6 +41,7 @@
 					}
 					
 					addnew();
+					playthis();
 					closethis();
 				}
 
@@ -55,6 +58,7 @@
 					});
 
 					addnew();
+					playthis();
 					closethis();
 				}
 
@@ -88,6 +92,16 @@
 				    	}, y*1000);
 					}
 				}
+
+				function playthis(){
+					$('.play').click(function(){
+						addnew();
+						var x = $(this).parent().attr('data-user');
+						console.log(x);
+						$('#play').html(f+x+g);
+					});
+				}
+
 
 				$('#save').click(function(){
 					var mynames = [];
@@ -135,10 +149,11 @@
 			}
 			.chat input{
 				box-sizing: border-box;
-				width: 320px;
+				width: 290px;
 				height: 30px;
 				padding-left: 8px;
 			}
+			.chat .play,
 			.chat .close{
 				height: 30px;
 				width: 30px;
@@ -151,6 +166,7 @@
 				cursor: pointer;
 				text-align: center;
 			}
+			.chat .play:hover,
 			.chat .close:hover{
 				background: #f2f2f2;
 			}
@@ -181,9 +197,20 @@
 			.console a{
 				cursor: pointer;
 			}
+
+
+			#play{
+				padding:0 8px;
+				/*visibility: hidden;*/
+				/*height:0;*/
+				max-width: 708px;
+			}
+			#play iframe{
+				width: 100%;
+			}
 		</style>
 	</head>
-	<body><div id="container"><div class="more">+</div></div><div id="msg"></div>
+	<body><div id="container"><div id="play"></div><div class="more">+</div></div><div id="msg"></div>
 		<div class="console">
 			<a id="save"><i class="fa fa-floppy-o fa-2x"></i></a>
 			<a id="reset"><i class="fa fa-trash fa-2x"></i></a>
