@@ -11,7 +11,9 @@
 <script>
 function date(){
   var today = new Date();
-if(today.getDate();==1&&today.getMonth();==3){
+  var d = today.getDate();
+  var m = today.getMonth();
+if(d==1&&m==3){
   console.log('update');
   document.getElementsByTagName('html')[0].style.fontFamily="'Comic Sans MS', cursive, sans-serif";
   document.getElementsByTagName('body')[0].style.fontFamily="'Comic Sans MS', cursive, sans-serif";
