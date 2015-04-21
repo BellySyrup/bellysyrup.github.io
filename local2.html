@@ -3,9 +3,10 @@
   <title>Web Notifications</title>
 </head>
 <body>
-  <h1>Web Notifications</h1>
   <script>
-  	icon = "http://vialect.net/wordpress/wp-content/uploads/2015/04/Mascot-Color-Positive.png";
+  lorem = 'Lorem ipsum';
+  dolor = 'dolor sit amet, consectetur adipiscing elit.';
+  icon = "http://vialect.net/wordpress/wp-content/uploads/2015/04/Mascot-Color-Positive.png";
   	window.addEventListener('load', function () {
 	  if (window.Notification && Notification.permission !== "granted") {
 	    Notification.requestPermission(function (status) {
@@ -18,7 +19,7 @@
   function notify(title,body,isicon){
   	// support = true; permission = true
   	if (window.Notification && Notification.permission === "granted") {
-  		if(isicon==true){
+  		if(isicon){
   			var n = new Notification(title,{body:body,icon:icon});
   		} else {
   			var n = new Notification(title,{body:body});
@@ -50,7 +51,7 @@
     }
   }
   </script>
-  <button id="button" onclick="notify('Lorem ipsum','dolor sit amet, consectetur adipiscing elit. Suspendisse scelerisque varius libero eget sodales.',true)">Send Notification</button>
+  <button id="button" onclick="notify(lorem,dolor,true)">Send Notification</button>
 </body>
 
 </html>
