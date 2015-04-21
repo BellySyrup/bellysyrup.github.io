@@ -17,7 +17,6 @@
 	  }
 	});
   function notify(title,body,isicon){
-  	// support = true; permission = true
   	if (window.Notification && Notification.permission === "granted") {
   		if(isicon){
   			var n = new Notification(title,{body:body,icon:icon});
@@ -25,13 +24,11 @@
   			var n = new Notification(title,{body:body});
   		}
     }
-    // support = true; permission = false;
     else if (window.Notification && Notification.permission !== "denied") {
       Notification.requestPermission(function (status) {
         if (Notification.permission !== status) {
           Notification.permission = status;
         }
-        // if permission == true;
         if (status === "granted") {
           if(isicon==true){
 	  			var n = new Notification(title,{body:body,icon:icon});
@@ -39,19 +36,28 @@
 	  			var n = new Notification(title,{body:body});
 	  		}
         }
-        // if permission == false;
-        else {
-          alert(title+"\n"+body);
-        }
+        else { alert(title+"\n"+body); }
       });
     }
-    // lol get a better browser noob
-    else {
-        alert(title+"\n"+body);
-    }
+    else { alert(title+"\n"+body); }
   }
   </script>
-  <button id="button" onclick="notify(lorem,dolor,true)">Send Notification</button>
+  <button id="button" onclick="notify(lorem,dolor)">Send Notification</button>
+  <button id="button" onclick="notify(lorem,dolor,true)">Send Notification w/ icon</button>
+  <h1>Steps:</h1>
+  <ol>
+  	<li>onload - if notifications are supported but permission isn't granted, ask for permission</li>
+  	<li>on notify
+  		<ul>
+  			<li>if supported and permitted, display new notification. check for icon.</li>
+  			<li>if supported and not permitted, ask for permission again.</li>
+  			<li>if permitted, display new notification. check for icon</li>
+  			<li>if not permitted, display alert</li>
+  			<li>if not supported, display alert</li>
+  		</ul>
+  	</li>
+  </ol>
+
 </body>
 
 </html>
