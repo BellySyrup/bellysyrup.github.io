@@ -1,24 +1,21 @@
 <html>
 <head>
   <title>Web Notifications</title>
-
+  
 </head>
 <body>
   <h1>Web Notifications</h1>
-  <a href="#" id="button" onclick="notify('hello world')">Send Notification</a>
-  <script type="text/javascript">
+  
+  <script>
 
   window.addEventListener('load', function () {
-  // At first, let's check if we have permission for notification
-  // If not, let's ask for it
   if (window.Notification && Notification.permission !== "granted") {
     Notification.requestPermission(function (status) {
       if (Notification.permission !== status) {
         Notification.permission = status;
       }
     });
-  }
-
+  }});
   function notify(msg){
   	// support = true; permission = true
   	if (window.Notification && Notification.permission === "granted") {
@@ -48,7 +45,9 @@
         alert(msg);
     }
   }
-});
+
   </script>
+  <button id="button" onclick="notify('hi')">Send Notification</button>
 </body>
+
 </html>
