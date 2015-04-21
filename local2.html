@@ -1,53 +1,56 @@
 <html>
 <head>
   <title>Web Notifications</title>
-  
 </head>
 <body>
   <h1>Web Notifications</h1>
-  
   <script>
-
-  window.addEventListener('load', function () {
-  if (window.Notification && Notification.permission !== "granted") {
-    Notification.requestPermission(function (status) {
-      if (Notification.permission !== status) {
-        Notification.permission = status;
-      }
-    });
-  }});
-  function notify(msg){
+  	icon = "http://vialect.net/wordpress/wp-content/uploads/2015/04/Mascot-Color-Positive.png";
+  	window.addEventListener('load', function () {
+	  if (window.Notification && Notification.permission !== "granted") {
+	    Notification.requestPermission(function (status) {
+	      if (Notification.permission !== status) {
+	        Notification.permission = status;
+	      }
+	    });
+	  }
+	});
+  function notify(title,body,isicon){
   	// support = true; permission = true
   	if (window.Notification && Notification.permission === "granted") {
-      var n = new Notification(msg);
-    } 
+  		if(isicon==true){
+  			var n = new Notification(title,{body:body,icon:icon});
+  		} else {
+  			var n = new Notification(title,{body:body});
+  		}
+    }
     // support = true; permission = false;
     else if (window.Notification && Notification.permission !== "denied") {
       Notification.requestPermission(function (status) {
         if (Notification.permission !== status) {
           Notification.permission = status;
         }
-
         // if permission == true;
         if (status === "granted") {
-          var n = new Notification(msg);
+          if(isicon==true){
+	  			var n = new Notification(title,{body:body,icon:icon});
+	  		} else {
+	  			var n = new Notification(title,{body:body});
+	  		}
         }
-
         // if permission == false;
         else {
-          alert(msg);
+          alert(title+"\n"+body);
         }
-
       });
     }
     // lol get a better browser noob
     else {
-        alert(msg);
+        alert(title+"\n"+body);
     }
   }
-
   </script>
-  <button id="button" onclick="notify('hi')">Send Notification</button>
+  <button id="button" onclick="notify('Lorem ipsum','dolor sit amet, consectetur adipiscing elit. Suspendisse scelerisque varius libero eget sodales.',true)">Send Notification</button>
 </body>
 
 </html>
