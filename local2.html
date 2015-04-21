@@ -14,47 +14,77 @@
     });
   }
 
-  var button = document.getElementById('button');
-
-  button.addEventListener('click', function () {
-    // If the user agreed to get notified
-    if (window.Notification && Notification.permission === "granted") {
-      var n = new Notification("Hi!");
-    }
-
-    // If the user hasn't told if he wants to be notified or not
-    // Note: because of Chrome, we are not sure the permission property
-    // is set, therefore it's unsafe to check for the "default" value.
+  function notify(msg){
+  	// support = true; permission = true
+  	if (window.Notification && Notification.permission === "granted") {
+      var n = new Notification(msg);
+    } 
+    // support = true; permission = false;
     else if (window.Notification && Notification.permission !== "denied") {
       Notification.requestPermission(function (status) {
         if (Notification.permission !== status) {
           Notification.permission = status;
         }
 
-        // If the user said okay
+        // if permission == true;
         if (status === "granted") {
-          var n = new Notification("Hi!");
+          var n = new Notification(msg);
         }
 
-        // Otherwise, we can fallback to a regular modal alert
+        // if permission == false;
         else {
-          alert("Hi!");
+          alert(msg);
         }
+
       });
     }
-
-    // If the user refuses to get notified
+    // lol get a better browser noob
     else {
-      // We can fallback to a regular modal alert
-      alert("Hi!");
+        alert(msg);
     }
-  });
+  }
+
+  // var button = document.getElementById('button');
+
+  // button.addEventListener('click', function () {
+  //   // If the user agreed to get notified
+  //   if (window.Notification && Notification.permission === "granted") {
+  //     var n = new Notification("Hi!");
+  //   }
+
+  //   // If the user hasn't told if he wants to be notified or not
+  //   // Note: because of Chrome, we are not sure the permission property
+  //   // is set, therefore it's unsafe to check for the "default" value.
+  //   else if (window.Notification && Notification.permission !== "denied") {
+  //     Notification.requestPermission(function (status) {
+  //       if (Notification.permission !== status) {
+  //         Notification.permission = status;
+  //       }
+
+  //       // If the user said okay
+  //       if (status === "granted") {
+  //         var n = new Notification("Hi!");
+  //       }
+
+  //       // Otherwise, we can fallback to a regular modal alert
+  //       else {
+  //         alert("Hi!");
+  //       }
+  //     });
+  //   }
+
+  //   // If the user refuses to get notified
+  //   else {
+  //     // We can fallback to a regular modal alert
+  //     alert("Hi!");
+  //   }
+  // });
 });
 
   </script>
 </head>
 <body>
   <h1>Web Notifications</h1>
-  <a href="#" id="button">Send Notification</a>
+  <a href="#" id="button" onclick="notify(msg);">Send Notification</a>
 </body>
 </html>
