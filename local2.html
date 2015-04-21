@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>Web Notifications</title>
+  <script type="text/javascript">
+
+  window.addEventListener('load', function () {
+  // At first, let's check if we have permission for notification
+  // If not, let's ask for it
+  if (window.Notification && Notification.permission !== "granted") {
+    Notification.requestPermission(function (status) {
+      if (Notification.permission !== status) {
+        Notification.permission = status;
+      }
+    });
+  }
+
+  var button = document.getElementById('button');
+
+  button.addEventListener('click', function () {
+    // If the user agreed to get notified
+    if (window.Notification && Notification.permission === "granted") {
+      var n = new Notification("Hi!");
+    }
+
+    // If the user hasn't told if he wants to be notified or not
+    // Note: because of Chrome, we are not sure the permission property
+    // is set, therefore it's unsafe to check for the "default" value.
+    else if (window.Notification && Notification.permission !== "denied") {
+      Notification.requestPermission(function (status) {
+        if (Notification.permission !== status) {
+          Notification.permission = status;
+        }
+
+        // If the user said okay
+        if (status === "granted") {
+          var n = new Notification("Hi!");
+        }
+
+        // Otherwise, we can fallback to a regular modal alert
+        else {
+          alert("Hi!");
+        }
+      });
+    }
+
+    // If the user refuses to get notified
+    else {
+      // We can fallback to a regular modal alert
+      alert("Hi!");
+    }
+  });
+});
+
+  </script>
+</head>
+<body>
+  <h1>Web Notifications</h1>
+  <a href="#" id="button">Send Notification</a>
+</body>
+</html>
