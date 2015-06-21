@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>Web Notifications</title>
+</head>
+<body>
+  <script>
+  lorem = 'Lorem ipsum';
+  dolor = 'dolor sit amet, consectetur adipiscing elit.';
+  icon = "http://vialect.net/wordpress/wp-content/uploads/2015/04/Mascot-Color-Positive.png";
+  	window.addEventListener('load', function () {
+	  if (window.Notification && Notification.permission !== "granted") {
+	    Notification.requestPermission(function (status) {
+	      if (Notification.permission !== status) {
+	        Notification.permission = status;
+	      }
+	    });
+	  }
+	});
+  function notify(title,body,isicon){
+  	if (window.Notification && Notification.permission === "granted") {
+  		if(isicon){
+  			var n = new Notification(title,{body:body,icon:icon});
+  		} else {
+  			var n = new Notification(title,{body:body});
+  		}
+    }
+    else if (window.Notification && Notification.permission !== "denied") {
+      Notification.requestPermission(function (status) {
+        if (Notification.permission !== status) {
+          Notification.permission = status;
+        }
+        if (status === "granted") {
+          if(isicon==true){
+	  			var n = new Notification(title,{body:body,icon:icon});
+	  		} else {
+	  			var n = new Notification(title,{body:body});
+	  		}
+        }
+        else { alert(title+"\n"+body); }
+      });
+    }
+    else { alert(title+"\n"+body); }
+  }
+  </script>
+  <button id="button" onclick="notify(lorem,dolor)">Send Notification</button>
+  <button id="button" onclick="notify(lorem,dolor,true)">Send Notification w/ icon</button>
+  <h1>Steps:</h1>
+  <ol>
+  	<li>onload - if notifications are supported but permission isn't granted, ask for permission</li>
+  	<li>on notify
+  		<ul>
+  			<li>if supported and permitted, display new notification. check for icon.</li>
+  			<li>if supported and not permitted, ask for permission again.</li>
+  			<li>if permitted, display new notification. check for icon</li>
+  			<li>if not permitted, display alert</li>
+  			<li>if not supported, display alert</li>
+  		</ul>
+  	</li>
+  </ol>
+
+</body>
+
+</html>
