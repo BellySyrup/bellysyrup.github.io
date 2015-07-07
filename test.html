@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+			$(function(){
+				button = $("button");
+
+				button.click(function(){
+					input = $("input").val();
+					getimgs(input);
+				});
+				function getimgs(input){
+					// $("iframe").attr("src",input);
+					test = $("iframe").contents().find("body").html();
+					alert(test);
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<p>enter a wp photo gallery post url<p>
+		
+		<input type="text" placeholder="enter url here"/>
+		<button>fap time!</button>
+		<iframe src="http://bootyoftheday.co/2015/05/15/sexy-selfies-part-29" style="width:100%;height:500px;"></iframe>
+	</body>
+</html>
