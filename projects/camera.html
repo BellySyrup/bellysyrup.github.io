@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="stuff, to, help, search, engines, not" name="keywords">
+<meta content="What this page is about." name="description">
+<meta content="Display Webcam Stream" name="title">
+<title>Display Webcam Stream</title>
+  
+<style>
+#container {
+    margin: 0px auto;
+    width: 640px;
+    height: 480px;
+    border: 10px #333 solid;
+}
+#videoElement {
+    width: 640px;
+    height: 480px;
+    background-color: #666;
+}
+
+</style>
+</head>
+  
+<body>
+<div id="container">
+	<div class="videoContainer">
+    	<video autoplay="true" id="videoElement"></video>
+	</div>
+	<br/><br/>
+	<div class="controlsContainer">
+    	<button id="snap" onClick="snap()">Snap</button>
+    	<button id="clear" onClick="restart()">Clear</button>
+    </div>
+    <br/><br/>
+    <div id="galleryContainer">
+    	<table id="gallery"></table>
+    </div>
+</div>
+<script>
+ var video = document.querySelector("#videoElement");
+ 
+ var captured = [];
+ var count = 1;
+ 
+ function snap(){
+ 	var obj = {};
+
+ 	var newRow = document.createElement('tr');
+ 	var imageCell = document.createElement('td');
+ 	var nameCell = document.createElement('td');
+
+ 	newRow.appendChild(imageCell);
+ 	newRow.appendChild(nameCell);
+
+ 	// get thumbnail
+ 	newPhoto = document.createElement('canvas');
+ 	newPhoto.width = 100;
+ 	newPhoto.height = 75;
+ 	imageCell.appendChild(newPhoto);
+ 	context = newPhoto.getContext("2d");
+ 	context.drawImage(video, 0, 0, 100, 75);
+
+ 	// get image
+ 	fullPhoto = document.createElement('canvas');
+ 	fullPhoto.width = 640;
+ 	fullPhoto.height = 480;
+ 	context = fullPhoto.getContext("2d");
+ 	context.drawImage(video, 0, 0, 640, 480);
+
+ 	var tempName = 'Snap_'+count;
+ 	newName = document.createElement('input');
+ 	newName.value = tempName;
+
+ 	nameCell.appendChild(newName);
+
+	var thumb = newPhoto.toDataURL("image/png");
+	var img = fullPhoto.toDataURL("image/png");
+ 	obj.thumb = thumb;
+ 	obj.img = img;
+ 	obj.name = tempName;
+ 	captured.push(obj);
+
+ 	document.getElementById('gallery').appendChild(newRow);
+ 	count ++;
+ 	console.log(obj.img);
+ }
+
+ function restart(){
+ 	document.getElementById('gallery').innerHTML = "";
+ }
+ 
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+ 
+if (navigator.getUserMedia) {       
+    navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+ 
+function handleVideo(stream) {
+    video.src = window.URL.createObjectURL(stream);
+}
+ 
+function videoError(e) {
+    // do something
+}
+
+function isStreamSupported() {
+  if (navigator.getUserMedia)
+    return true;
+  else
+    return false;
+}
+
+</script>
+
+</body>
+</html>
