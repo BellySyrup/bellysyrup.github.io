@@ -24,7 +24,9 @@
 </head>
   
 <body>
+	<button onclick='check()'>check</button>
 <div id="container">
+
 	<div class="videoContainer">
     	<video autoplay="true" id="videoElement"></video>
 	</div>
@@ -40,13 +42,19 @@
 </div>
 <script>
  var video = document.querySelector("#videoElement");
+ var multiple = false;
  
  var captured = [];
  var count = 1;
  
  function snap(){
  	var obj = {};
+ 	
+ 	if(multiple){
 
+ 	
+ 	}
+ 	
  	var newRow = document.createElement('tr');
  	var imageCell = document.createElement('td');
  	var nameCell = document.createElement('td');
@@ -84,14 +92,16 @@
 
  	document.getElementById('gallery').appendChild(newRow);
  	count ++;
- 	console.log(obj.img);
  }
 
  function restart(){
  	document.getElementById('gallery').innerHTML = "";
  }
  
-navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+ function check(){
+ 	console.log('clicked');
+ 	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
  
 if (navigator.getUserMedia) {       
     navigator.getUserMedia({video: true}, handleVideo, videoError);
@@ -104,13 +114,8 @@ function handleVideo(stream) {
 function videoError(e) {
     // do something
 }
+ }
 
-function isStreamSupported() {
-  if (navigator.getUserMedia)
-    return true;
-  else
-    return false;
-}
 
 </script>
 
