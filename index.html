@@ -1,6 +1,80 @@
-<html><head><title>Big Brother 18 Live Stream</title><!--<style>body{background:black;}div{width:650px;margin:20px auto;}</style>--></head>
-<body>
-  <div style="display:none">
-    <iframe src="http://nowwatchtvlive.co/channel-tab-frame/big_brother_usa_server-1.php" width="650" height="580" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe></div>
-    <iframe src="https://discordapp.com/widget?id=139062820808425472&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-    </body></html>
+<!Doctype html>
+
+<html>
+	<head>
+		<title>Parallel calcs</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+				
+				function init(){
+					update();
+					$('input').on("change", function(event) { 
+					     update();
+					});
+					
+				}
+
+				function update(){
+
+					$('button').attr('onclick','').unbind('click');
+
+					$('#add').on("click", function(event) { 
+					     addnewrow();
+					});
+					$('#ifields button').on("click", function(event) { 
+					     deleterow($(this));
+					});
+					$('input').on("change", function(event) { 
+					     update();
+					});
+
+					var x = $('input');
+					var newrow = '<tr><td><input type="text" value="1"/></td><td><button>x</button></td></tr>';
+					var total = 0;
+					var temp = 0;
+					for (var i = x.length - 2; i >= 0; i--) {
+						temp += 1 / x[i].value;
+
+					};
+
+					total = 1 / temp;
+					$('#total').attr('value',total.toFixed(2));
+				}
+
+				function addnewrow(){
+					$('#ifields').append('<tr><td><input type="text" value="1"/></td><td><button>x</button></td></tr>');
+					update();
+				};
+				function deleterow(x){
+					x.parent().parent().remove();
+					update();
+				};
+
+				init();
+
+			});
+		</script>
+		<style>
+		*{
+			font-family: sans-serif;	
+		}
+
+		</style>
+	</head>
+	<body>
+	<div>
+		<h3>Resistance</h3>
+		<table id="ifields">
+			<tr><td><input type="text" value="16"/></td><td><button class="remove">x</button></td></tr>
+			<tr><td><input type="text" value="10"/></td><td><button>x</button></td></tr>
+			<tr><td><input type="text" value="15"/></td><td><button>x</button></td></tr>
+			<tr><td><input type="text" value="20"/></td><td><button>x</button></td></tr>
+			
+		</table>
+		<table>
+			<tr><td><input id="total" type="text"/></td><td><button id="add">+</button></td></tr>
+		</table>
+	</div>
+	</body>
+</html>
