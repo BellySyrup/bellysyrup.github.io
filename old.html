@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Form elements - jQuery Mobile Demos</title>
+    		<link rel="stylesheet" href="./css/themes/default/jquery.mobile-1.4.5.min.css">
+    		<!-- <link rel="stylesheet" href="../_assets/css/jqm-demos.css"> -->
+    		<link rel="shortcut icon" href="../favicon.ico">
+    		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    		<script src="./js/jquery.js"></script>
+    		<script src="./_assets/js/index.js"></script>
+    		<script src="./js/jquery.mobile-1.4.5.min.js"></script>
+            <script>
+
+                $(function(){
+                
+                    function init(){
+                        update();   
+                    }
+
+                    function update(){
+                        console.log('a');
+
+                        $('#RT button').on("click", function(event) { 
+                             addnewrow();
+                        });
+                        $('#ifields button').on("click", function(event) { 
+                             deleterow($(this));
+                        });
+                        $('input').on("change", function(event) { 
+                             update();
+                        });
+
+                        var x = $('input');
+                        // var newrow = '<tr><td><input type="text" value="1"/></td><td><button>x</button></td></tr>';
+                        var total = 0;
+                        var temp = 0;
+                        for (var i = x.length - 2; i >= 0; i--) {
+                            temp += 1 / x[i].value;
+
+                        };
+
+                        total = 1 / temp;
+                        console.log(total);
+                        $('#RT input').attr('value',total.toFixed(2));
+                    }
+
+                    function addnewrow(){
+                        console.log('add');
+                        
+                        $('#ifields').append('<div data-role="controlgroup" data-type="horizontal"><input type="number" id="search-control-group" data-wrapper-class="controlgroup-textinput ui-btn" value="1"><button tabindex="-1">X</button></div>').trigger("create");
+                        $('#ifields button').unbind("click", '');
+                        $('#ifields button').on("click", function(event) { 
+                             deleterow($(this));
+                        });
+                        recalc();
+                    };
+                    function deleterow(x){
+                        console.log('del',x);
+                        x.parent().parent().remove();
+                        recalc();
+                        //update();
+                    };
+
+                    function recalc(){
+                        console.log('recalc');
+                        var x = $('input');
+                        // var newrow = '<tr><td><input type="text" value="1"/></td><td><button>x</button></td></tr>';
+                        var total = 0;
+                        var temp = 0;
+                        for (var i = x.length - 2; i >= 0; i--) {
+                            temp += 1 / x[i].value;
+
+                        };
+
+                        total = 1 / temp;
+                        $('#RT input').attr('value',total.toFixed(2));
+                    }
+
+                    init();
+
+                });
+
+            </script>
+            <style>
+                .remove{
+                    float:right;
+                }
+                .controlgroup-textinput{
+                    padding-top:.22em;
+                    padding-bottom:.22em;
+                }
+                .ui-disabled, .ui-state-disabled, button[disabled], .ui-select .ui-btn.ui-state-disabled{
+                    opacity:1 !important;
+                }
+            </style>
+	</head>
+	<body>
+	<div data-role="page" class="jqm-demos" data-quicklinks="false">
+
+	
+
+    <div role="main" class="ui-content jqm-content">
+
+        <div id="ifields">
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="number" id="search-control-group" data-wrapper-class="controlgroup-textinput ui-btn" value="680">
+                <button tabindex="-1">X</button>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="number" id="search-control-group" data-wrapper-class="controlgroup-textinput ui-btn" value="820">
+                <button tabindex="-1">X</button>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="number" id="search-control-group" data-wrapper-class="controlgroup-textinput ui-btn" value="470">
+                <button tabindex="-1">X</button>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="number" id="search-control-group" data-wrapper-class="controlgroup-textinput ui-btn" value="330">
+                <button tabindex="-1">X</button>
+            </div>
+        </div>
+        
+        
+
+
+        <div id="RT" data-role="controlgroup" data-type="horizontal">
+            <label for="number-pattern">Total Resistance</label>
+            <input type="number" id="number-pattern" data-wrapper-class="controlgroup-textinput ui-btn" disabled>
+            <button tabindex="-1">+</button>
+        </div>
+
+	</div><!-- /content -->
+	    
+
+
+</div><!-- /page -->
+
+</body>
+</html>
