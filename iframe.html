@@ -4,13 +4,17 @@
 		<title>hi</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="refresh" content="10" />
+		<!-- <meta http-equiv="refresh" content="10" /> -->
 		<style>
-			*{margin:0;}
-			img{width:100%;}
 		</style>
 	</head>
 	<body>
+		<script>
+			setInterval(function() {
+				var myImageElement = document.getElementById('testimg');
+					myImageElement.src = 'http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11&rand=' + Math.random();
+				}, 5000);
+		</script>
 		<img id="testimg" src="http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11"/>
 	</body>
 </html>
