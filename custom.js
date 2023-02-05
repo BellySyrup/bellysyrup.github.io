@@ -4,6 +4,9 @@ $(function() {
     console.log( "ready!" );
 });
 
+$( "#c" ).css( "border", "3px solid red" );
+console.log('got here');
+
 
 // setInterval(function() {
 	// var c1 = document.getElementById('c1');
