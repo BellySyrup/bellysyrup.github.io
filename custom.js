@@ -1,5 +1,5 @@
 // Dashy Scripts by stephan
-v = '0.1.5';
+v = '0.1.6';
 console.log('Dashy scripts '+v);
 
 // Create images for each IP camara in wrapped div#c
@@ -28,9 +28,9 @@ function camera(){
 	
 }
 
-function ltt() {
+function ltt(){
 	var v = document.getElementById('v');
-	var builder =  '<iframe src="https://www.youtube.com/embed?listType=user_uploads&list=LinusTechTips" title="latest LTT"></iframe>';
+	var builder =  '<iframe src="https://www.youtube.com/embed?listType=user_uploads&list=LinusTechTips" title="latest LTT" style="width: 100%;height:200px;border:none;" allowfullscreen></iframe>';
 	v.innerHTML = builder;
 }
 
