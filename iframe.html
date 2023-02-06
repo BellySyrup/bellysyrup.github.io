@@ -1,20 +1,12 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>hi</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- <meta http-equiv="refresh" content="10" /> -->
-		<style>
-		</style>
-	</head>
-	<body>
-		<script>
-			setInterval(function() {
-				var myImageElement = document.getElementById('testimg');
-					myImageElement.src = 'http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11&rand=' + Math.random();
-				}, 5000);
-		</script>
-		<img id="testimg" src="http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11"/>
-	</body>
+<head>
+    <title>YouTube Recent Upload Thing</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+</head>
+<body>
+<div id="static_video"></div>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=UUB8OUG89o0QWqmJ2lfzdyIg" seamless allowfullscreen></iframe>
+
+</body>
 </html>

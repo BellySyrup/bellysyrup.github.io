@@ -25,6 +25,14 @@ function camera(){
 		//c2.srcset = c2.src;
 		//c3.srcset = c3.src;
 	},5000);
-
+	
 }
+
+function ltt() {
+	var v = document.getElementById('v');
+	var builder =  '<iframe src="https://www.youtube.com/embed?listType=user_uploads&list=LinusTechTips" title="latest LTT"></iframe>';
+	v.innerHTML = builder;
+}
+
 camera();
+ltt();
