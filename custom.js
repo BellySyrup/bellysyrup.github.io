@@ -1,5 +1,7 @@
 // Dashy Scripts
 // Grabs camera images every X seconds and refreshes embedded img
+v = '0.1';
+console.log('dashy scripts '+v);
 console.log('load custom scripts');
 var c = document.getElementById('c');	// get wrapper
 var x = '<img id="c1" src="http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11" style="width:100%;"/>';
@@ -10,6 +12,7 @@ setInterval(function(){
 	//var c2 = document.getElementById('c2');
 	//var c3 = document.getElementById('c3');
 	c1.src = 'http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11&rand=' + Math.random();
+	c1.srcset = c1.src;
 	console.log('refresh camera' + c1.src);
 	//c2.src = 'http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11&rand=' + Math.random();
 	//c3.src = 'http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11&rand=' + Math.random();
