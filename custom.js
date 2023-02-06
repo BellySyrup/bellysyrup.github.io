@@ -1,14 +1,16 @@
-// Dashy Scripts
-v = '0.1.4.1';
-console.log('dashy scripts '+v);
+// Dashy Scripts by stephan
+v = '0.1.5';
+console.log('Dashy scripts '+v);
 
 // Create images for each IP camara in wrapped div#c
 // refreshes every 30 seconds
 function camera(){
 	var s = 'style="width:100%;max-width:640px;"';
 	var c = document.getElementById('c');	// get wrapper
-	c.innerHTML = 	'<img id="c1" '+s+' src="http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11"/>' +
-					'<img id="c2" '+s+' src="http://sconzen.github.io/images/banner.jpg"/>'; // create camera img
+	var builder =  '<img id="c1" '+s+' src="http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11"/>';
+	    builder += '<img id="c2" '+s+' src="http://sconzen.github.io/images/banner.jpg"/>';
+	
+	c.innerHTML = builder;
 
 	setInterval(function(){
 		var c1 = document.getElementById('c1');
@@ -22,25 +24,7 @@ function camera(){
 		c1.srcset = c1.src;
 		//c2.srcset = c2.src;
 		//c3.srcset = c3.src;
-		console.log(v);
-		test();
 	},5000);
 
 }
-
-function test(){
-	
-	//console.log('testing... potentially volatile!');
-	var s = document.createElement('script');
-	s.src = 'http://sconzen.github.io/custom.js';
-	document.body.appendChild(s);
-	
-	//console.log('done testing... did we make it?');
-}
-
-//console.log('load custom scripts');
-
 camera();
-
-
-//console.log('end load custom scripts');
