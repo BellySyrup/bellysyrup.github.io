@@ -2,16 +2,15 @@
 // Grabs camera images every X seconds and refreshes embedded img
 console.log('load custom scripts');
 var c = document.getElementById('c');	// get wrapper
-var c1_src = 'http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11';
-var x = '<img id="c1" src="'+ c1_src +'" style="width:100%;"/>';
+var x = '<img id="c1" src="http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11" style="width:100%;"/>';
 c.innerHTML = x;
 
 setInterval(function(){
-	console.log('refresh camera');
 	var c1 = document.getElementById('c1');
 	//var c2 = document.getElementById('c2');
 	//var c3 = document.getElementById('c3');
-	c1.src = c1_src;
+	c1.src = 'http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11&rand=' + Math.random();
+	console.log('refresh camera' + c1.src);
 	//c2.src = 'http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11&rand=' + Math.random();
 	//c3.src = 'http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11&rand=' + Math.random();
 },30000);
