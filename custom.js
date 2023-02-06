@@ -1,5 +1,5 @@
 // Dashy Scripts
-v = '0.1.2';
+v = '0.1.3';
 console.log('dashy scripts '+v);
 
 // Create images for each IP camara in wrapped div#c
