@@ -7,11 +7,12 @@ console.log('dashy scripts '+v);
 function camera(){
 	
 	var c = document.getElementById('c');	// get wrapper
-	c.innerHTML = '<img id="c1" src="http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11" style="width:100%;"/>'; // create camera img
+	c.innerHTML = '<img id="c1" src="http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11" style="width:100%;"/>' +
+				 '<img id="c2" src="http://sconzen.github.io/images/banner.jpg" style="width:100%;"/>'; // create camera img
 
 	setInterval(function(){
 		var c1 = document.getElementById('c1');
-		//var c2 = document.getElementById('c2');
+		var c2 = document.getElementById('c2');
 		//var c3 = document.getElementById('c3');
 		
 		c1.src = 'http://admin:kermit101@192.168.50.11/snap.jpg?JpegCam=11&rand=' + Math.random();
@@ -22,7 +23,7 @@ function camera(){
 		//c2.srcset = c2.src;
 		//c3.srcset = c3.src;
 		
-		console.log('refresh camera');
+		//console.log('refresh camera');
 	},30000);
 
 }
