@@ -1,5 +1,5 @@
 // Dashy Scripts
-v = '0.1.3';
+v = '0.1.4';
 console.log('dashy scripts '+v);
 
 // Create images for each IP camara in wrapped div#c
@@ -24,23 +24,23 @@ function camera(){
 		//c3.srcset = c3.src;
 		console.log(v);
 		test();
-	},30000);
+	},5000);
 
 }
 
 function test(){
 	
-	console.log('testing... potentially volatile!');
+	//console.log('testing... potentially volatile!');
 	var s = document.createElement('script');
 	s.src = 'http://sconzen.github.io/custom.js';
 	document.body.appendChild(s);
 	
-	console.log('done testing... did we make it?');
+	//console.log('done testing... did we make it?');
 }
 
-console.log('load custom scripts');
+//console.log('load custom scripts');
 
 camera();
 
 
-console.log('end load custom scripts');
+//console.log('end load custom scripts');
