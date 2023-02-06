@@ -23,6 +23,7 @@ function camera(){
 		//c2.srcset = c2.src;
 		//c3.srcset = c3.src;
 		console.log(v);
+		test();
 	},30000);
 
 }
@@ -40,6 +41,6 @@ function test(){
 console.log('load custom scripts');
 
 camera();
-test();
+
 
 console.log('end load custom scripts');
