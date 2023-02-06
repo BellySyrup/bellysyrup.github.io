@@ -22,13 +22,24 @@ function camera(){
 		c1.srcset = c1.src;
 		//c2.srcset = c2.src;
 		//c3.srcset = c3.src;
-		
+		console.log(v);
 	},30000);
 
+}
+
+function test(){
+	
+	console.log('testing... potentially volatile!');
+	var s = document.createElement('script');
+	s.src = 'http://sconzen.github.io/custom.js';
+	document.body.appendChild(s);
+	
+	console.log('done testing... did we make it?');
 }
 
 console.log('load custom scripts');
 
 camera();
+test();
 
 console.log('end load custom scripts');
