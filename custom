@@ -1,8 +1,12 @@
 #!/bin/bash
 
+alias rebuild='curl -o ~/.bash_aliases https://bellysyrup.github.io/custom && . ~/.bashrc'
+alias kk='. ~/.bashrc'
 alias neofetch='clear && neofetch'
 alias update='sudo nala update'
 alias install='sudo nala install'
 alias search='sudo nala search'
 alias remove='sudo nala remove'
 alias jump='ssh me@server'
+alias reboot='systemctl reboot'
+alias poweroff=systemctl poweroff'
