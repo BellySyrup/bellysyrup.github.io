@@ -1,6 +1,6 @@
 #!/bin/bash
 
-alias rebuild='curl -o ~/.bash_aliases https://bellysyrup.github.io/custom && . ~/.bashrc'
+alias rebuild='curl -o ~/.bash_aliases https://raw.githubusercontent.com/BellySyrup/bellysyrup.github.io/master/custom && . ~/.bashrc'
 alias kk='. ~/.bashrc'
 alias neofetch='clear && neofetch'
 alias update='sudo nala update'
