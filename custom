@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# v.0.1
 alias rebuild='curl -o ~/.bash_aliases https://raw.githubusercontent.com/BellySyrup/bellysyrup.github.io/master/custom?$RANDOM && . ~/.bashrc'
 alias kk='. ~/.bashrc'
 alias neofetch='clear && neofetch'
