@@ -1,0 +1,8 @@
+#!/bin/bash
+
+alias neofetch='clear && neofetch'
+alias update='sudo nala update'
+alias install='sudo nala install'
+alias search='sudo nala search'
+alias remove='sudo nala remove'
+alias jump='ssh me@server'
