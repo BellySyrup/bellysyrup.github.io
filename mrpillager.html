@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mr. Pillagers' wild ride</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            table, th, td {
+                border: 1px solid;
+            }   
+            td,th{
+                padding: 2px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" id="anotherone">Another 1</button><br><br>
+            <button type="button" id="removeone">Remove 1</button><br><br>
+            <label for="money">$$ To Win:</label><br>
+            <input type="number" id="money" name="money"><br><br>
+            <label for="odds1">Main Attempt:</label><br>
+            <input type="number" id="odds1" name="odds2"><br><br>
+        <form></form>
+        <script>
+            $(document).ready(function () {
+                reload();
+                $('input').on("change",function(){reload();});
+                $("#anotherone").on("click",function(){anotherone();});
+                $("#removeone").on("click",function(){removeone();});
+            });
+
+            function anotherone(){
+                console.log("Another one!");
+                count = $("form").children().length+1;
+                newfield='<div><label for="odds2">'+count+'. Carry Over Odds:</label><br><input type="number" id="odds2" name="odds2" value="2.65"><br><br></div>';
+                $("form").append(newfield);
+                $('input').on("change",function(){reload();});
+                reload();
+            }
+
+            function removeone(){
+                console.log("Remove one!");
+                $('form').find('div').last().remove();
+                reload();
+            }
+
+            function reload(){
+                table='<tr><th>Attempts</th><th>Odds</th><th>$$ To Wager</th><th>Total Spent</th></tr>';
+                win = parseFloat($('#money').val());
+
+                $('input').not('#money').each(function (index) {
+                    b = parseFloat($(this).val());
+                    if(index>0){
+                        wager = (win+spent)/(b-1);
+                        spent = wager+spent;
+                        label = index + ". Carry Over"
+                    } else{
+                        wager = win/(b-1);
+                        spent = wager;
+                        label = "Main Attempt";
+                    }
+                    x = index+1;
+                    table+="<tr><td>"+label+"</td><td>"+b+"</td><td>$"+wager.toFixed(2)+"</td><td>$"+spent.toFixed(2)+"</td></tr>";
+                });
+                
+                $('table').html(table);
+            }
+        </script>
+        <table></table>
+    </body>
+</html>
