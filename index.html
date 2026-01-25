@@ -1,28 +1,140 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<style>
-			body{
-				font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
-			}
-			h1{
-				text-align:center;
-				font-weight:lighter;
-				color:#333;
-				margin-top: 20px;
-			  	margin-bottom: 10px;
-			  	font-size: 50px;
-			}
-			a{
-				text-decoration: none;
-				color: #333;
-			}
-		</style>
-	</head>
-	<body>
-		<h1><a href="/projects/dwnldr/">dwnldr</a></h1>
-		<h1><a href="/projects/gallerydrive/">gallerydrive</a></h1>
-		<h1><a href="/projects/chat.html">twitch</a></h1>
-		<h1><a href="/projects/chat.html">2</a></h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dynamic Dashboard</title>
+
+    <style>
+      * {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-family: "Courier New", monospace;
+      }
+
+      body {
+        background: #333;
+        padding: 40px 0 0 40px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #ccc;
+      }
+
+      ul {
+        margin-bottom: 30px;
+      }
+
+      a {
+        font-size: 50px;
+        display: block;
+        width: 400px;
+        padding-left: 0;
+      }
+
+      a:hover {
+        padding-left: 30px;
+      }
+
+      a.up {
+        color: lime;
+      }
+
+      a.down {
+        color: #ff5555;
+      }
+
+      a.checking {
+        color: yellow;
+      }
+    </style>
+
+    <script>
+      const links = [
+        { name: "reddit", url: "https://reddit.com" },
+        { name: "facebook", url: "https://facebook.com" }
+      ];
+
+      const containers = [
+        { name: "jellyfin", url: "http://192.168.50.3:8096/health" },
+        { name: "ispyagent", url: "http://192.168.50.3:8090" },
+        { name: "nextcloud", url: "http://192.168.50.3:8080" },
+        { name: "immich", url: "http://192.168.50.3:2283" },
+        { name: "syncthing", url: "http://192.168.50.3:8384" },
+        { name: "octoprint", url: "http://192.168.50.3:82" },
+        { name: "pihole", url: "http://192.168.50.3:8081/admin/login" }
+      ];
+
+      const misc = [
+        { name: "c1", url: "http://192.168.50.137" },
+        { name: "c2", url: "http://192.168.50.129" },
+        { name: "c3", url: "http://192.168.50.22" },
+        { name: "c4", url: "http://192.168.50.11" }
+      ];
+
+      function buildList(title, items, parentId, isContainer = false) {
+        const parent = document.getElementById(parentId);
+
+        const heading = document.createElement("h2");
+        heading.textContent = title;
+        parent.appendChild(heading);
+
+        const container = document.createElement("ul");
+
+        items.forEach(item => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = item.url;
+          a.textContent = item.name;
+
+          if (isContainer) {
+            a.id = item.name;
+            //a.classList.add("checking");
+          }
+
+          li.appendChild(a);
+          container.appendChild(li);
+        });
+
+        parent.appendChild(container);
+      }
+
+      async function pingContainer(item) {
+        const link = document.getElementById(item.name);
+        if (!link) return;
+
+        try {
+          await fetch(item.url, { mode: "no-cors", cache: "no-store" });
+          link.classList.remove("up", "down");
+          link.classList.add("up");
+        } catch {
+          link.classList.remove("up", "down");
+          link.classList.add("down");
+        }
+      }
+
+      async function pingAllContainers() {
+        await Promise.all(containers.map(pingContainer));
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        buildList("links", links, "home");
+        buildList("containers", containers, "home", true);
+        buildList("misc", misc, "home");
+
+        pingAllContainers();
+        setInterval(pingAllContainers, 5000);
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="home">
+      <!-- Lists will be dynamically added here -->
+    </div>
+  </body>
 </html>
