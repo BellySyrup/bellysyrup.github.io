@@ -1,140 +1,217 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Dynamic Dashboard</title>
+<html lang="en">
+<head><meta charset="UTF-8"><title>hello world</title></head>
+<body>
+  <ul><li><div id="terminalLine"><span id="cursor">&gt; </span><span id="terminalInput">hello world</span><span class="cursor"></span></div></li></ul>
+<h1 id="linksHeader">links</h1>
+<ul id="linksList">
+  <li><a href="https://reddit.com">reddit</a></li>
+</ul>
+<h1 id="containerHeader">docker</h1>
+<ul id="containerList"><li>Loading...</li></ul>
 
-    <style>
-      * {
-        list-style: none;
-        text-decoration: none;
-        color: white;
-        margin: 0;
-        padding: 0;
-        font-family: "Courier New", monospace;
-      }
+<script>
+  const containersInfo = [
+    ["jellyfin", "jellyfin", "8096"],
+    ["ispyagent", "ispyagentdvr", "8090"],
+    ["syncthing", "syncthing", "8384"],
+    ["octoprint", "octoprint", "82"],
+    ["immich", "immich_server", "2283"],
+    ["pihole", "pihole", "8081/admin/login"]
+  ];
 
-      body {
-        background: #333;
-        padding: 40px 0 0 40px;
-      }
+  const customCommands = [
+    ["degoogle", "https://reddit.com/r/degoogle"],
+    ["grapheneos", "https://reddit.com/r/grapheneos"],
+    ["privacy", "https://reddit.com/r/privacy"],
+    ["gh", "https://github.com/"],
+    ["news", "https://news.ycombinator.com/"]
+  ];
 
-      h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        color: #ccc;
-      }
 
-      ul {
-        margin-bottom: 30px;
-      }
+  async function fetchContainers() {
+    try {
+      const res = await fetch("http://192.168.50.3:3000/docker/containers");
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-      a {
-        font-size: 50px;
-        display: block;
-        width: 400px;
-        padding-left: 0;
-      }
+      const data = await res.json();
+      const list = document.getElementById("containerList");
+      list.innerHTML = "";
 
-      a:hover {
-        padding-left: 30px;
-      }
+      const includedNames = containersInfo.map(ci => ci[1]);
 
-      a.up {
-        color: lime;
-      }
+      // Build container list
+      containersInfo.forEach(([displayName, realContainerName, url]) => {
+        const c = data.find(cont => cont.name === realContainerName);
+        if (!c) return;
 
-      a.down {
-        color: #ff5555;
-      }
+        const li = document.createElement("li");
 
-      a.checking {
-        color: yellow;
-      }
-    </style>
+        const a = document.createElement("a");
+        a.textContent = displayName;
+        a.title = c.statusText;
+        a.href = "http://192.168.50.3:" + url;
+        a.target = "_blank";
+        a.className = c.status === "running" ? "up" : "down";
 
-    <script>
-      const links = [
-        { name: "reddit", url: "https://reddit.com" },
-        { name: "facebook", url: "https://facebook.com" }
-      ];
+        li.appendChild(a);
 
-      const containers = [
-        { name: "jellyfin", url: "http://192.168.50.3:8096/" },
-        { name: "ispyagent", url: "http://192.168.50.3:8090" },
-        { name: "nextcloud", url: "http://192.168.50.3:8080" },
-        { name: "immich", url: "http://192.168.50.3:2283" },
-        { name: "syncthing", url: "http://192.168.50.3:8384" },
-        { name: "octoprint", url: "http://192.168.50.3:82" },
-        { name: "pihole", url: "http://192.168.50.3:8081/admin/login" }
-      ];
-
-      const misc = [
-        { name: "c1", url: "http://192.168.50.137" },
-        { name: "c2", url: "http://192.168.50.129" },
-        { name: "c3", url: "http://192.168.50.22" },
-        { name: "c4", url: "http://192.168.50.11" }
-      ];
-
-      function buildList(title, items, parentId, isContainer = false) {
-        const parent = document.getElementById(parentId);
-
-        const heading = document.createElement("h2");
-        heading.textContent = title;
-        parent.appendChild(heading);
-
-        const container = document.createElement("ul");
-
-        items.forEach(item => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = item.url;
-          a.textContent = item.name;
-
-          if (isContainer) {
-            a.id = item.name;
-            //a.classList.add("checking");
-          }
-
-          li.appendChild(a);
-          container.appendChild(li);
-        });
-
-        parent.appendChild(container);
-      }
-
-      async function pingContainer(item) {
-        const link = document.getElementById(item.name);
-        if (!link) return;
-
-        try {
-          await fetch(item.url, { mode: "no-cors", cache: "no-store" });
-          link.classList.remove("up", "down");
-          link.classList.add("up");
-        } catch {
-          link.classList.remove("up", "down");
-          link.classList.add("down");
+        if (c.ports.length > 0) {
+          const portsDiv = document.createElement("div");
+          portsDiv.className = "ports";
+          portsDiv.innerHTML = c.ports.map(p =>
+            `Port: ${p.ip || "0.0.0.0"}:${p.public ?? "—"} → ${p.private}/${p.type}`
+          ).join("<br>");
+          li.appendChild(portsDiv);
         }
-      }
 
-      async function pingAllContainers() {
-        await Promise.all(containers.map(pingContainer));
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        buildList("links", links, "home");
-        buildList("containers", containers, "home", true);
-        buildList("misc", misc, "home");
-
-        pingAllContainers();
-        setInterval(pingAllContainers, 5000);
+        list.appendChild(li);
       });
-    </script>
-  </head>
 
-  <body>
-    <div id="home">
-      <!-- Lists will be dynamically added here -->
-    </div>
-  </body>
+      const omitted = data
+        .filter(c => !includedNames.includes(c.name))
+        .map(c => `${c.name} [${c.status === "running" ? "UP" : "DOWN"}]`);
+
+      const header = document.getElementById("containerHeader");
+      header.title = omitted.length > 0 ? "Omitted: " + omitted.join(", ") : "No omitted containers";
+
+    } catch (err) {
+      console.error(err);
+      const list = document.getElementById("containerList");
+      list.innerHTML = `<li>Error fetching containers: ${err}</li>`;
+    }
+  }
+
+  fetchContainers();
+  setInterval(fetchContainers, 30000);
+
+  let terminalBuffer = "";
+
+  window.addEventListener("keydown", (e) => {
+  if (e.ctrlKey || e.altKey || e.metaKey) return;
+
+  const inputEl = document.getElementById("terminalInput");
+  inputEl.className = "";
+  if (e.key === "Backspace") {
+    terminalBuffer = terminalBuffer.slice(0, -1);
+    inputEl.textContent = terminalBuffer;
+    e.preventDefault();
+    return;
+  }
+
+  if (e.key === "Enter") {
+    const command = terminalBuffer.trim().toLowerCase();
+    terminalBuffer = "";
+    inputEl.textContent = "";
+
+    const containerMatch = containersInfo.find(
+      ([name]) => name.toLowerCase() === command
+    );
+
+    if (containerMatch) {
+      const [, , url] = containerMatch;
+      window.location.href = "http://192.168.50.3:" + url;
+      return;
+    }
+
+    const customMatch = customCommands.find(
+      ([keyword]) => keyword.toLowerCase() === command
+    );
+
+    if (customMatch) {
+      const [, url] = customMatch;
+      window.location.href = url;
+      return;
+    }
+
+    // Optional: flash red or console log if not found
+    console.log(`Unknown command: ${command}`);
+    inputEl.textContent = "unknown command";
+    terminalInput.className = "invalid";
+    return;
+  }
+
+  // Printable characters
+  if (e.key.length === 1) {
+    terminalBuffer += e.key;
+    inputEl.textContent = terminalBuffer;
+  }
+});
+
+
+
+</script>
+<style>
+  body {
+    font-family: "Courier New", monospace;
+    background: #212121;
+    color: #eee;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  a {
+    font-size: 50px;
+    display: block;
+    width: 400px;
+    padding-left: 0;
+    text-decoration: none;
+    color:white;
+  }
+  a:hover {
+    padding-left: 30px;
+  }
+  a.up {
+    color: lime;
+  }
+  a.down, .invalid{
+    color: red;
+  }
+  .ports {
+    font-size: 0.9em;
+    margin-left: 20px;
+    color: #ccc;
+    display: none;
+  }
+  #cursor{
+    font-size: 50px;
+    display:inline-block;
+    width:38px;
+  }
+  .cursor {
+    display: inline-block;
+    width: 30px;
+    height: 58px;
+    background-color: #eee;
+    margin-left: 2px;
+    animation: blink 1s step-start infinite;
+    vertical-align: bottom;
+    font-size: 50px;
+  }
+  @keyframes blink {
+    50% { background-color: transparent; }
+  }
+  
+#terminalLine{
+height: 58px;
+}
+#terminalInput {
+  display: inline-block;
+  font-size: 50px;
+}
+
+</style>
+</body>
 </html>
+
